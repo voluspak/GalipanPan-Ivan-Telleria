@@ -7,6 +7,11 @@
 
  /*Index*/
 
+ .navBar__ul-responsive-container,
+ #itemCarruselContainer-index,
+ .navBar i{
+    display: none;
+ }
 .navBar__container{
     margin-bottom: 25px;
   
@@ -19,8 +24,8 @@
     }
 
     .navBar a img{
-        height: 150px;
-        width: 250px;
+        height: 9.37rem;
+        width: 15.62rem;
     }
 
     .navBar__ul{
@@ -28,7 +33,7 @@
         display: flex;
         flex-flow: wrap;
         justify-content: space-around;
-        width: 650px;
+        width: 40.62rem;
     }
 
     .navBar__ul a{
@@ -71,12 +76,17 @@ section{
     align-items: center;
     align-content: space-around;
     height: 540px;
+    width: 98vw;
+    margin: auto;
 }
     .texto{
     height: 520px;
-    width: 350px;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
     }
 
     .textoSuperior{
@@ -161,13 +171,14 @@ section{
         }
 
     section img{
-        width: 740px;
-        height: 520px;
+        width: 46.25rem;
+        height: 32.5rem;
     }
 
 hr{
 	border-color: #f05913;
-    margin: 10px;
+    margin: 10px auto;
+    width: 80vw;
 }
 
 aside{
@@ -175,8 +186,8 @@ aside{
 }
 
 aside img{
-    height: 150px; 
-    width: 200px;
+    height: 9.37rem; 
+    width: 12.5rem;
 }
 
 
@@ -198,7 +209,7 @@ aside img{
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        padding-top: 10px;
+        padding: 10px 0 0 10px;
     }
 
     .footer__mapa, .footer__galipan{

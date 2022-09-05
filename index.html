@@ -11,95 +11,162 @@
 	<title>Galipan Pan</title>
 </head>
 <body>
+	<div class="responsiveContainer">
+        <header class="border">
+            <div class="navBar__container">
+                <nav>
+                    <div class="navBar">
+                        <a href="./index.html"><img src="./assets/Logo.jpg" alt="Logo Galian Pan"></a>	
+                        <ul class="navBar__ul">
+                            <li><a href="./paginas/menu.html">Menú</a></li>
+				    	    <li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
+			    		    <li><a href="./paginas/contacto.html">Contacto</a></li>
+                        </ul>
+                        <div class="navBar__ul-responsive-container">
+                        <ul class="navBar__ul-responsive">
+                            <li><a href="./paginas/menu.html">Menú</a></li>
+                            <li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="./paginas/contacto.html">Contacto</a></li>
+                        </ul>
+                        </div>
+                        <a href="./paginas/delivery.html" class="navBar__button">Delivery</a>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>	
+                </nav>
+            </div>  
+        </header>
+		<main>
+			<section>
+				<div class="texto textoContainer">
+					<div class="SoloTexto">		
+						<div class="textoSuperior">
+							<h1>Panaderia <br> Venezolana Artesanal</h1>	
+							<p class="textoSuperior__panaderia">Deliciosa <i>panaderia</i> casera <br>
+								excelente para compartir un<br>
+								momento cálido y familiar</p>
+						</div>	
+						<div class="textoYButton">	
+							<p class="textoYButton__prueba">Prueba YA <br> Nuestros</p> 
+							<div class="textoYButton__texto-b">
+								<p class="textoYButton__rollos">Rollos de Canela</p>
+								<div class="textoYButton__delivery-button">
+									<p class="delivery"><i>COP$19k x 12 Rolls</i> <br>
+										<b>+ Delivery</b></p>
+									<a class="textoYButton__button" href="./paginas/delivery.html">Añadir</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="imgContainer">
+						<img src="./assets/rol2.jpg" alt="Roles De Canela">
+					</div>
+				</div>
+			</section>
+		</main>
 
-<header>
-	<div class="navBar__container">
-		<nav>
-			<div class="navBar">	
-				<a href="../index.html"><img src="./assets/logo.jpg" alt="Logo Galian Pan"></a>
-				<ul class="navBar__ul">
-					<li><a href="./paginas/menu.html">Menú</a></li>
-					<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
-					<li><a href="./paginas/contacto.html">Contacto</a></li>
-				</ul>
-				<a href="./paginas/delivery.html" class="navBar__button">Delivery</a>
-			</div>	
-		</nav>
-	</div>	
-</header>
-<main>
-	<section>
-		<div class="texto">	
-			<div class="textoSuperior">
-				<h1>Panaderia <br> Venezolana Artesanal</h1>	
-				<p class="textoSuperior__panaderia">Deliciosa <i>panaderia</i> casera <br>
-					excelente para compartir un<br>
-					momento cálido y familiar</p>
-			</div>	
-			<div class="textoYButton">	
-				<p class="textoYButton__prueba">Prueba YA <br> Nuestros</p> 
-				<p class="textoYButton__rollos">Rollos de Canela</p>
-				<div class="textoYButton__delivery-button">
-					<p class="delivery"><i>COP$19k x 12 Rolls</i> <br>
-						<b>+ Delivery</b></p>
-					<a class="textoYButton__button" href="./paginas/pedidoonline.html">Añadir</a>
+		<hr>
+			
+		<aside>
+			<div class="asideSimpleGalery">
+				<img src="./assets/pan-de-jamón.jpg" alt="Pan de jamon">
+				<img src="./assets/rol2.jpg" alt="Roles de Canela">
+				<img src="./assets/canilla.jpg"  alt="Pan frances">
+				<img src="./assets/tortarol.jpg"  alt="Torta hecha de roles">
+				<img src="./assets/golfeado.jpg" alt="Rollo de panela y queso">
+				<img src="./assets/cupcake.jpg"  alt="Cupcake">
+			</div>
+
+			<div id="itemCarruselContainer-index">  
+				<div class="itemCarrusel-index">
+					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-rol1"><img src="./assets/rol1.jpg" alt="Roles de Canela">
+					</div>
+					<div class="flechasCarrusel-index">
+						<a href="#tarjetaCarrusel-cupcake"><i class="fa-solid fa-angle-left"></i></a>
+						<a href="#tarjetaCarrusel-rol2"><i class="fa-solid fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="itemCarrusel-index">
+						<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-rol2"><img src="./assets/rol2.jpg" alt="Roles de Canela">
+						</div>
+					<div class="flechasCarrusel-index">
+						<a href="#tarjetaCarrusel-rol1"><i class="fa-solid fa-angle-left"></i></a>
+						<a href="#tarjetaCarrusel-jamon"><i class="fa-solid fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="itemCarrusel-index">
+						<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-jamon"><img src="./assets/pan-de-jamón.jpg" alt="Pan de pan-de-jamón">
+					</div>
+					<div class="flechasCarrusel-index">
+						<a href="#tarjetaCarrusel-rol2"><i class="fa-solid fa-angle-left"></i></a>
+						<a href="#tarjetaCarrusel-canilla"><i class="fa-solid fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="itemCarrusel-index">
+					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-canilla"><img src="./assets/canilla.jpg" alt="Pan frances">
+					</div>
+					<div class="flechasCarrusel-index">
+						<a href="#tarjetaCarrusel-jamon"><i class="fa-solid fa-angle-left"></i></a>
+						<a href="#tarjetaCarrusel-tortarol"><i class="fa-solid fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="itemCarrusel-index">
+					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-tortarol"><img src="./assets/tortarol.jpg" alt="Torta hecha con roles de Canela">
+					</div>
+					<div class="flechasCarrusel-index">
+						<a href="#tarjetaCarrusel-canilla"><i class="fa-solid fa-angle-left"></i></a>
+						<a href="#tarjetaCarrusel-cupcake"><i class="fa-solid fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="itemCarrusel-index">
+					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-cupcake"><img src="./assets/cupcake.jpg" alt="Cupcake">
+					</div>
+					<div class="flechasCarrusel-index">
+						<a href="#tarjetaCarrusel-tortarol"><i class="fa-solid fa-angle-left"></i></a>
+						<a href="#tarjetaCarrusel-rol1"><i class="fa-solid fa-angle-right"></i></a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<img src="./assets/rol2.jpg" height="302px" width="464px" alt="Roles De Canela">
-	</section>
-</main>
-
-	<hr>
-	
-	<aside>
-		<img src="./assets/pan-de-jamón.jpg" alt="Pan de jamon">
-		<img src="./assets/rol2.jpg" alt="Roles de Canela">
-		<img src="./assets/canilla.jpg"  alt="Pan frances">
-		<img src="./assets/tortarol.jpg"  alt="Torta hecha de roles">
-		<img src="./assets/golfeado.jpg" alt="Rollo de panela y queso">
-		<img src="./assets/cupcake.jpg"  alt="Cupcake">
-	</aside>
+		</aside>
 
 
-<footer>
-	<div class="footerContainer">
-		<div class="footer__directions">
-			<div class="footer__mapa">
-				<h3 class="footer__hs">Mapa del Sitio</h3>
-				<ul class="footer__ul">
-					<li><a href="./paginas/menu.html">Menú</a></li>
-					<li><a href="./paginas/delivery.html">Pedido Online</a></li>
-					<li><a href="./paginas/contacto.html">Contactanos</a></li>
-				</ul>
+		<footer>
+			<div class="footerContainer">
+				<div class="footer__directions">
+					<div class="footer__mapa">
+						<h2 class="footer__hs">Mapa del Sitio</h2>
+						<ul class="footer__ul">
+							<li><a href="./paginas/menu.html">Menú</a></li>
+							<li><a href="./paginas/delivery.html">Pedido Online</a></li>
+							<li><a href="./paginas/contacto.html">Contactanos</a></li>
+						</ul>
+					</div>
+					<div class="footer__galipan">
+						<h3 class="footer__hs">Galipan Pan</h3>
+						<ul class="footer__ul">
+							<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
+						</ul>
+					</div>
+					<div class="footer__rrss">
+						<h3 class="footer__hs">Redes Sociales</h3>
+						<ul class="footer__ul">
+							<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
+							<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
+						</ul>	
+					</div>
+				</div>	
+				<div class="footer__CopyrightContenedor">
+					<div class="footer__CopyrightContenedor__rrss">
+						<ul>
+							<li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/galipanpan" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+							<li><a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp">	</i></a></li>
+						</ul>
+					</div>
+					<h4 class="footer__hs">Galipan Pan 2020. Todos los derechos reservados.</h4>
+				</div>
 			</div>
-			<div class="footer__galipan">
-				<h3 class="footer__hs">Galipan Pan</h3>
-				<ul class="footer__ul">
-					<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
-				</ul>
-			</div>
-			<div class="footer__rrss">
-				<h3 class="footer__hs">Redes Sociales</h3>
-				<ul class="footer__ul">
-					<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
-					<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
-				</ul>	
-			</div>
-		</div>	
-		<div class="footer__CopyrightContenedor">
-			<div class="footer__CopyrightContenedor__rrss">
-				<ul>
-					<li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-					<li><a href="https://www.facebook.com/galipanpan" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-					<li><a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp">	</i></a></li>
-				</ul>
-			</div>
-			<h4 class="footer__hs">Galipan Pan 2020. Todos los derechos reservados.</h4>
-		</div>
+		</footer>
 	</div>
-</footer>
-
 
 </body>
 </html>
