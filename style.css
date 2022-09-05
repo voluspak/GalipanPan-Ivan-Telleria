@@ -9,7 +9,9 @@
 
  .navBar__ul-responsive-container,
  #itemCarruselContainer-index,
- .navBar i{
+ .navBar i,
+ .parallax-a img,
+ .parallax-b img{
     display: none;
  }
 .navBar__container{
