@@ -11,109 +11,121 @@
 	<title>Contacto</title>
 </head>
 <body>
-
-<header>
-	<div class="navBar__container">
-		<nav>
-			<div class="navBar">	
-				<a href="../index.html"><img src="../assets/logo.jpg" alt="Logo Galian Pan"></a>
-				<ul class="navBar__ul">
-					<li><a href="./menu.html">Menú</a></li>
-					<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-					<li><a href="./contacto.html">Contacto</a></li>
-				</ul>
-				<a href="./delivery.html" class="navBar__button">Delivery</a>
-			</div>	
-		</nav>
-	</div>	
-</header>
-<main>	
-	<div class="mainContainer">
-		<div class="textoContactanos">
-			<h1>¡Contactanos!</h1>
-				<p>Puedes dejarnos tus datos en el siguiente formulario<br>
-				¡Nos pondremos en contacto contigo en la brevedad!</p>
-				<p>También nos puedes contactar via <a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></p>
-		</div>
-
-		<div class="formContainer">
-			<h2>Dejanos tu datos de contacto</h2>
-			<form class="formFieldset">	
-						<div>
-						<label>Nombres y Apellidos</label><br>
-						<input class="formFieldset__inputs" type="name" placeholder="Nombres y Apellidos" required><br>
-						</div>
-						<div>
-						<label>Mail de contacto</label><br>
-						<input class="formFieldset__inputs" type="email" placeholder="Mail" required ><br>
-						</div>
-						<div>
-						<label>Motivo del contacto</label><br>
-						<select required class="formFieldset__inputs">
-							<option selected disabled>Seleccione un motivo</option>
-							<option>Consulta</option>
-							<option>Pedido Mayorista</option>
-							<option>Franquicias</option>
-							<option>Búsqueda de empleo</option>
-						</select><br>					
-						</div>
-						<div>
-						<label>Numero telefónico</label><br>
-						<input type="number" placeholder="123456789" class="formFieldset__inputs"><br>
-						</div>
-						<div>
-						<label>Dejanos tu comentario</label><br>
-						<textarea placeholder="Escribe aquí tu comentario..." required></textarea><br>
-						</div>
-						<div class="formFieldset_buttons">
-						<input type="submit" placeholder="Enviar" class="formFieldset__enviar"> 
-						<input type="reset" class="formFieldset__reset">
-						</div>
-					</fieldset>
-			</form>
-		</div>
-	</div>
-
-</main>
-
-<footer>
-	<div class="footerContainer">
-		<div class="footer__directions">
-			<div class="footer__mapa">
-				<h3 class="footer__hs">Mapa del Sitio</h3>
-				<ul class="footer__ul">
-					<li><a href="./menu.html">Menú</a></li>
-					<li><a href="./delivery.html">Pedido Online</a></li>
-					<li><a href="./contacto.html">Contactanos</a></li>
-				</ul>
-			</div>
-			<div class="footer__galipan">
-				<h3 class="footer__hs">Galipan Pan</h3>
-				<ul class="footer__ul">
-					<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-				</ul>
-			</div>
-			<div class="footer__rrss">
-				<h3 class="footer__hs">Redes Sociales</h3>
-				<ul class="footer__ul">
-					<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
-					<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
-				</ul>	
-			</div>
-		</div>	
-		<div class="footer__CopyrightContenedor">
-			<div class="footer__CopyrightContenedor__rrss">
-				<ul>
-					<li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-					<li><a href="https://www.facebook.com/galipanpan" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-					<li><a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp">	</i></a></li>
-				</ul>
-			</div>
-			<h4 class="footer__hs">Galipan Pan 2020. Todos los derechos reservados.</h4>
-		</div>
-	</div>
-</footer>
+    <div class="responsiveContainer-b">
+        <header>
+            <div class="navBar__container">
+                <nav>
+                    <div class="navBar">
+                        <a href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>	
+                        <ul class="navBar__ul">
+                        <li><a href="./menu.html">Menú</a></li>
+				    	<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+			    		<li><a href="./contacto.html">Contacto</a></li>
+                        </ul>
+                        <div class="navBar__ul-responsive-container">
+                            <ul class="navBar__ul-responsive">
+                            <li><a href="./menu.html">Menú</a></li>
+                            <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                            <li><a href="./contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <a href="./delivery.html" class="navBar__button">Delivery</a>
+                            <i class="fa-solid fa-bars"></i>
+                    </div>	
+                </nav>
+            </div>  
+        </header>
+        <main class="mainContainerContacto">	
+            <div class="mainContainer">
+                <div class="textoContactanos">
+                    <h1>¡Contactanos!</h1>
+                        <p>Puedes dejarnos tus datos en el siguiente formulario<br>
+                        ¡Nos pondremos en contacto contigo en la brevedad!</p>
+                        <p>También nos puedes contactar via <a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></p>
+                </div>
+        
+                <div class="formContainer">
+                    <h2>Dejanos tu datos de contacto</h2>
+                    <form class="formFieldset">	
+                                <div>
+                                    <label>Nombres y Apellidos</label><br>
+                                    <input class="formFieldset__inputs" type="name" placeholder="Nombres y Apellidos" required><br>
+                                </div>
+                                <div>
+                                    <label>Mail de contacto</label><br>
+                                    <input class="formFieldset__inputs" type="email" placeholder="Mail" required ><br>
+                                </div>
+                                <div>
+                                    <label>Motivo del contacto</label><br>
+                                    <select required class="formFieldset__inputs">
+                                        <option selected disabled>Seleccione un motivo</option>
+                                        <option>Consulta</option>
+                                        <option>Pedido Mayorista</option>
+                                        <option>Franquicias</option>
+                                       <option>Búsqueda de empleo</option>
+                                    </select><br>					
+                                </div>
+                                <div>
+                                    <label>Numero telefónico</label><br>
+                                 <input type="number" placeholder="123456789" class="formFieldset__inputs"><br>
+                                </div>
+                                <div>
+                                    <label>Dejanos tu comentario</label><br>
+                                    <textarea placeholder="Escribe aquí tu comentario..." required></textarea><br>
+                                </div>
+                                <div class="formFieldset_buttons">
+                                    <input type="submit" placeholder="Enviar" class="formFieldset__enviar"> 
+                                    <input type="reset" class="formFieldset__reset">
+                                </div>
+                    </form>
+                </div>
+            </div>
+        </main>
 
 
+
+
+
+
+
+
+        <footer class="border footer-b">
+            <div class="footerContainer">
+                <div class="footer__directions">
+                    <div class="footer__mapa">
+                        <h2 class="footer__hs">Mapa del Sitio</h2>
+                        <ul class="footer__ul">
+                            <li><a href="./menu.html">Menú</a></li>
+                            <li><a href="./delivery.html">Pedido Online</a></li>
+                            <li><a href="./contacto.html">Contactanos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__galipan">
+                        <h3 class="footer__hs">Galipan Pan</h3>
+                        <ul class="footer__ul">
+                            <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__rrss">
+                        <h3 class="footer__hs">Redes Sociales</h3>
+                        <ul class="footer__ul">
+                            <li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
+                        </ul>	
+                    </div>
+                </div>	
+                <div class="footer__CopyrightContenedor">
+                    <div class="footer__CopyrightContenedor__rrss">
+                        <ul class="footer__ul">
+                            <li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/galipanpan" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    <h4 class="footer__hs">Galipan Pan 2020. Todos los derechos reservados.</h4>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
