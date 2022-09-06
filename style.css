@@ -856,4 +856,14 @@ aside img{
             font-size: 2rem;
         }
 
+    /*MENU*/
+
+    .mainContainerMenu{
+        height: 40rem;
+    }
+    #itemCarruselContainer,
+    .itemCarrusel{
+        height: 37.5rem;
+        width: 20rem;
+    }
 }
