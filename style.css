@@ -627,7 +627,38 @@ aside img{
         display: block;
         font-size: 2rem;
     }
-    main{
+    .navBar__ul-responsive{
+        list-style: none;
+        text-align: center;
+        color: #a3a3a3;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 40px;
+    }
+    .navBar__ul-responsive a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navBar__ul-responsive-container{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -50%;
+        background-color: rgb(250, 97, 41);
+        width: 60%;
+        height: 30%;
+        z-index: 10;
+        transition: all 400ms ease;
+    }
+
+    .navBar:hover > .navBar__ul-responsive-container{
+    top: 12.8%;
+    transition: all 400ms ease;
+    }
+
+
+    .mainIndex{
         height: 22rem;
     }
     .texto{
@@ -797,5 +828,32 @@ aside img{
         height: 5rem;
     }
 
+    /*CONTACTO*/
+
+    .mainContainerContacto{
+        height: 90rem;
+    }
+    .mainContainer{
+        width: 100vw;
+        height: 70%;
+    }
     
+        .textoContactanos,
+        .formContainer{
+            margin-top: -5rem;
+            height: 30%;
+            width: 80%;
+        }
+        .textoContactanos h1{
+            font-size: 3rem;
+        }
+
+        .textoContactanos p{
+            font-size: 1.6rem;
+        }
+
+        .formContainer h2{
+            font-size: 2rem;
+        }
+
 }
