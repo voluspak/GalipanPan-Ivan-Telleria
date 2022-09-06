@@ -89,7 +89,6 @@ section{
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
-    overflow-x: hidden;
     }
 
     .textoSuperior{
@@ -169,6 +168,7 @@ section{
             animation-iteration-count: infinite;
             animation-duration: 3s;
             animation-delay: 1s;
+            overflow: hidden;
 
         }
 
@@ -186,6 +186,7 @@ section{
         animation-name: slide-img;
         animation-iteration-count: 1;
         animation-duration: 1s;
+        overflow: hidden;
     }
 
     .textoSuperior,
@@ -217,17 +218,17 @@ section{
         }
     }
 
-@keyframes boton-añadir{
-    0%{
-        font-size: 20px;
+    @keyframes boton-añadir{
+        0%{
+            font-size: 20px;
+        }
+        50%{
+            font-size: 23px;
+        }
+        100%{
+            font-size: 20px;
+        }
     }
-    50%{
-        font-size: 23px;
-    }
-    100%{
-        font-size: 20px;
-    }
-}
 hr{
 	border-color: #f05913;
     margin: 10px auto;
@@ -537,6 +538,9 @@ aside img{
 
     .historia__superior h1{
         font-size: 60px;
+    }
+
+    .animacion-h1-historia{
         animation-name: h1-historia;
         animation-timing-function: ease;
         animation-iteration-count: infinite;
@@ -892,6 +896,17 @@ aside img{
         height: 5rem;
     }
 
+    @keyframes boton-añadir{
+        0%{
+            font-size: .8;
+        }
+        50%{
+            font-size: 1rem;
+        }
+        100%{
+            font-size: .8rem;
+        }
+    }
     /*CONTACTO*/
 
     .mainContainerContacto{
@@ -949,14 +964,18 @@ aside img{
         width: 100%;
         height: 40%;
     }
-
+    .animacion-h1-historia{
+        animation: none;
+    }
     .historia__superior h1{
         font-size: 45px;
+        line-height: 4rem;
     }
 
     .historia__superior{
         text-align: center;
         order: 2;
+        margin-bottom: -8rem;
     }
 
     .historia__inferior{
