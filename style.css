@@ -89,6 +89,7 @@ section{
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
+    overflow-x: hidden;
     }
 
     .textoSuperior{
@@ -162,6 +163,13 @@ section{
             font-weight: bold;
             color: #fff;
             text-decoration: none;
+            transition: all .1s;
+            animation-name: boton-añadir;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-delay: 1s;
+
         }
 
         .textoYButton__button:hover{
@@ -169,14 +177,57 @@ section{
             margin: -1px;
             background-color: #ff8040;
             color: #f0f0f0;
-            transition: all .1s;
         }
 
     section img{
         width: 46.25rem;
         height: 32.5rem;
+        border-radius: 10px;
+        animation-name: slide-img;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
     }
 
+    .textoSuperior,
+    .textoYButton{
+        animation-name: slide-texto;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+    }
+    
+    @keyframes slide-img{
+        from{
+            transform: translateX(50rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slide-texto{
+        from{
+            transform: translateX(-20rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+@keyframes boton-añadir{
+    0%{
+        font-size: 20px;
+    }
+    50%{
+        font-size: 23px;
+    }
+    100%{
+        font-size: 20px;
+    }
+}
 hr{
 	border-color: #f05913;
     margin: 10px auto;
@@ -486,6 +537,21 @@ aside img{
 
     .historia__superior h1{
         font-size: 60px;
+        animation-name: h1-historia;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    @keyframes h1-historia{
+        0%{
+            font-size: 60px;
+        }
+        50%{
+            font-size: 70px;
+        }
+        100%{
+            font-size: 60px;
+        }
     }
 
     .historia__superior{
