@@ -434,8 +434,15 @@
     }
 
     /*MENU*/
-
-#itemCarruselContainer{
+    .mainContainerMenu{
+        width: 50%;
+        margin: auto;
+    }
+    .carousel-item img{
+        height: 50rem;
+        object-fit:fill;
+    }
+/* #itemCarruselContainer{
     border: 5px solid transparent;
     border-radius: 10px;
     height: 800px;
@@ -491,7 +498,7 @@
 
 #tarjetaCarrusel-B{
     background-color: grey;
-}
+} */
 
 
     /*SOBRE NOSOTROS*/

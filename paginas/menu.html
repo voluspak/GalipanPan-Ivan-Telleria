@@ -3,101 +3,97 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script src="https://kit.fontawesome.com/4619c90884.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-	<title>Menu</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Galipan Pan</title>
 </head>
 <body>
-    <div class="responsiveContainer-b">
-        <header>
-            <div class="navBar__container">
-                <nav>
-                    <div class="navBar">
-                        <a href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>	
-                        <ul class="navBar__ul">
-                            <li><a href="../index.html">Inicio</a></li>
-                            <li><a href="./menu.html">Menú</a></li>
-                            <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                            <li><a href="./contacto.html">Contacto</a></li>
-                            <li><a href="./galeria.html">Galeria</a></li>
-                        </ul>
-                        <div class="navBar__ul-responsive-container">
-                            <ul class="navBar__ul-responsive">
-                                <li><a href="../index.html">Inicio</a></li>
-                                <li><a href="./menu.html">Menú</a></li>
-                                <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                                <li><a href="./contacto.html">Contacto</a></li>
-                                <li><a href="./galeria.html">Galeria</a></li>
-                            </ul>
-                        </div>
-                        <a href="./delivery.html" class="navBar__button">Delivery</a>
-                            <i class="fa-solid fa-bars"></i>
-                    </div>	
-                </nav>
-            </div>  
+	<div class="Container">
+        <header class="row">
+			<nav class="navbar navbar-expand-lg bg-light col">
+				<div class="container-fluid">		
+					<a class="navbar-brand" href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse navBar-links" id="navbarText">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                               <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+						    <li class="nav-item">
+					    		<a class="nav-link active" aria-current="page" href="./menu.html">Menú</a>
+					    	</li>
+					    	<li class="nav-item">
+					    		<a class="nav-link" href="./sobrenosotros.html">Sobre Nosotros</a>
+					    	</li>
+					    	<li class="nav-item">
+					    		<a class="nav-link" href="./contacto.html">Contacto</a>
+					    	</li>
+					    	<li class="nav-item">
+					    		<a class="nav-link" href="./galeria.html">Galeria</a>
+					    	</li>
+					    </ul>
+					    <span class="navbar-text">
+					    	<a href="./delivery.html" class="navBar__button">Delivery</a>
+					    </span>
+					</div>
+				</div>
+			</nav>
         </header>
 
-        <main class="mainContainerMenu">
-            <div id="itemCarruselContainer">
-                <div class="itemCarrusel" id="itemCarrusel-A">
-                    <div class="tarjetaCarrusel" id="tarjetaCarrusel-A"><img src="../assets/Carta1.png" alt="Menu A">
-                    </div>
-                    <div class="flechasCarrusel-A">
-                        <a href="#tarjetaCarrusel-B"><i class="fa-solid fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="itemCarrusel" id="itemCarrusel-B">
-                        <div class="tarjetaCarrusel" id="tarjetaCarrusel-B"><img src="../assets/Carta2.png" alt="Menu B">
-                        </div>
-                    <div class="flechasCarrusel-B">
-                        <a href="#tarjetaCarrusel-A"><i class="fa-solid fa-angle-left"></i></a>
-                    </div>
-                </div>
-            </div>
+        <main class="mainContainerMenu row text-center">
+			<div id="carouselExampleControls" class="carousel slide col" data-bs-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="../assets/Carta1.png" class="d-block w-70" alt="Menu 1">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../assets/Carta2.png" class="d-block w-70" alt="Menu 2">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
         </main>
 
-        <footer>
+		<footer class="row">
 			<div class="footerContainer">
 				<div class="footer__responsive">
 					<h2 class="footer__hs">Mapa del Sitio</h2>
 					<ul class="footer__ul">
-						<li><a href="./menu.html">Menú</a></li>
-						<li><a href="./galeria.html">Galeria</a></li>
-						<li><a href="./delivery.html">Pedido Online</a></li>
-						<li><a href="./contacto.html">Contactanos</a></li>
-						<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+						<li><a href="./paginas/menu.html">Menú</a></li>
+						<li><a href="./paginas/galeria.html">Galeria</a></li>
+						<li><a href="./paginas/delivery.html">Pedido Online</a></li>
+						<li><a href="./paginas/contacto.html">Contactanos</a></li>
+						<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
 						<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
 						<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
 					</ul>
 				</div>
 				<div class="footer__directions">
-					<div class="footer__mapa">
+					<div class="footer__mapa col text-center">
 						<h2 class="footer__hs">Mapa del Sitio</h2>
-						<ul class="footer__ul">
-							<li><a href="./menu.html">Menú</a></li>
-							<li><a href="./delivery.html">Pedido Online</a></li>
-							<li><a href="./contacto.html">Contactanos</a></li>
-							<li><a href="./galeria.html">Galeria</a></li>
+						<ul class="footer__ul ul-links">
+							<li><a href="./paginas/menu.html">Menú</a></li>
+							<li><a href="./paginas/delivery.html">Pedido Online</a></li>
+							<li><a href="./paginas/contacto.html">Contactanos</a></li>
+							<li><a href="./paginas/galeria.html">Galeria</a></li>
+							<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
 						</ul>
-					</div>
-					<div class="footer__galipan">
-						<h3 class="footer__hs">Galipan Pan</h3>
-						<ul class="footer__ul">
-							<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-						</ul>
-					</div>
-					<div class="footer__rrss">
-						<h3 class="footer__hs">Redes Sociales</h3>
-						<ul class="footer__ul">
-							<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
-							<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
-						</ul>	
 					</div>
 				</div>	
-				<div class="footer__CopyrightContenedor">
+				<div class="footer__CopyrightContenedor col">
 					<div class="footer__CopyrightContenedor__rrss">
 						<ul>
 							<li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
@@ -109,6 +105,7 @@
 				</div>
 			</div>
 		</footer>
-    </div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
