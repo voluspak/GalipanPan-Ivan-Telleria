@@ -8,39 +8,45 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 	<title>Galipan Pan</title>
 </head>
 <body>
-	<div class="responsiveContainer">
-        <header class="border">
-            <div class="navBar__container">
-                <nav>
-                    <div class="navBar">
-                        <a href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>	
-                        <ul class="navBar__ul">
-                            <li><a href="./paginas/menu.html">Menú</a></li>
-                            <li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
-                            <li><a href="./paginas/contacto.html">Contacto</a></li>
-                            <li><a href="./paginas/galeria.html">Galeria</a></li>
-                        </ul>
-                        <div class="navBar__ul-responsive-container">
-                            <ul class="navBar__ul-responsive">
-                                <li><a href="./paginas/menu.html">Menú</a></li>
-                                <li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
-                                <li><a href="./paginas/contacto.html">Contacto</a></li>
-                                <li><a href="./paginas/galeria.html">Galeria</a></li>
-                            </ul>
-                        </div>
-                        <a href="./paginas/delivery.html" class="navBar__button">Delivery</a>
-                            <button class="responsiveButton"><div></div><div></div><div></div></button>
-                    </div>	
-                </nav>
-            </div>  
+	<div class="Container">
+        <header class="row">
+			<nav class="navbar navbar-expand-lg bg-light col">
+				<div class="container-fluid">		
+					<a class="navbar-brand" href="./index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse navBar-links" id="navbarText">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link  active" aria-current="page" href="./paginas/menu.html">Menú</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./paginas/sobrenosotros.html">Sobre Nosotros</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./paginas/contacto.html">Contacto</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./paginas/galeria.html">Galeria</a>
+						</li>
+						</ul>
+						<span class="navbar-text">
+							<a href="./paginas/delivery.html" class="navBar__button">Delivery</a>
+						</span>
+					</div>
+				</div>
+			</nav>
         </header>
-		<main class="mainIndex">
+
+		<main class="mainIndex text-center">
 			<section>
-				<div class="texto textoContainer">
-					<div class="soloTexto ">		
+				<div class="texto textoContainer row">
+					<div class="soloTexto col-md-5">		
 						<div class="textoSuperior">
 							<h1>Panaderia <br> Venezolana Artesanal</h1>	
 							<p class="textoSuperior__panaderia">Deliciosa <i>panaderia</i> casera <br>
@@ -59,80 +65,52 @@
 							</div>
 						</div>
 					</div>
-					<div class="imgContainer">
+					<div class="imgContainer col-md-7">
 						<img src="./assets/rol2.jpg" alt="Roles De Canela" class="imgContainer__rol2">
-						<img src="./assets/rol1.jpg" alt="Roles De Canela" class="imgContainer__rol1">
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<hr>
-			
-		<aside>
-			<div class="asideSimpleGalery">
-				<img src="./assets/pan-de-jamón.jpg" alt="Pan de jamon">
-				<img src="./assets/rol2.jpg" alt="Roles de Canela">
-				<img src="./assets/canilla.jpg"  alt="Pan frances">
-				<img src="./assets/tortarol.jpg"  alt="Torta hecha de roles">
-				<img src="./assets/golfeado.jpg" alt="Rollo de panela y queso">
-				<img src="./assets/cupcake.jpg"  alt="Cupcake">
-			</div>
-
-			<div id="itemCarruselContainer-index">  
-				<div class="itemCarrusel-index">
-					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-rol1"><img src="./assets/rol1.jpg" alt="Roles de Canela">
-					</div>
-					<div class="flechasCarrusel-index">
-						<a href="#tarjetaCarrusel-cupcake"><i class="fa-solid fa-angle-left"></i></a>
-						<a href="#tarjetaCarrusel-rol2"><i class="fa-solid fa-angle-right"></i></a>
-					</div>
+		<aside class="row">
+			<div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="true">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
 				</div>
-				<div class="itemCarrusel-index">
-						<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-rol2"><img src="./assets/rol2.jpg" alt="Roles de Canela">
-						</div>
-					<div class="flechasCarrusel-index">
-						<a href="#tarjetaCarrusel-rol1"><i class="fa-solid fa-angle-left"></i></a>
-						<a href="#tarjetaCarrusel-jamon"><i class="fa-solid fa-angle-right"></i></a>
-					</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="./assets/pan-de-jamón.jpg" class="d-block w-100" alt="Pan de jamon">
+				  </div>
+				  <div class="carousel-item">
+					<img src="./assets/canilla.jpg" class="d-block w-100" alt="pan frances">
+				  </div>
+				  <div class="carousel-item">
+					<img src="./assets/rol1.jpg" class="d-block w-100" alt="rol de canela">
+				  </div>
+				  <div class="carousel-item">
+					<img src="./assets/cupcake.jpg" class="d-block w-100" alt="cupcake">
+				  </div>
+				  <div class="carousel-item">
+					<img src="./assets/rol2.jpg" class="d-block w-100" alt="rol de canela">
+				  </div>
 				</div>
-				<div class="itemCarrusel-index">
-						<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-jamon"><img src="./assets/pan-de-jamón.jpg" alt="Pan de pan-de-jamón">
-					</div>
-					<div class="flechasCarrusel-index">
-						<a href="#tarjetaCarrusel-rol2"><i class="fa-solid fa-angle-left"></i></a>
-						<a href="#tarjetaCarrusel-canilla"><i class="fa-solid fa-angle-right"></i></a>
-					</div>
-				</div>
-				<div class="itemCarrusel-index">
-					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-canilla"><img src="./assets/canilla.jpg" alt="Pan frances">
-					</div>
-					<div class="flechasCarrusel-index">
-						<a href="#tarjetaCarrusel-jamon"><i class="fa-solid fa-angle-left"></i></a>
-						<a href="#tarjetaCarrusel-tortarol"><i class="fa-solid fa-angle-right"></i></a>
-					</div>
-				</div>
-				<div class="itemCarrusel-index">
-					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-tortarol"><img src="./assets/tortarol.jpg" alt="Torta hecha con roles de Canela">
-					</div>
-					<div class="flechasCarrusel-index">
-						<a href="#tarjetaCarrusel-canilla"><i class="fa-solid fa-angle-left"></i></a>
-						<a href="#tarjetaCarrusel-cupcake"><i class="fa-solid fa-angle-right"></i></a>
-					</div>
-				</div>
-				<div class="itemCarrusel-index">
-					<div class="tarjetaCarrusel-index" id="tarjetaCarrusel-cupcake"><img src="./assets/cupcake.jpg" alt="Cupcake">
-					</div>
-					<div class="flechasCarrusel-index">
-						<a href="#tarjetaCarrusel-tortarol"><i class="fa-solid fa-angle-left"></i></a>
-						<a href="#tarjetaCarrusel-rol1"><i class="fa-solid fa-angle-right"></i></a>
-					</div>
-				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
 			</div>
 		</aside>
 
 
-		<footer>
+		<footer class="row">
 			<div class="footerContainer">
 				<div class="footer__responsive">
 					<h2 class="footer__hs">Mapa del Sitio</h2>
@@ -147,30 +125,18 @@
 					</ul>
 				</div>
 				<div class="footer__directions">
-					<div class="footer__mapa">
+					<div class="footer__mapa col text-center">
 						<h2 class="footer__hs">Mapa del Sitio</h2>
-						<ul class="footer__ul">
+						<ul class="footer__ul ul-links">
 							<li><a href="./paginas/menu.html">Menú</a></li>
 							<li><a href="./paginas/delivery.html">Pedido Online</a></li>
 							<li><a href="./paginas/contacto.html">Contactanos</a></li>
 							<li><a href="./paginas/galeria.html">Galeria</a></li>
-						</ul>
-					</div>
-					<div class="footer__galipan">
-						<h3 class="footer__hs">Galipan Pan</h3>
-						<ul class="footer__ul">
 							<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
 						</ul>
 					</div>
-					<div class="footer__rrss">
-						<h3 class="footer__hs">Redes Sociales</h3>
-						<ul class="footer__ul">
-							<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
-							<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
-						</ul>	
-					</div>
 				</div>	
-				<div class="footer__CopyrightContenedor">
+				<div class="footer__CopyrightContenedor col">
 					<div class="footer__CopyrightContenedor__rrss">
 						<ul>
 							<li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
@@ -183,6 +149,6 @@
 			</div>
 		</footer>
 	</div>
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -14,39 +14,40 @@
  .footer__responsive{
     display: none;
  }
-.navBar__container{
+/* .navBar__container{
     margin-bottom: 25px;
   
 }
-    .navBar{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
+*/  .container-fluid{
+        background-color: #fff;
     }
-
-    .navBar a img{
-        height: 9.37rem;
-        width: 15.62rem;
-    }
-
-    .navBar__ul{
+    .navbar-nav{
+        margin-left: 5rem;
         list-style-type: none;
         display: flex;
         flex-flow: wrap;
         justify-content: space-around;
         width: 40.62rem;
+
     }
 
-    .navBar__ul a{
+    .navbar-brand img{
+        height: 9.37rem;
+        width: 15.62rem;
+    }
+
+    .navbar-nav a{
         text-decoration: none;
         color: #a3a3a3;
         font-weight: bold;
         font-size: 23px;
     }
 
+    .active{
+        color: #f17407 !important;  
+    }
 
-    .navBar__ul a:hover{
+    .navbar-nav a:hover{
         color: #fa8925;
         text-decoration: underline;
         transition: all 0.1s;
@@ -59,46 +60,19 @@
         padding: 5px 10px;
         font-size: 25px;
         font-weight: bold;
-        color: #fff;
+        color: #fff !important;
         text-decoration: none;
+        margin-right: 5rem;
+        transition: background-color color .1s ease;
     }
 
     .navBar__button:hover{
         font-size: 26px;
         background-color: #f52f2f;
         color: #f0f0f0;
-        margin: -2px;
-        transition: all .1s;
     }
 
-section{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-around;
-    height: 540px;
-    width: 98vw;
-    margin: auto;
-}
-    .texto{
-    height: 520px;
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-around;
-    }
 
-    .textoSuperior{
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 16.25rem;
-        width: 21.87rem;
-    }
         h1{
             color: rgb(255, 140, 0);
             font-size: 30px;
@@ -124,8 +98,9 @@ section{
         flex-flow: column wrap;
         justify-content: space-evenly;
         align-items: flex-start;
-        height: 16.25rem;
-        width: 21.87rem;
+        height: 14rem;
+        width: 20rem;
+        margin: auto;
     }
 
         .textoYButton__prueba{
@@ -138,6 +113,7 @@ section{
             color: #f05913;
             letter-spacing: 1px;
             font-size: 22px;
+            text-align: start;
         }
 
         .textoYButton__delivery-button{
@@ -179,9 +155,9 @@ section{
             color: #f0f0f0;
         }
 
-    section img{
-        width: 46.25rem;
-        height: 32.5rem;
+    .imgContainer{
+        width: 44.25rem;
+        height: 30.5rem;
         border-radius: 10px;
         animation-name: slide-img;
         animation-iteration-count: 1;
@@ -229,20 +205,20 @@ section{
             font-size: 20px;
         }
     }
-hr{
-	border-color: #f05913;
-    margin: 10px auto;
-    width: 80vw;
-}
 
-aside{
-	text-align: center;
-}
+    .mainIndex{
+        margin-bottom: 5rem;
+    }
+    .carousel{
+        margin: 5rem auto;
+        
+    }
+    .carousel img{
+        height: 30rem;
+        border-radius: 10px;
+        object-fit: cover;
 
-aside img{
-    height: 9.37rem; 
-    width: 12.5rem;
-}
+    }
 
 
 
@@ -252,10 +228,10 @@ aside img{
     justify-content: space-between;
     background-color: #faa55f;
     width: 100%;
-    height: 150px;
+    height: 100%
 }
     .footer__directions, .footer__CopyrightContenedor{
-        width: 40%;
+        width: 50%;
         height: 150px;
         display: flex;
     }
@@ -266,21 +242,24 @@ aside img{
         padding: 10px 0 0 10px;
     }
 
-    .footer__mapa, .footer__galipan{
-        border-right: 2px solid #f05913;
-        height: 90px;
-        padding-right: 15px;
+    .ul-links{
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        height: 5rem;
+        list-style-type: none;
     }
-
     footer ul, footer a{
         color: #333;
     }
 
     footer a{
         text-decoration: none;
-        font-size: 18px;
+        font-size: 1.2rem;
     }
-
+    .footer__rrss{
+        outline: auto;
+    }
 
     footer a:hover{
         color:  #888;
@@ -307,7 +286,7 @@ aside img{
     }
     .footer__CopyrightContenedor__rrss ul li i{
         font-size: 40px;
-    }
+    } */
 
     /* CONTACTO*/
 
@@ -719,8 +698,8 @@ aside img{
                 opacity: 1;
             }
         }
-@media screen and (max-width: 480px){
-    /*INICIO*/
+ @media screen and (max-width: 480px){
+    /*INICIO*
     .navBar{
         justify-content: space-between;
         padding-right: 10px;
@@ -1097,4 +1076,4 @@ aside img{
     .gridGalery img:first-child{
         grid-column: 1 / 3;
     }
-}
+} 
