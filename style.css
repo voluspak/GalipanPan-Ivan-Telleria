@@ -442,79 +442,13 @@
         height: 50rem;
         object-fit:fill;
     }
-/* #itemCarruselContainer{
-    border: 5px solid transparent;
-    border-radius: 10px;
-    height: 800px;
-    width: 600px;
-    overflow: hidden;
-    margin: 10px auto;
-}
-
-#itemCarruselContainer i{
-    color: rgba(255, 140, 0, 0.801);
-    font-size: 40px;
-}
-
-#itemCarruselContainer div img{
-    width: 100%;
-    height: 100%;
-}
-
-.itemCarrusel{
-    height: 800px;
-    width: 600px;
-    position: relative;
-
-}
-
-.tarjetaCarrusel{
-    height: 100%;
-    width: 100%;
-}
-
-.flechasCarrusel-A, .flechasCarrusel-B{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-
-.flechasCarrusel-A{
-    justify-content: end;
-}
-
-.flechasCarrusel-B{
-    justify-content: start;
-}
-
-#tarjetaCarrusel-A{
-    background-color: green;
-}
-
-
-#tarjetaCarrusel-B{
-    background-color: grey;
-} */
-
 
     /*SOBRE NOSOTROS*/
-
-.navBar-historia{
-    padding-top: 2.5rem;
-    padding-bottom: 1.25rem;
-}
+ 
 .historiaContainer{
     width: 100%;
     height: 62.5rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
     .historia-A, .historia-B{
@@ -536,7 +470,8 @@
     }
 
     .historia__superior h1{
-        font-size: 60px;
+        font-size: 3rem;
+        width: 100%;
     }
 
     .animacion-h1-historia{
@@ -594,7 +529,7 @@
 
     .rolesHistoria{
         background-image: url("./assets/rol1.jpg");
-    }
+    } 
 
     /*DELIVERY*/
 .deliveryMainContainer{
