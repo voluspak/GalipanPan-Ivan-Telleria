@@ -604,7 +604,19 @@
     
     /*GALERIA*/
 
-    .gridGalery{
+    .container{
+        width: 100vw;
+    }
+    .galeria-container .col-lg-4{
+        padding: 1rem;
+        margin: 0 !important;
+    }
+
+    .galeria-container img{
+        width: 100%;
+        height: 30rem;
+    }
+    /* .gridGalery{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
         grid-gap: 10px;
@@ -639,7 +651,7 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-        }
+        } */
  @media screen and (max-width: 480px){
     /*INICIO*
     .navBar{

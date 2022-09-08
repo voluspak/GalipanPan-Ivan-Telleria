@@ -3,106 +3,142 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script src="https://kit.fontawesome.com/4619c90884.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-	<title>Contacto</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Galeria</title>
 </head>
 <body>
-    <header>
-        <div class="navBar__container">
-            <nav>
-                <div class="navBar">
-                    <a href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>	
-                    <ul class="navBar__ul">
-                        <li><a href="../index.html">Inicio</a></li>
-                         <li><a href="./menu.html">Menú</a></li>
-                         <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                         <li><a href="./contacto.html">Contacto</a></li>
-                         <li><a href="./galeria.html">Galeria</a></li>
-                     </ul>
-                     <div class="navBar__ul-responsive-container">
-                         <ul class="navBar__ul-responsive">
-                             <li><a href="../index.html">Inicio</a></li>
-                             <li><a href="./menu.html">Menú</a></li>
-                             <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                             <li><a href="./contacto.html">Contacto</a></li>
-                             <li><a href="./galeria.html">Galeria</a></li>
-                         </ul>
-                     </div>
-                     <a href="./delivery.html" class="navBar__button">Delivery</a>
-                         <i class="fa-solid fa-bars"></i>
-                 </div>	
-             </nav>
-         </div>  
-    </header>
+	<div class="Container">
+        <header class="row">
+			<nav class="navbar navbar-expand-lg bg-light col">
+				<div class="container-fluid">		
+					<a class="navbar-brand" href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse navBar-links" id="navbarText">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                               <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+						    <li class="nav-item">
+					    		<a class="nav-link" aria-current="page" href="./menu.html">Menú</a>
+					    	</li>
+					    	<li class="nav-item">
+					    		<a class="nav-link active" href="./sobrenosotros.html">Sobre Nosotros</a>
+					    	</li>
+					    	<li class="nav-item">
+					    		<a class="nav-link" href="./contacto.html">Contacto</a>
+					    	</li>
+					    	<li class="nav-item">
+					    		<a class="nav-link" href="./galeria.html">Galeria</a>
+					    	</li>
+					    </ul>
+					    <span class="navbar-text">
+					    	<a href="./delivery.html" class="navBar__button">Delivery</a>
+					    </span>
+					</div>
+				</div>
+			</nav>
+        </header>
 
-    <main>
-        <div class="gridGalery">
-            <img src="https://cdn.pixabay.com/photo/2020/04/23/22/24/cinamonn-5084293_960_720.jpg" alt="Roles en bandeja">
-            <img src="https://cdn.pixabay.com/photo/2021/06/12/02/39/cinnamon-swirls-6329832_960_720.jpg" alt="roles con glaseado">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/299878250_470448285091238_8974535418520004790_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=WR-OxQEoAzMAX_N8FDP&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8E5SCn_w66I8rdthxfSb41qg17BgTzOhPL17u21nBPCw&oe=631E742F" alt="Roles de canela">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/294085884_449290613873672_7743864095973559491_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pZ5uci6CTXUAX87Hsi6&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8zf6x75GawtVDVieHSMDRZjXQReCvaVMLrbUHqnNguEg&oe=631E6821" alt="Cupcakes">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/281756081_404119275057473_8147131171179316333_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Ksc1DpHLw64AX9liTb2&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8Fi3dQf4oRd3wQPEuHua3cu24VL1bNxeqGBpjsjt0dtg&oe=631D8CCB" alt="Roles con topping">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/275245353_500589481671364_4489951864974877704_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=Y_TyvZOSPkwAX9poDBZ&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8zEawPgrrOK-Mgv4xH86aU56gMLry_CXFg_4yh4HHC2Q&oe=631E91A3" alt="TortaRol">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/273623574_481831060213873_8305367172423574521_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a26aad&_nc_ohc=QDcxaUOt7v0AX8Da4Wk&_nc_oc=AQnjH61CyAJeg9cGezeHtT32YUlWbOQsS68mxWhPx_T08IPgvHMxlx77FsGeQmFxGrg&_nc_ht=scontent.fccs8-1.fna&oh=00_AT_sDAX4IcA7FMI_THckcRvvzdx7pZuZxoyV-x-YHzM0dA&oe=631E1429" alt="TortaRol">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/273479391_481109503619362_9193888661732089656_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_ohc=ufdivDSxil0AX-9IdDb&_nc_oc=AQliPLhJX2kYhuk1fLZi8HvqKmaFMfou5scrCynLxTmJl_30aDFydhghCG-DsPROab4&_nc_ht=scontent.fccs8-1.fna&oh=00_AT-nsHj4W6DBQ2_foRAgTsYECoBKF7CJvwd1QxAqLbFI7w&oe=631CD6C2" alt="Cupcakes">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/248544597_416610626735917_554174718772446078_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a26aad&_nc_ohc=_PGtgEUsD9sAX-5A15B&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9P00CDepwI0Vdsl6V4JXEz-Hb3OMCbqlrLQuceUKZaIw&oe=631D9989" alt="Pan de Jamon">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/151301783_250971129966535_287671205404114266_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=ytydLjNzwLEAX-vLiHj&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9xnyhhroydsInqHnXapGcGKvpgmS-9ZO5cFgdOznq2Zw&oe=633F99DA" alt="Cupcakes">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/143044781_237552314641750_7001580708192702594_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=UtsAnsrEQnoAX8PI8lg&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9pTZRgXAfBl_HwGdN_3QY6qrfVMK9Clh2DZ1hBN2SuXg&oe=633CC5EF" alt="Trufas">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/126104815_183679976695651_1785820322291750777_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=mvUmUEMDvWUAX87sRCN&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9euawl9ydq4NYCgAI4160fHsqyGh5h-Pz3IE5tsL--Jw&oe=633DD0B1" alt="Roles">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/122057259_174025857661063_7835663444188014733_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=NKVQsX9TEFIAX_A7LX3&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9wuGOg4u1b4NCYaiOVtqgY6q7CuIEVwwZtLLmuotAT_g&oe=633D2FF7" alt="OreoRol">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/118086440_154380789625570_7450832419669074415_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=tlspywz6ydIAX9eIHWE&_nc_ht=scontent.fccs8-1.fna&oh=00_AT96YsMNEfw3mq0YWxxyAwSYWLREnA0EvVkJNuSISnwwJg&oe=633CDFEE" alt="Pretzel">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/117603546_151985239865125_2238287532394100474_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=L8YI9LmZGNkAX-OljCk&_nc_ht=scontent.fccs8-1.fna&oh=00_AT__sZ6yVDBc5qw5elcKqcdKpFlV4x21X2X7xiuXYsC_Yg&oe=634035C8" alt="Pretzel">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/106923968_138197854577197_132066261033848031_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XaBpbIahWfYAX8dBfCi&_nc_ht=scontent.fccs8-1.fna&oh=00_AT-G1I5Rzq6_29cY5piU3Xs_ngXPW-rTwOoZS1G3dmDVJw&oe=633FF27F" alt="Brownie">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/106789365_136591654737817_9028487703603027086_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9267fe&_nc_ohc=fLIoZV2-FNgAX-I42rv&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9-xQWYVIrzg8WaE1qhRaf0TaffxFkhRJVwNwvJdrEWDw&oe=633CA8E3" alt="Pan">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/117763214_153403383056644_7151967102632790414_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=5u5I-Yis3W8AX-tffrw&_nc_ht=scontent.fccs8-1.fna&oh=00_AT92PKtXwTnN5CiSxYqqfI3rTjkGXTDARIdGQJeBCQv3pQ&oe=634023F9" alt="Golfeado">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/128695861_196091568787825_884610182448639186_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=WEwBHI375ukAX8Xguam&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8UEqwX79sCmblQ-fE5Tt8d3hD4kvOqGllrue_MG4tiag&oe=633E02B6" alt="PizzaRol">
-            <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/136074232_223323472731301_912798487635430126_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a26aad&_nc_ohc=kMUYQucssLsAX_efAAo&_nc_ht=scontent.fccs8-1.fna&oh=00_AT-l0BQKXdCQnP45wYZ4b-rtVl9kj_BxPa1Sip05LVizfA&oe=633F7986" alt="Pan de Jamon">
+    <main class="galeria-container text-center pb-5">
+        <h1 class="p-5">Fotos</h1>
+        <div class="gridGalery row">
+            <div class="col-lg-4">
+                <img src="https://cdn.pixabay.com/photo/2020/04/23/22/24/cinamonn-5084293_960_720.jpg" alt="Roles en bandeja">
+            </div>   
+            <div class="col-lg-4">   
+                <img src="https://cdn.pixabay.com/photo/2021/06/12/02/39/cinnamon-swirls-6329832_960_720.jpg" alt="roles con glaseado">
+            </div> 
+            <div class="col-lg-4"> 
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/299878250_470448285091238_8974535418520004790_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=WR-OxQEoAzMAX_N8FDP&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8E5SCn_w66I8rdthxfSb41qg17BgTzOhPL17u21nBPCw&oe=631E742F" alt="Roles de canela">
+            </div>
+            <div class="col-lg-4"> 
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/294085884_449290613873672_7743864095973559491_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=pZ5uci6CTXUAX87Hsi6&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8zf6x75GawtVDVieHSMDRZjXQReCvaVMLrbUHqnNguEg&oe=631E6821" alt="Cupcakes">
+            </div> 
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/281756081_404119275057473_8147131171179316333_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Ksc1DpHLw64AX9liTb2&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8Fi3dQf4oRd3wQPEuHua3cu24VL1bNxeqGBpjsjt0dtg&oe=631D8CCB" alt="Roles con topping">
+            </div> 
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/275245353_500589481671364_4489951864974877704_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=Y_TyvZOSPkwAX9poDBZ&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8zEawPgrrOK-Mgv4xH86aU56gMLry_CXFg_4yh4HHC2Q&oe=631E91A3" alt="TortaRol">
+            </div>    
+            <div class="col-lg-4">    
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/273623574_481831060213873_8305367172423574521_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a26aad&_nc_ohc=QDcxaUOt7v0AX8Da4Wk&_nc_oc=AQnjH61CyAJeg9cGezeHtT32YUlWbOQsS68mxWhPx_T08IPgvHMxlx77FsGeQmFxGrg&_nc_ht=scontent.fccs8-1.fna&oh=00_AT_sDAX4IcA7FMI_THckcRvvzdx7pZuZxoyV-x-YHzM0dA&oe=631E1429" alt="TortaRol">
+            </div> 
+            <div class="col-lg-4">  
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/273479391_481109503619362_9193888661732089656_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_ohc=ufdivDSxil0AX-9IdDb&_nc_oc=AQliPLhJX2kYhuk1fLZi8HvqKmaFMfou5scrCynLxTmJl_30aDFydhghCG-DsPROab4&_nc_ht=scontent.fccs8-1.fna&oh=00_AT-nsHj4W6DBQ2_foRAgTsYECoBKF7CJvwd1QxAqLbFI7w&oe=631CD6C2" alt="Cupcakes">
+            </div>  
+            <div class="col-lg-4">  
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t39.30808-6/248544597_416610626735917_554174718772446078_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a26aad&_nc_ohc=_PGtgEUsD9sAX-5A15B&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9P00CDepwI0Vdsl6V4JXEz-Hb3OMCbqlrLQuceUKZaIw&oe=631D9989" alt="Pan de Jamon">
+            </div>  
+            <div class="col-lg-4">  
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/151301783_250971129966535_287671205404114266_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=ytydLjNzwLEAX-vLiHj&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9xnyhhroydsInqHnXapGcGKvpgmS-9ZO5cFgdOznq2Zw&oe=633F99DA" alt="Cupcakes">
+            </div>  
+           <div class="col-lg-4">   
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/143044781_237552314641750_7001580708192702594_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=UtsAnsrEQnoAX8PI8lg&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9pTZRgXAfBl_HwGdN_3QY6qrfVMK9Clh2DZ1hBN2SuXg&oe=633CC5EF" alt="Trufas">
+            </div>  
+            <div class="col-lg-4">  
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/126104815_183679976695651_1785820322291750777_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=mvUmUEMDvWUAX87sRCN&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9euawl9ydq4NYCgAI4160fHsqyGh5h-Pz3IE5tsL--Jw&oe=633DD0B1" alt="Roles">
+            </div> 
+            <div class="col-lg-4">    
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/122057259_174025857661063_7835663444188014733_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=NKVQsX9TEFIAX_A7LX3&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9wuGOg4u1b4NCYaiOVtqgY6q7CuIEVwwZtLLmuotAT_g&oe=633D2FF7" alt="OreoRol">
+            </div>
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/118086440_154380789625570_7450832419669074415_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=tlspywz6ydIAX9eIHWE&_nc_ht=scontent.fccs8-1.fna&oh=00_AT96YsMNEfw3mq0YWxxyAwSYWLREnA0EvVkJNuSISnwwJg&oe=633CDFEE" alt="Pretzel">
+            </div>
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/117603546_151985239865125_2238287532394100474_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=L8YI9LmZGNkAX-OljCk&_nc_ht=scontent.fccs8-1.fna&oh=00_AT__sZ6yVDBc5qw5elcKqcdKpFlV4x21X2X7xiuXYsC_Yg&oe=634035C8" alt="Pretzel">
+            </div>
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/106923968_138197854577197_132066261033848031_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XaBpbIahWfYAX8dBfCi&_nc_ht=scontent.fccs8-1.fna&oh=00_AT-G1I5Rzq6_29cY5piU3Xs_ngXPW-rTwOoZS1G3dmDVJw&oe=633FF27F" alt="Brownie">
+            </div>
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/106789365_136591654737817_9028487703603027086_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9267fe&_nc_ohc=fLIoZV2-FNgAX-I42rv&_nc_ht=scontent.fccs8-1.fna&oh=00_AT9-xQWYVIrzg8WaE1qhRaf0TaffxFkhRJVwNwvJdrEWDw&oe=633CA8E3" alt="Pan">
+            </div>
+            <div class="col-lg-4">
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/117763214_153403383056644_7151967102632790414_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=5u5I-Yis3W8AX-tffrw&_nc_ht=scontent.fccs8-1.fna&oh=00_AT92PKtXwTnN5CiSxYqqfI3rTjkGXTDARIdGQJeBCQv3pQ&oe=634023F9" alt="Golfeado">
+            </div>    
+            <div class="col-lg-4">    
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/128695861_196091568787825_884610182448639186_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=WEwBHI375ukAX8Xguam&_nc_ht=scontent.fccs8-1.fna&oh=00_AT8UEqwX79sCmblQ-fE5Tt8d3hD4kvOqGllrue_MG4tiag&oe=633E02B6" alt="PizzaRol">
+            </div>  
+            <div class="col-lg-4">  
+                <img src="https://scontent.fccs8-1.fna.fbcdn.net/v/t1.6435-9/136074232_223323472731301_912798487635430126_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a26aad&_nc_ohc=kMUYQucssLsAX_efAAo&_nc_ht=scontent.fccs8-1.fna&oh=00_AT-l0BQKXdCQnP45wYZ4b-rtVl9kj_BxPa1Sip05LVizfA&oe=633F7986" alt="Pan de Jamon">
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="row">
         <div class="footerContainer">
             <div class="footer__responsive">
                 <h2 class="footer__hs">Mapa del Sitio</h2>
                 <ul class="footer__ul">
-                    <li><a href="./menu.html">Menú</a></li>
-                    <li><a href="./delivery.html">Pedido Online</a></li>
-                    <li><a href="./galeria.html">Galeria</a></li>
-                    <li><a href="./contacto.html">Contactanos</a></li>
-                    <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./paginas/menu.html">Menú</a></li>
+                    <li><a href="./paginas/galeria.html">Galeria</a></li>
+                    <li><a href="./paginas/delivery.html">Pedido Online</a></li>
+                    <li><a href="./paginas/contacto.html">Contactanos</a></li>
+                    <li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
                     <li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
                     <li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
                 </ul>
             </div>
             <div class="footer__directions">
-                <div class="footer__mapa">
+                <div class="footer__mapa col text-center">
                     <h2 class="footer__hs">Mapa del Sitio</h2>
-                    <ul class="footer__ul">
-                        <li><a href="./menu.html">Menú</a></li>
-                        <li><a href="./delivery.html">Pedido Online</a></li>
-                        <li><a href="./contacto.html">Contactanos</a></li>
-                        <li><a href="./galeria.html">Galeria</a></li>
+                    <ul class="footer__ul ul-links">
+                        <li><a href="./paginas/menu.html">Menú</a></li>
+                        <li><a href="./paginas/delivery.html">Pedido Online</a></li>
+                        <li><a href="./paginas/contacto.html">Contactanos</a></li>
+                        <li><a href="./paginas/galeria.html">Galeria</a></li>
+                        <li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
                     </ul>
-                </div>
-                <div class="footer__galipan">
-                    <h3 class="footer__hs">Galipan Pan</h3>
-                    <ul class="footer__ul">
-                        <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                    </ul>
-                </div>
-                <div class="footer__rrss">
-                    <h3 class="footer__hs">Redes Sociales</h3>
-                    <ul class="footer__ul">
-                        <li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
-                    </ul>	
                 </div>
             </div>	
-            <div class="footer__CopyrightContenedor">
+            <div class="footer__CopyrightContenedor col">
                 <div class="footer__CopyrightContenedor__rrss">
                     <ul>
                         <li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
@@ -115,5 +151,6 @@
         </div>
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
