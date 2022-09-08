@@ -3,129 +3,120 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../style.css">
 	<script src="https://kit.fontawesome.com/4619c90884.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-	<title>Contacto</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Galipan Pan</title>
 </head>
 <body>
-    <div class="responsiveContainer-b">
-        <header>
-            <div class="navBar__container">
-                <nav>
-                    <div class="navBar">
-                        <a href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>	
-                        <ul class="navBar__ul">
-                            <li><a href="../index.html">Inicio</a></li>
-                            <li><a href="./menu.html">Menú</a></li>
-                            <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                            <li><a href="./contacto.html">Contacto</a></li>
-                            <li><a href="./galeria.html">Galeria</a></li>
-                        </ul>
-                        <div class="navBar__ul-responsive-container">
-                            <ul class="navBar__ul-responsive">
-                                <li><a href="../index.html">Inicio</a></li>
-                                <li><a href="./menu.html">Menú</a></li>
-                                <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-                                <li><a href="./contacto.html">Contacto</a></li>
-                                <li><a href="./galeria.html">Galeria</a></li>
-                            </ul>
-                        </div>
-                        <a href="./delivery.html" class="navBar__button">Delivery</a>
-                            <i class="fa-solid fa-bars"></i>
-                    </div>	
-                </nav>
-            </div>  
+	<div class="Container">
+        <header class="row">
+			<nav class="navbar navbar-expand-lg bg-light col">
+				<div class="container-fluid">		
+					<a class="navbar-brand" href="../index.html"><img src="../assets/Logo.jpg" alt="Logo Galian Pan"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse navBar-links" id="navbarText">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link  active" aria-current="page" href="./menu.html">Menú</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./sobrenosotros.html">Sobre Nosotros</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./contacto.html">Contacto</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./galeria.html">Galeria</a>
+						</li>
+						</ul>
+						<span class="navbar-text">
+							<a href="./delivery.html" class="navBar__button">Delivery</a>
+						</span>
+					</div>
+				</div>
+			</nav>
         </header>
+
         <main class="mainContainerContacto">	
             <div class="mainContainer">
-                <div class="textoContactanos">
+                <div class="textoContactanos row col-md-12 text-center">
                     <h1>¡Contactanos!</h1>
                         <p>Puedes dejarnos tus datos en el siguiente formulario<br>
                         ¡Nos pondremos en contacto contigo en la brevedad!</p>
                         <p>También nos puedes contactar via <a href="https://api.whatsapp.com/send?phone=573173934277" target="_blank"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></p>
                 </div>
         
-                <div class="formContainer">
-                    <h2>Dejanos tu datos de contacto</h2>
-                    <form class="formFieldset">	
-                                <div>
-                                    <label>Nombres y Apellidos</label><br>
-                                    <input class="formFieldset__inputs inputBorder" type="name" placeholder="Nombres y Apellidos" required><br>
-                                </div>
-                                <div>
-                                    <label>Mail de contacto</label><br>
-                                    <input class="formFieldset__inputs inputBorder" type="email" placeholder="Mail" required ><br>
-                                </div>
-                                <div>
-                                    <label>Motivo del contacto</label><br>
-                                    <select required class="formFieldset__inputs inputBorder">
-                                        <option selected disabled>Seleccione un motivo</option>
-                                        <option>Consulta</option>
-                                        <option>Pedido Mayorista</option>
-                                        <option>Franquicias</option>
-                                       <option>Búsqueda de empleo</option>
-                                    </select><br>					
-                                </div>
-                                <div>
-                                    <label>Numero telefónico</label><br>
-                                 <input type="number" placeholder="123456789" class="formFieldset__inputs inputBorder"><br>
-                                </div>
-                                <div>
-                                    <label>Dejanos tu comentario</label><br>
-                                    <textarea placeholder="Escribe aquí tu comentario..." required class="inputBorder"></textarea><br>
-                                </div>
-                                <div class="formFieldset_buttons">
-                                    <input type="submit" placeholder="Enviar" class="formFieldset__enviar"> 
-                                    <input type="reset" class="formFieldset__reset">
-                                </div>
-                    </form>
+                <form class="row g-3 form-contacto text-center">
+                    <h2>Dejanos tu datos de contacto</h2>   
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="name" class="form-control" id="floatingInput" placeholder="name">
+                        <label for="floatingInput">Nombre</label>
+                      </div>
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Mail</label>
+                    </div>
+
+                        <div class="form-floating col-md-6">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                              <option selected disabled>Motivo de Consulta</option>
+                              <option>Consulta</option>
+                              <option>Pedido Mayorista</option>
+                              <option>Franquicias</option>
+                              <option>Búsqueda de empleo</option>	
+                            </select>
+                        </div>
+                    <div class="form-floating mb-3 col-md-6">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Teléfono</label>
+                      </div>
+                      <div class="form-floating col-md-6">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Escribe aqui tu comentario..</label>
+                      </div>
+                    <div class="col-md-6 form-contacto__button">
+                      <button type="submit" class="form-contacto__button-send">Enviar</button>
+                      <button type="reset" class="form-contacto__button-reset">Restablecer</button>
+                    </div>
+                  </form>
                 </div>
             </div>
         </main>
 
 
-        <footer>
+		<footer class="row">
 			<div class="footerContainer">
 				<div class="footer__responsive">
 					<h2 class="footer__hs">Mapa del Sitio</h2>
 					<ul class="footer__ul">
-						<li><a href="./menu.html">Menú</a></li>
-						<li><a href="./delivery.html">Pedido Online</a></li>
-                        <li><a href="./galeria.html">Galeria</a></li>
-						<li><a href="./contacto.html">Contactanos</a></li>
-						<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
+						<li><a href="./paginas/menu.html">Menú</a></li>
+						<li><a href="./paginas/galeria.html">Galeria</a></li>
+						<li><a href="./paginas/delivery.html">Pedido Online</a></li>
+						<li><a href="./paginas/contacto.html">Contactanos</a></li>
+						<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
 						<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
 						<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
 					</ul>
 				</div>
 				<div class="footer__directions">
-					<div class="footer__mapa">
+					<div class="footer__mapa col text-center">
 						<h2 class="footer__hs">Mapa del Sitio</h2>
-						<ul class="footer__ul">
-							<li><a href="./menu.html">Menú</a></li>
-							<li><a href="./delivery.html">Pedido Online</a></li>
-							<li><a href="./contacto.html">Contactanos</a></li>
-                            <li><a href="./galeria.html">Galeria</a></li>
+						<ul class="footer__ul ul-links">
+							<li><a href="./paginas/menu.html">Menú</a></li>
+							<li><a href="./paginas/delivery.html">Pedido Online</a></li>
+							<li><a href="./paginas/contacto.html">Contactanos</a></li>
+							<li><a href="./paginas/galeria.html">Galeria</a></li>
+							<li><a href="./paginas/sobrenosotros.html">Sobre Nosotros</a></li>
 						</ul>
-					</div>
-					<div class="footer__galipan">
-						<h3 class="footer__hs">Galipan Pan</h3>
-						<ul class="footer__ul">
-							<li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-						</ul>
-					</div>
-					<div class="footer__rrss">
-						<h3 class="footer__hs">Redes Sociales</h3>
-						<ul class="footer__ul">
-							<li><a href="https://www.instagram.com/galipanpan/" target="_blank">Instagram</a></li>
-							<li><a href="https://www.facebook.com/galipanpan" target="_blank">Facebook</a></li>
-						</ul>	
 					</div>
 				</div>	
-				<div class="footer__CopyrightContenedor">
+				<div class="footer__CopyrightContenedor col">
 					<div class="footer__CopyrightContenedor__rrss">
 						<ul>
 							<li><a href="https://www.instagram.com/galipanpan/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
@@ -137,6 +128,7 @@
 				</div>
 			</div>
 		</footer>
-    </div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

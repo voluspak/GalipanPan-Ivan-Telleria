@@ -290,27 +290,20 @@
 
     /* CONTACTO*/
 
-.mainContainer{
-    width: 50rem;
-    height: 62.5rem;
-    margin: auto;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-}
+    .mainContainerContacto{
+        margin-top: 10rem;
+    }
 
     .textoContactanos{
-        height: 30%;
-        width: 100%;
+        margin-top: 5rem;
         display: flex;
-        flex-flow: column wrap;
+        flex-direction: column;
         justify-content: space-around;
-        align-items: center;
     }
 
         .textoContactanos h1{
             font-size: 80px;
+            margin-bottom: 3rem;
         }
 
         .textoContactanos p{
@@ -331,103 +324,110 @@
         .textoContactanos a{
             text-decoration: none;
         }
-    .formContainer{
-        height: 70%;
-        width: 100%;
+
+    .form-contacto{
         display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 5rem;
     }
-    .formContainer h2{
+
+    .form-contacto h2{
         text-align: center;
         color: rgb(230, 129, 5);
         font-size: 40px;
     }
-    .formFieldset{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: flex-start;
-        font-size: 25px;
-        height: 200px;
-        border-radius: 5px;
 
+    .form-contacto label{
+        font-size: 1.5rem;
     }
-
-    .formFieldset div{
-        display: flex;
-        flex-flow: column;
-        margin: 0px 10px;
-        margin: auto;
-    }
-
-    .formFieldset div label{
-        margin-bottom: -20px;
-    }
-
-    .formFieldset__inputs{
-        font-size: 20px;
-        height: 23px;
+    .form-contacto select{
+        font-size: 1.3rem;
+        width: 15rem;
         border: none;
-        padding-left: 5px;
-    }
-
-    .inputBorder{
         border-bottom: 2px solid rgb(255, 140, 0);
+        padding-left: 5px;
+        border-radius: 0;
     }
 
-    .inputBorder:focus{
-        background: linear-gradient(to bottom, transparent, rgba(248, 207, 157, 0.63));
+    .form-contacto select:focus{
+        background: linear-gradient(to bottom, transparent, rgba(252, 136, 5, 0.521));
         outline: none;
+        box-shadow: none;
+        border-bottom: 1px solid rgb(255, 140, 0);
+    }
+    .form-contacto input{
+        font-size: 20px;
+        height: 1.2rem;
+        width: 15rem;
+        border: none;
+        border-bottom: 2px solid rgb(255, 140, 0);
+        padding-left: 5px;
+        border-radius: 0;
     }
 
-    .formContainer textarea{
-        height: 200px;
-        width: 300px;
-        min-width: 300px;
-        min-height: 200px;
-        max-height: 220px;
-        max-width: 320px;
-        font-size: 20px;
+    .form-contacto input:focus{
+        background: linear-gradient(to bottom, transparent, rgba(252, 136, 5, 0.521));
+        outline: none;
+        box-shadow: none;
+        border-bottom: 1px solid rgb(255, 140, 0);
+    }
+
+    .form-contacto textarea{
+        height: 12.5rem;
+        width: 20rem;
+        min-width: 18.75rem;
+        min-height: 12.5rem;
+        max-height: 13.75rem;
+        max-width: 22rem;
+        font-size: 1.25rem;
         border: none;
         border-bottom: 1px solid rgb(255, 140, 0);
         padding-left: 5px;
     }
 
-    .formContainer textarea:focus{
+    .form-contacto textarea:focus{
         background: linear-gradient(to bottom, transparent, rgba(248, 207, 157, 0.63));
-        outline: none;
+        outline:  5px solid rgba(255, 166, 0, 0.87);
+        box-shadow: 5px solid rgb(255, 140, 0);
     }
 
-    .formFieldset__enviar{
+    .form-contacto__button{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-contacto__button-send,
+    .form-contacto__button-reset{
+        padding: 5px;
+    }
+
+    .form-contacto__button-send{
         background-color: rgb(255, 140, 0);
         color: #fff;
         border-radius: 5px;
         font-size: 20px;
         border: 1px solid transparent;
-        padding: 5px;
-        margin: 5px;
+        width: 8rem;
+        margin-bottom: .5rem; 
     }
-    .formFieldset__reset{
+    .form-contacto__button-reset{
         background-color: #fff;
         color: rgb(255, 140, 0);
         font-size: 20px;
         border: 1px solid rgb(247, 156, 45);
         border-radius: 5px;
-        padding: 5px;
-        margin: 5px;
+        width: 10rem;
     }
-
-    .formFieldset__enviar:hover, .formFieldset__reset:hover{
-        cursor: pointer;
-    }
-
-    .formFieldset__enviar:active{
+    .form-contacto__button-send:active{
         background-color: #fff;
         color: rgb(255, 140, 0);
         border: 1px solid rgb(247, 156, 45);
     }
-    .formFieldset__reset:active{
+    .form-contacto__button-reset:active{
         background-color: rgb(255, 140, 0);
         color: #fff;
         
