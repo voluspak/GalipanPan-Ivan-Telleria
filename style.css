@@ -14,21 +14,13 @@
  .footer__responsive{
     display: none;
  }
-/* .navBar__container{
-    margin-bottom: 25px;
-  
-}
-*/  .container-fluid{
+
+ .container-fluid{
         background-color: #fff;
     }
-    .navbar-nav{
-        margin-left: 5rem;
-        list-style-type: none;
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-around;
-        width: 40.62rem;
 
+    .navbar-nav{
+        margin-left: 10rem;
     }
 
     .navbar-brand img{
@@ -62,8 +54,8 @@
         font-weight: bold;
         color: #fff !important;
         text-decoration: none;
-        margin-right: 5rem;
         transition: background-color color .1s ease;
+        margin-right: 3rem;
     }
 
     .navBar__button:hover{
@@ -532,21 +524,10 @@
     } 
 
     /*DELIVERY*/
-.deliveryMainContainer{
-    width: 100%;
-    height: 145vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    .itemCard{
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        max-width: 1000px;
-        justify-content: center;
-
+ 
+    .cards-container{
+        width: 80vw;
+        margin: auto;
     }
         .card{
             width: 25%;
@@ -569,22 +550,17 @@
             height: 210px;
         }
 
-        .card .content{
-            padding: 15px;
-            text-align: center;
-
-        }
-        .card .content p{
+        .card p{
             line-height: 1.5;
             color: #6a6a6a;    
         }
 
-        .card .content h3{
+        .card-title{
             color: #fa8925;
             margin-bottom: 15px;
         }
 
-        .card .content button{
+        .card a{
             display: inline-block;
             padding: 10px;
             margin-top: 10px;
@@ -594,19 +570,17 @@
             border-radius: 4px;
             transition: all 400ms ease;
             font-weight: bold;
+            text-decoration: none;
         }
 
-        .card .content button:hover{
+        .card a:hover{
             background-color: #ff6e2b;
             color: #fff;
             cursor: pointer;
-        }
+        } 
     
     /*GALERIA*/
 
-    .container{
-        width: 100vw;
-    }
     .galeria-container .col-lg-4{
         padding: 1rem;
         margin: 0 !important;
