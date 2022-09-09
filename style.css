@@ -755,13 +755,14 @@
     /*MENU*/
 
     .mainContainerMenu{
-        height: 40rem;
+        width: 100%;
+        margin: auto;
     }
-    #itemCarruselContainer,
-    .itemCarrusel{
-        height: 37.5rem;
-        width: 20rem;
+    .carousel-item img{
+        height: 35rem;
+        object-fit:fill;
     }
+
 
     /*SOBRE NOSOTROS*/
 
