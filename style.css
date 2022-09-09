@@ -455,7 +455,7 @@
         align-items: center;
     }
 
-    .historia-A div, .logoHistoria, .historia-B div{ 
+    .historia-A div, .historia-B div{ 
         width: 50%;
         height: 100%;
         display: flex;
@@ -766,76 +766,59 @@
 
     /*SOBRE NOSOTROS*/
 
-    .navBar-historia{
-    justify-content: space-around;
-    }
-
     .historiaContainer{
-        height: 150rem;
+        height: 120rem;
     }
-    .historia-A div, .logoHistoria, .historia-B div{ 
-        width: 100%;
-        height: 50%;
-    }
-
-    .historia-A, .historia-B{
-        width: 100%;
-        height: 40%;
-    }
-    .animacion-h1-historia{
-        animation: none;
-    }
-    .historia__superior h1{
-        font-size: 45px;
-        line-height: 4rem;
-    }
-
-    .historia__superior{
-        text-align: center;
-        order: 2;
-        margin-bottom: -8rem;
-    }
-
-    .historia__inferior{
-        text-align: center;
-        order: 4;
-    }
-
-    .parallax-a{
-        background-position: 50% 50%;
-        background-size: 100% 35%;
-        order: 1;
-    }
-
     
-    .parallax-b{
-        background-size: 100% 60%;
-        background-position: 100% 50%;
-        order: 3;
-    }
+        .historia-A, .historia-B{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .historia-A div, .historia-B div{ 
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-content: center;
+        }
+    
+        .historia__superior h1{
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+    
+        .historia__superior{
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            order: 2;
+        }
+    
+        .historia__inferior{
+            font-size: 1.8rem;
+            line-height: 2rem;
+            text-align: center;
+            order: 4;
+            
+        }
+    
+        .parallax-a{
+            background-position: 50% 40%;
+            background-size: 70% 20%;
+            order: 1;
+        }
+    
+        
+        .parallax-b{
+            background-position: 40% 80%;
+            background-size: 150% 100%;
+            order: 3;
+        }
 
-
-
-    /*DELIVERY*/
-
-    .card{
-        width: 40%;
-        height: 250%;
-        margin: 20px;
-        border-radius: 6px;
-        overflow: hidden;
-        background-color: #fff;
-        box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
-        cursor: default;
-        transition: all 400ms ease;
-    }
-
-    /*GALERY*/
-    .gridGalery{
-        grid-template-columns: 50% 50%;
-    }
-    .gridGalery img:nth-child(13),
-    .gridGalery img:first-child{
-        grid-column: 1 / 3;
-    }
 } 
