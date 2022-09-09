@@ -201,15 +201,18 @@
     .mainIndex{
         margin-bottom: 5rem;
     }
+
+    hr{
+        width: 80vw;
+        border: 2px solid #f05913;
+        margin: auto;
+    }
     .carousel{
         margin: 5rem auto;
         
     }
     .carousel img{
-        height: 30rem;
         border-radius: 10px;
-        object-fit: cover;
-
     }
 
 
@@ -590,31 +593,12 @@
         width: 100%;
         height: 30rem;
     }
-    /* .gridGalery{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-        grid-gap: 10px;
-        grid-auto-rows: 200px;
-        margin: 10px;
+
+    .galeria-container{
         animation-name: galeryAnimation;
         animation-timing-function: ease;
         animation-duration: 1s;
     }
-
-        .gridGalery img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gridGalery img:first-child{
-            grid-column: 1 / span 3;
-            grid-row: 1 / span 2;
-        }
-        .gridGalery img:nth-child(13){
-            grid-column: 3 / 5;
-            grid-row: 4 / 7;
-        }
 
         @keyframes galeryAnimation {
             from{
@@ -625,7 +609,7 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-        } */
+        } 
  @media screen and (max-width: 480px){
     /*INICIO*/
 
@@ -672,11 +656,7 @@
     .delivery{
         font-size: 1.1rem;
     }
-    hr{
-        width: 80vw;
-        border: 2px solid #f05913;
-        margin: auto;
-    }
+
     .carousel-inner img{
         height: 20rem;
     }
@@ -752,20 +732,9 @@
     }
     /*CONTACTO*/
 
-    .mainContainerContacto{
-        height: 90rem;
+    .form-contacto{
+        width: 90vw;
     }
-    .mainContainer{
-        width: 100vw;
-        height: 70%;
-    }
-    
-        .textoContactanos,
-        .formContainer{
-            margin-top: -5rem;
-            height: 30%;
-            width: 80%;
-        }
         .textoContactanos h1{
             font-size: 3rem;
         }
@@ -774,10 +743,15 @@
             font-size: 1.6rem;
         }
 
-        .formContainer h2{
-            font-size: 2rem;
+        form div h2{
+            font-size: 1.6rem;
+            width: 100%;
+        } 
+        .form-contacto textarea{
+            width: 15rem;
+            min-width: 15rem;
+            max-width: 20rem;
         }
-
     /*MENU*/
 
     .mainContainerMenu{
