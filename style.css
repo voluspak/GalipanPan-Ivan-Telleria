@@ -281,7 +281,7 @@
     }
     .footer__CopyrightContenedor__rrss ul li i{
         font-size: 40px;
-    } */
+    }
 
     /* CONTACTO*/
 
@@ -610,7 +610,7 @@
                 opacity: 1;
             }
         } 
- @media screen and (max-width: 480px){
+ @media screen and (max-width: 600px){
     /*INICIO*/
 
     .responsiveButton{
@@ -752,6 +752,12 @@
             min-width: 15rem;
             max-width: 20rem;
         }
+        .form-contacto input,
+        .form-contacto select,
+        .form-contacto textarea{
+            width: 100%;
+        }
+        
     /*MENU*/
 
     .mainContainerMenu{
@@ -810,7 +816,7 @@
     
         .parallax-a{
             background-position: 50% 40%;
-            background-size: 70% 20%;
+            background-size: 70% 25%;
             order: 1;
         }
     
@@ -822,3 +828,35 @@
         }
 
 } 
+
+@media screen and (max-width: 400px){
+    /* INDEX */
+    footer{
+        height: 25rem;
+    }
+
+    .footerContainer{
+        grid-template-rows: 50% 50%;
+        place-items: center;
+    }
+
+    .footer__CopyrightContenedor{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .textoYButton__delivery-button{
+        width: 19rem;
+    }
+
+    /* SOBRE NOSOTROS */
+    .historiaContainer{
+        height: 140rem;
+    }
+     
+   /* CONTACTO */
+   .form-contacto textarea{
+    font-size: 1.25rem;
+}
+}
