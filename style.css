@@ -829,7 +829,7 @@
 
 } 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) and (orientation: portrait){
     /* INDEX */
     footer{
         height: 25rem;
