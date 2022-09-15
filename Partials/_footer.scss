@@ -5,7 +5,10 @@
     background-color: #faa55f;
     width: 100%;
     height: 100%;
-
+    
+    .footer__responsive{
+        display: none;
+     }
     .footer__directions, .footer__CopyrightContenedor{
         width: 50%;
         height: 150px;

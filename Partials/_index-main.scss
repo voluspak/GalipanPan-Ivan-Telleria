@@ -1,0 +1,166 @@
+.container-fluid{
+    background-color: #fff;
+}
+
+.mainIndex{
+    margin-bottom: 5rem;
+
+    h1{
+        color: rgb(255, 140, 0);
+        font-size: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 30px;
+        text-align: center;
+
+    }
+
+    .textoSuperior__panaderia{
+        line-height: 30px;
+        letter-spacing: 2.5px;
+        font-size: 20px;
+        i{
+            font-weight: bold;
+        }
+    }
+
+    .textoYButton{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: 14rem;
+        width: 20rem;
+        margin: auto;
+    }
+
+        .textoYButton__prueba{
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 22px;
+        }
+
+        .textoYButton__rollos{
+            color: #f05913;
+            letter-spacing: 1px;
+            font-size: 22px;
+            text-align: start;
+        }
+
+        .textoYButton__delivery-button{
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: space-between;
+            align-items: center;
+            width: 350px;
+        }
+
+        .textoYButton__delivery{
+            line-height: 25px;
+
+        }
+
+        .textoYButton__button{
+            border: solid transparent 1px;
+            border-radius: 3px;
+            background-color: #ff6e2b;
+            padding: 10px 25px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: all .1s;
+            animation-name: boton-añadir;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            overflow: hidden;
+            &:hover{
+                font-size: 21px;
+                margin: -1px;
+                background-color: #ff8040;
+                color: #f0f0f0;
+            }
+        }
+
+    .imgContainer{
+        width: 44.25rem;
+        height: 30.5rem;
+        border-radius: 10px;
+        animation-name: slide-img;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+        overflow: hidden;
+    }
+
+    .textoSuperior,
+    .textoYButton{
+        animation-name: slide-texto;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+    }
+
+    @keyframes slide-img{
+        from{
+            transform: translateX(50rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slide-texto{
+        from{
+            transform: translateX(-20rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes boton-añadir{
+        0%{
+            font-size: 20px;
+        }
+        50%{
+            font-size: 23px;
+        }
+        100%{
+            font-size: 20px;
+        }
+    }
+
+    .mainIndex{
+        margin-bottom: 5rem;
+    }
+    @media screen and (max-width: 600px){
+        .mainIndex{
+            height: 45rem;
+
+            .textoYButton__prueba{
+                font-size: 1.65rem;
+            }
+            .textoYButton__rollos{
+                text-align: center;
+                font-size: 1.8rem;
+            }
+        
+            .delivery{
+                font-size: 1.1rem;
+            }
+        
+        }
+        
+    }
+
+    @media screen and (max-width: 400px) and (orientation: portrait){
+        .textoYButton__delivery-button{
+            width: 19rem;
+        }
+    }
+}

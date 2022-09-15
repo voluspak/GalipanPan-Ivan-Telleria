@@ -744,7 +744,6 @@
             width: 100%;
         } 
         .form-contacto textarea{
-            width: 15rem;
             min-width: 15rem;
             max-width: 20rem;
         }

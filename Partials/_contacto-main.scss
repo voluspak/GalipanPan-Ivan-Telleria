@@ -1,0 +1,45 @@
+.mainContainerContacto{
+    margin-top: 10rem;
+
+
+    .textoContactanos{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        h1{
+            font-size: 80px;
+            margin-bottom: 3rem;
+        }
+        
+        p{
+            font-size: 30px;
+        }
+
+        a, i{
+            color: rgb(116, 201, 77);
+        }
+
+        a{
+            text-decoration: none;
+            &:hover{
+                color: rgb(93, 161, 61); 
+            }
+            &:hover > i{
+                color: rgb(93, 161, 61);
+            }
+        }
+    }
+    @media screen and (max-width: 600px){
+        .textoContactanos{
+
+            h1{
+            font-size: 3rem;
+            }
+            p{
+            font-size: 1.6rem;
+            }
+        }
+    }
+}
