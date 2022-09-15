@@ -1,0 +1,25 @@
+.galeria-container{
+    animation-name: galeryAnimation;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+
+    .col-lg-4{
+        padding: 1rem;
+        margin: 0 !important;
+    }
+    img{
+        width: 100%;
+        height: 30rem;
+    }
+
+    @keyframes galeryAnimation {
+        from{
+            transform: translateY(50rem);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    } 
+}

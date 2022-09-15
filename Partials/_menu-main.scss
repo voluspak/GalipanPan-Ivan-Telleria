@@ -1,0 +1,25 @@
+.mainContainerMenu{
+    width: 50%;
+    margin: auto;
+
+    .carousel-item{
+        img{
+        height: 50rem;
+        object-fit:fill;
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        .mainContainerMenu{
+            width: 100%;
+            margin: auto;
+        
+            .carousel-item{
+                img{
+                height: 35rem;
+                object-fit:fill;
+                }
+            }
+        }
+    }
+}
