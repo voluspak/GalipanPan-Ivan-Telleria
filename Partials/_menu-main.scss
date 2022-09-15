@@ -1,23 +1,22 @@
 .mainContainerMenu{
-    width: 50%;
-    margin: auto;
+    width: 100%;
 
     .carousel-item{
         img{
         height: 50rem;
-        object-fit:fill;
+        object-fit: fill;
+        margin: auto;
         }
     }
 
     @media screen and (max-width: 600px){
         .mainContainerMenu{
-            width: 100%;
-            margin: auto;
-        
+             width: 200%;
             .carousel-item{
                 img{
-                height: 35rem;
-                object-fit:fill;
+                    height: 35rem;
+                    object-fit: fill;
+                    margin: auto;
                 }
             }
         }

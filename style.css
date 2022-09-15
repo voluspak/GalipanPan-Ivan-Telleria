@@ -82,6 +82,14 @@ header .navBar__button:hover {
   width: 100%;
   height: 100%;
 }
+.footerContainer a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.footerContainer a:hover {
+  color: #888;
+}
 .footerContainer .footer__responsive {
   display: none;
 }
@@ -103,18 +111,8 @@ header .navBar__button:hover {
   height: 5rem;
   list-style-type: none;
 }
-.footerContainer footer ul, .footerContainer footer a {
-  color: #333;
-}
-.footerContainer footer a {
-  text-decoration: none;
-  font-size: 1.2rem;
-}
 .footerContainer .footer__rrss {
   outline: auto;
-}
-.footerContainer footer a:hover {
-  color: #888;
 }
 .footerContainer .footer__hs {
   color: rgb(46, 46, 46);
@@ -168,10 +166,11 @@ header .navBar__button:hover {
   .footerContainer .footer__ul {
     display: flex;
     height: 60%;
-    width: 90%;
-    flex-flow: column wrap;
+    width: 100%;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-content: space-around;
+    list-style-type: none;
   }
   .footerContainer .footer__ul a {
     font-size: 1rem;
@@ -187,9 +186,6 @@ header .navBar__button:hover {
   }
 }
 @media screen and (max-width: 400px) and (orientation: portrait) {
-  .footerContainer {
-    /* INDEX */
-  }
   .footerContainer footer {
     height: 25rem;
   }
@@ -245,7 +241,7 @@ header .navBar__button:hover {
   color: rgb(230, 129, 5);
   letter-spacing: 1px;
   font-size: 22px;
-  text-align: start;
+  text-align: center;
 }
 .mainIndex .textoYButton__delivery-button {
   display: flex;
@@ -652,23 +648,23 @@ aside .carousel img {
 }
 
 .mainContainerMenu {
-  width: 50%;
-  margin: auto;
+  width: 100%;
 }
 .mainContainerMenu .carousel-item img {
   height: 50rem;
   -o-object-fit: fill;
      object-fit: fill;
+  margin: auto;
 }
 @media screen and (max-width: 600px) {
   .mainContainerMenu .mainContainerMenu {
-    width: 100%;
-    margin: auto;
+    width: 200%;
   }
   .mainContainerMenu .mainContainerMenu .carousel-item img {
     height: 35rem;
     -o-object-fit: fill;
        object-fit: fill;
+    margin: auto;
   }
 }
 
@@ -696,6 +692,7 @@ aside .carousel img {
 .historiaContainer .historia__superior h1 {
   font-size: 3rem;
   width: 100%;
+  color: rgb(255, 140, 0);
 }
 .historiaContainer .animacion-h1-historia {
   -webkit-animation-name: h1-historia;
@@ -764,7 +761,7 @@ aside .carousel img {
   .historiaContainer .historiaContainer {
     height: 120rem;
   }
-  .historiaContainer .historia-A, .historiaContainer .historia-B {
+  .historiaContainer .historiaContainer .historia-A, .historiaContainer .historiaContainer .historia-B {
     width: 100%;
     height: 40%;
     display: flex;
@@ -772,7 +769,7 @@ aside .carousel img {
     justify-content: space-between;
     align-items: center;
   }
-  .historiaContainer .historia-A div, .historiaContainer .historia-B div {
+  .historiaContainer .historiaContainer .historia-A div, .historiaContainer .historiaContainer .historia-B div {
     width: 100%;
     height: 30%;
     display: flex;
@@ -780,28 +777,28 @@ aside .carousel img {
     justify-content: space-between;
     align-content: center;
   }
-  .historiaContainer .historia__superior h1 {
+  .historiaContainer .historiaContainer .historia__superior h1 {
     font-size: 2rem;
     line-height: 4rem;
   }
-  .historiaContainer .historia__superior {
+  .historiaContainer .historiaContainer .historia__superior {
     font-size: 2rem;
     line-height: 2rem;
     text-align: center;
     order: 2;
   }
-  .historiaContainer .historia__inferior {
+  .historiaContainer .historiaContainer .historia__inferior {
     font-size: 1.8rem;
     line-height: 2rem;
     text-align: center;
     order: 4;
   }
-  .historiaContainer .parallax-a {
+  .historiaContainer .historiaContainer .parallax-a {
     background-position: 50% 40%;
     background-size: 70% 25%;
     order: 1;
   }
-  .historiaContainer .parallax-b {
+  .historiaContainer .historiaContainer .parallax-b {
     background-position: 40% 80%;
     background-size: 150% 100%;
     order: 3;
@@ -809,6 +806,6 @@ aside .carousel img {
 }
 @media screen and (max-width: 400px) and (orientation: portrait) {
   .historiaContainer .historiaContainer {
-    height: 140rem;
+    height: 180rem;
   }
 }/*# sourceMappingURL=style.css.map */
