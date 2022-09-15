@@ -84,69 +84,71 @@
             font-size: 60px;
         }
     }
-
+}
     @media screen and (max-width: 600px){
 
-        .historiaContainer{
-            height: 120rem;
-
-            .historia-A, .historia-B{
-                width: 100%;
-                height: 40%;
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                align-items: center;
-                div{ 
-                    width: 100%;
-                    height: 30%;
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-between;
-                    align-content: center;
-                }    
-            }
-        
-            .historia__superior{
-                h1{
-                font-size: 2rem;
-                line-height: 4rem;
-                }
-            }
-        
-            .historia__superior{
-                font-size: 2rem;
-                line-height: 2rem;
-                text-align: center;
-                order: 2;
-            }
-        
-            .historia__inferior{
-                font-size: 1.8rem;
-                line-height: 2rem;
-                text-align: center;
-                order: 4;
-                
-            }
-        
-            .parallax-a{
-                background-position: 50% 40%;
-                background-size: 70% 25%;
-                order: 1;
-            }
-        
-            
-            .parallax-b{
-                background-position: 40% 80%;
-                background-size: 150% 100%;
-                order: 3;
-            }
-        } 
+   .historiaContainer{
+        height: 120rem;
     }
     
+        .historia-A, .historia-B{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .historia-A div, .historia-B div{ 
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-content: center;
+        }
+    
+        .historia__superior h1{
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+    
+        .historia__superior{
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            order: 2;
+        }
+    
+        .historia__inferior{
+            font-size: 1.8rem;
+            line-height: 2rem;
+            text-align: center;
+            order: 4;
+            
+        }
+    
+        .parallax-a{
+            background-position: 50% 40%;
+            background-size: 70% 25%;
+            order: 1;
+        }
+    
+        
+        .parallax-b{
+            background-position: 40% 80%;
+            background-size: 150% 100%;
+            order: 3;
+        }
+
+
+
+    
+
     @media screen and (max-width: 400px) and (orientation: portrait){
         .historiaContainer{
-            height: 180rem;
+            height: 140rem;
         }
     }
 

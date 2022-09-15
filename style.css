@@ -757,11 +757,12 @@ aside .carousel img {
     font-size: 60px;
   }
 }
+
 @media screen and (max-width: 600px) {
-  .historiaContainer .historiaContainer {
+  .historiaContainer {
     height: 120rem;
   }
-  .historiaContainer .historiaContainer .historia-A, .historiaContainer .historiaContainer .historia-B {
+  .historia-A, .historia-B {
     width: 100%;
     height: 40%;
     display: flex;
@@ -769,43 +770,43 @@ aside .carousel img {
     justify-content: space-between;
     align-items: center;
   }
-  .historiaContainer .historiaContainer .historia-A div, .historiaContainer .historiaContainer .historia-B div {
+  .historia-A div, .historia-B div {
     width: 100%;
-    height: 30%;
+    height: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
   }
-  .historiaContainer .historiaContainer .historia__superior h1 {
+  .historia__superior h1 {
     font-size: 2rem;
     line-height: 4rem;
   }
-  .historiaContainer .historiaContainer .historia__superior {
+  .historia__superior {
     font-size: 2rem;
     line-height: 2rem;
     text-align: center;
     order: 2;
   }
-  .historiaContainer .historiaContainer .historia__inferior {
+  .historia__inferior {
     font-size: 1.8rem;
     line-height: 2rem;
     text-align: center;
     order: 4;
   }
-  .historiaContainer .historiaContainer .parallax-a {
+  .parallax-a {
     background-position: 50% 40%;
     background-size: 70% 25%;
     order: 1;
   }
-  .historiaContainer .historiaContainer .parallax-b {
+  .parallax-b {
     background-position: 40% 80%;
     background-size: 150% 100%;
     order: 3;
   }
 }
-@media screen and (max-width: 400px) and (orientation: portrait) {
-  .historiaContainer .historiaContainer {
-    height: 180rem;
+@media screen and (max-width: 600px) and (max-width: 400px) and (orientation: portrait) {
+  .historiaContainer {
+    height: 140rem;
   }
 }/*# sourceMappingURL=style.css.map */
