@@ -85,11 +85,10 @@
         }
     }
 }
-    @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
 
    .historiaContainer{
         height: 120rem;
-    }
     
         .historia-A, .historia-B{
             width: 100%;
@@ -102,7 +101,7 @@
     
         .historia-A div, .historia-B div{ 
             width: 100%;
-            height: 100%;
+            height: 30%;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
@@ -141,7 +140,8 @@
             background-size: 150% 100%;
             order: 3;
         }
-
+    }
+}
 
 
     
@@ -151,8 +151,6 @@
             height: 140rem;
         }
     }
-
-}
 
 
 

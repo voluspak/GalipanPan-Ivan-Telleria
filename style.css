@@ -762,7 +762,7 @@ aside .carousel img {
   .historiaContainer {
     height: 120rem;
   }
-  .historia-A, .historia-B {
+  .historiaContainer .historia-A, .historiaContainer .historia-B {
     width: 100%;
     height: 40%;
     display: flex;
@@ -770,42 +770,42 @@ aside .carousel img {
     justify-content: space-between;
     align-items: center;
   }
-  .historia-A div, .historia-B div {
+  .historiaContainer .historia-A div, .historiaContainer .historia-B div {
     width: 100%;
-    height: 100%;
+    height: 30%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
   }
-  .historia__superior h1 {
+  .historiaContainer .historia__superior h1 {
     font-size: 2rem;
     line-height: 4rem;
   }
-  .historia__superior {
+  .historiaContainer .historia__superior {
     font-size: 2rem;
     line-height: 2rem;
     text-align: center;
     order: 2;
   }
-  .historia__inferior {
+  .historiaContainer .historia__inferior {
     font-size: 1.8rem;
     line-height: 2rem;
     text-align: center;
     order: 4;
   }
-  .parallax-a {
+  .historiaContainer .parallax-a {
     background-position: 50% 40%;
     background-size: 70% 25%;
     order: 1;
   }
-  .parallax-b {
+  .historiaContainer .parallax-b {
     background-position: 40% 80%;
     background-size: 150% 100%;
     order: 3;
   }
 }
-@media screen and (max-width: 600px) and (max-width: 400px) and (orientation: portrait) {
+@media screen and (max-width: 400px) and (orientation: portrait) {
   .historiaContainer {
     height: 140rem;
   }
