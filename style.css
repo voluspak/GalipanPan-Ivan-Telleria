@@ -512,6 +512,18 @@ aside .carousel img {
 .mainContainerContacto .textoContactanos a, .mainContainerContacto .textoContactanos i {
   color: rgb(116, 201, 77);
 }
+.mainContainerContacto .textoContactanos i {
+  -webkit-animation-name: whatsapp;
+          animation-name: whatsapp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.46, 0.45, 0.5);
+          animation-timing-function: cubic-bezier(0.5, 0.46, 0.45, 0.5);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
 .mainContainerContacto .textoContactanos a {
   text-decoration: none;
 }
@@ -520,6 +532,22 @@ aside .carousel img {
 }
 .mainContainerContacto .textoContactanos a:hover > i {
   color: rgb(93, 161, 61);
+}
+@-webkit-keyframes whatsapp {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes whatsapp {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
 }
 @media screen and (max-width: 600px) {
   .mainContainerContacto .textoContactanos h1 {
@@ -707,6 +735,9 @@ aside .carousel img {
           animation-timing-function: ease;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+.galeria-container h1 {
+  color: rgb(255, 140, 0);
 }
 .galeria-container .col-lg-4 {
   padding: 1rem;
