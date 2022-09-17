@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 100%;
+    width: 50%;
     margin: auto;
     margin-bottom: 5rem;
 
@@ -103,39 +103,37 @@
             color: $botton-letter-a;
         }
     }
-    @media screen and (max-width: 600px){
+}
+@media screen and (max-width: 600px){
 
-        form{
-            div{
-                h2{
-                    font-size: 1.6rem;
-                    width: 100%;
-                }
-            }
-
-            .form-contacto{
-                width: 90vw;
-
-                textarea{
-                min-width: 15rem;
-                max-width: 20rem;
-                }
-
-                input,
-                select,
-                textarea{
+    .form-contacto{
+        width: 100%;
+        div{
+            h2{
+                font-size: 1.6rem;
                 width: 100%;
-                }
             }
-        } 
+        }
+
+        textarea{
+            min-width: 15rem;
+            max-width: 20rem;
+        }
+
+        input,
+        select,
+        textarea{
+            width: 100%;
+        }
     }
 
-    @media screen and (max-width: 400px) and (orientation: portrait){
-        .form-contacto{ 
-            textarea{
-                font-size: 1.25rem;
-        
-            }
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait){
+    .form-contacto{ 
+        textarea{
+            font-size: 1.25rem;
+    
         }
     }
 }

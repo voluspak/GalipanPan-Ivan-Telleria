@@ -21,8 +21,8 @@ header .navbar-nav a {
 }
 header .navbar-nav a:hover {
   color: #fa8925;
-  text-decoration: underline;
-  transition: all 0.1s;
+  transform: rotate(5deg);
+  transition: all 0.5s;
 }
 header .navbar-nav .active {
   color: #f17407 !important;
@@ -563,7 +563,7 @@ aside .carousel img {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 50%;
   margin: auto;
   margin-bottom: 5rem;
 }
@@ -655,30 +655,30 @@ aside .carousel img {
   background-color: #ff6e2b;
   color: #fff;
 }
+
 @media screen and (max-width: 600px) {
-  .form-contacto form div h2 {
+  .form-contacto {
+    width: 100%;
+  }
+  .form-contacto div h2 {
     font-size: 1.6rem;
     width: 100%;
   }
-  .form-contacto form .form-contacto {
-    width: 90vw;
-  }
-  .form-contacto form .form-contacto textarea {
+  .form-contacto textarea {
     min-width: 15rem;
     max-width: 20rem;
   }
-  .form-contacto form .form-contacto input,
-.form-contacto form .form-contacto select,
-.form-contacto form .form-contacto textarea {
+  .form-contacto input,
+.form-contacto select,
+.form-contacto textarea {
     width: 100%;
   }
 }
 @media screen and (max-width: 400px) and (orientation: portrait) {
-  .form-contacto .form-contacto textarea {
+  .form-contacto textarea {
     font-size: 1.25rem;
   }
 }
-
 .cards-container {
   width: 80vw;
   margin: auto;

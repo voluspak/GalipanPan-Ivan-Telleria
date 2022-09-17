@@ -19,8 +19,8 @@ header{
             font-size: 23px;
             &:hover{
                 color: #fa8925;
-                text-decoration: underline;
-                transition: all 0.1s;
+                transform: rotate(5deg);
+                transition: all 0.5s;
             }
         }
         .active{
