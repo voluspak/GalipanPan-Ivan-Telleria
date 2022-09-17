@@ -304,6 +304,101 @@ header .navBar__button:hover {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
+.mainIndex .letreroContainer h3 {
+  color: rgb(230, 129, 5);
+  font-weight: bold;
+  font-size: 3rem;
+}
+.mainIndex .letreroContainer h3:first-child {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-name: rapido;
+          animation-name: rapido;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.mainIndex .letreroContainer h3:nth-child(2) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-name: sencillo;
+          animation-name: sencillo;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.mainIndex .letreroContainer h3:last-child {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-name: horno;
+          animation-name: horno;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes rapido {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rapido {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sencillo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes sencillo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes horno {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes horno {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes slide-img {
   from {
     transform: translateX(50rem);
@@ -382,16 +477,6 @@ header .navBar__button:hover {
   .mainIndex .textoYButton__delivery-button {
     width: 19rem;
   }
-}
-
-aside .letreroContent {
-  margin: auto;
-  width: 50%;
-}
-aside .letreroContent h3 {
-  float: left;
-  color: green;
-  position: relative;
 }
 
 hr {

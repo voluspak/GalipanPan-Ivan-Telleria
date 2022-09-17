@@ -101,6 +101,65 @@
         animation-duration: 1s;
     }
 
+    .letreroContainer{
+        h3{
+            color: $sub-title-color;
+            font-weight: bold;
+            font-size: 3rem;
+            &:first-child{
+                animation-delay: 1.5s;
+                animation-name: rapido;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            &:nth-child(2){
+                animation-delay: 2.5s;
+                animation-name: sencillo;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            &:last-child{
+                animation-delay: 3.5s;
+                animation-name: horno;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+        }
+    }
+
+    @keyframes rapido{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+    @keyframes sencillo{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+    @keyframes horno{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
     @keyframes slide-img{
         from{
             transform: translateX(50rem);
