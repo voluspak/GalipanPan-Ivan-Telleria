@@ -86,7 +86,7 @@
 
     .imgContainer{
         width: 44.25rem;
-        height: 30.5rem;
+        height: 18rem;
         border-radius: 10px;
         animation-name: slide-img;
         animation-iteration-count: 1;
@@ -140,8 +140,6 @@
     }
     @media screen and (max-width: 600px){
         .mainIndex{
-            height: 45rem;
-
             .textoYButton__prueba{
                 font-size: 1.65rem;
             }
