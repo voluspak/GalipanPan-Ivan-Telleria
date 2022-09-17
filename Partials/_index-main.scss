@@ -32,8 +32,7 @@
         height: 14rem;
         width: 20rem;
         margin: auto;
-    }
-
+    
         .textoYButton__prueba{
             font-weight: 800;
             letter-spacing: 1px;
@@ -52,7 +51,7 @@
             flex-flow: wrap row;
             justify-content: space-between;
             align-items: center;
-            width: 350px;
+            width: 19.87rem;
         }
 
         .textoYButton__delivery{
@@ -83,10 +82,10 @@
                 color: #f0f0f0;
             }
         }
-
+    }
     .imgContainer{
         width: 44.25rem;
-        height: 18rem;
+        height: 30rem;
         border-radius: 10px;
         animation-name: slide-img;
         animation-iteration-count: 1;
@@ -135,9 +134,6 @@
         }
     }
 
-    .mainIndex{
-        margin-bottom: 5rem;
-    }
     @media screen and (max-width: 600px){
         .mainIndex{
             .textoYButton__prueba{
@@ -151,7 +147,7 @@
             .delivery{
                 font-size: 1.1rem;
             }
-        
+            
         }
         
     }

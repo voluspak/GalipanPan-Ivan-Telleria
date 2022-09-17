@@ -1,3 +1,18 @@
+aside{
+   .letreroContent{
+        margin: auto;
+        width: 50%;
+
+        h3{
+            float: left;
+            color: green;
+            position: relative;
+        }
+    }
+}
+
+
+
 hr{
     width: 80vw;
     border: 2px solid #f05913;

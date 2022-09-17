@@ -232,28 +232,28 @@ header .navBar__button:hover {
   width: 20rem;
   margin: auto;
 }
-.mainIndex .textoYButton__prueba {
+.mainIndex .textoYButton .textoYButton__prueba {
   font-weight: 800;
   letter-spacing: 1px;
   font-size: 22px;
 }
-.mainIndex .textoYButton__rollos {
+.mainIndex .textoYButton .textoYButton__rollos {
   color: rgb(230, 129, 5);
   letter-spacing: 1px;
   font-size: 22px;
   text-align: center;
 }
-.mainIndex .textoYButton__delivery-button {
+.mainIndex .textoYButton .textoYButton__delivery-button {
   display: flex;
   flex-flow: wrap row;
   justify-content: space-between;
   align-items: center;
-  width: 350px;
+  width: 19.87rem;
 }
-.mainIndex .textoYButton__delivery {
+.mainIndex .textoYButton .textoYButton__delivery {
   line-height: 25px;
 }
-.mainIndex .textoYButton__button {
+.mainIndex .textoYButton .textoYButton__button {
   border: solid transparent 1px;
   border-radius: 3px;
   background-color: #ff6e2b;
@@ -275,7 +275,7 @@ header .navBar__button:hover {
           animation-delay: 1s;
   overflow: hidden;
 }
-.mainIndex .textoYButton__button:hover {
+.mainIndex .textoYButton .textoYButton__button:hover {
   font-size: 21px;
   margin: -1px;
   background-color: #ff8040;
@@ -283,7 +283,7 @@ header .navBar__button:hover {
 }
 .mainIndex .imgContainer {
   width: 44.25rem;
-  height: 18rem;
+  height: 30rem;
   border-radius: 10px;
   -webkit-animation-name: slide-img;
           animation-name: slide-img;
@@ -366,9 +366,6 @@ header .navBar__button:hover {
     font-size: 20px;
   }
 }
-.mainIndex .mainIndex {
-  margin-bottom: 5rem;
-}
 @media screen and (max-width: 600px) {
   .mainIndex .mainIndex .textoYButton__prueba {
     font-size: 1.65rem;
@@ -385,6 +382,16 @@ header .navBar__button:hover {
   .mainIndex .textoYButton__delivery-button {
     width: 19rem;
   }
+}
+
+aside .letreroContent {
+  margin: auto;
+  width: 50%;
+}
+aside .letreroContent h3 {
+  float: left;
+  color: green;
+  position: relative;
 }
 
 hr {
@@ -510,7 +517,7 @@ aside .carousel img {
   padding: 5px;
 }
 .form-contacto .form-contacto__button-send {
-  background-color: rgb(255, 140, 0);
+  background-color: #ff6e2b;
   color: #fff;
   border-radius: 5px;
   font-size: 20px;
@@ -520,7 +527,7 @@ aside .carousel img {
 }
 .form-contacto .form-contacto__button-send:active {
   background-color: #fff;
-  color: rgb(255, 140, 0);
+  color: rgb(255, 140, 0) 255, 140, 0;
   border: 1px solid rgb(247, 156, 45);
 }
 .form-contacto .form-contacto__button-reset {
@@ -532,7 +539,7 @@ aside .carousel img {
   width: 10rem;
 }
 .form-contacto .form-contacto__button-reset:active {
-  background-color: rgb(255, 140, 0);
+  background-color: #ff6e2b;
   color: #fff;
 }
 @media screen and (max-width: 600px) {
