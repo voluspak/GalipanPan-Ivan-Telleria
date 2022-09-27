@@ -351,6 +351,17 @@ header .navBar__button:hover {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+.mainIndex hr {
+  width: 80vw;
+  border: 2px solid #f05913;
+  margin: auto;
+}
+.mainIndex .carousel {
+  margin: 5rem auto;
+}
+.mainIndex .carousel img {
+  border-radius: 10px;
+}
 @-webkit-keyframes rapido {
   from {
     opacity: 0;
@@ -477,19 +488,6 @@ header .navBar__button:hover {
   .mainIndex .textoYButton__delivery-button {
     width: 19rem;
   }
-}
-
-hr {
-  width: 80vw;
-  border: 2px solid #f05913;
-  margin: auto;
-}
-
-aside .carousel {
-  margin: 5rem auto;
-}
-aside .carousel img {
-  border-radius: 10px;
 }
 
 .mainContainerContacto {
@@ -640,7 +638,7 @@ aside .carousel img {
 }
 .form-contacto .form-contacto__button-send:active {
   background-color: #fff;
-  color: rgb(255, 140, 0) 255, 140, 0;
+  color: rgb(255, 140, 0);
   border: 1px solid rgb(247, 156, 45);
 }
 .form-contacto .form-contacto__button-reset {

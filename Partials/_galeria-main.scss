@@ -4,7 +4,7 @@
     animation-duration: 1s;
 
     h1{
-        color: $title-color;
+        color: map-get($colors , title-color );
     }
     .col-lg-4{
         padding: 1rem;

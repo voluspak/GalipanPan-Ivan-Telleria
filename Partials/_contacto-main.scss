@@ -9,7 +9,7 @@
         justify-content: space-around;
         
         h1{
-            color: $title-color;
+            color: map-get($colors , title-color);
             font-size: 80px;
             margin-bottom: 3rem;
         }

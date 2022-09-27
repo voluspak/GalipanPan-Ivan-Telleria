@@ -6,7 +6,7 @@
     margin-bottom: 5rem;
 
     h1{
-        color: $title-color;
+        color: map-get($colors, title-color);
         font-size: 30px;
         display: inline-block;
         vertical-align: middle;
@@ -40,7 +40,7 @@
         }
 
         .textoYButton__rollos{
-            color: $sub-title-color;
+            color: map-get($colors , sub-title-color);
             letter-spacing: 1px;
             font-size: 22px;
             text-align: center;
@@ -62,11 +62,11 @@
         .textoYButton__button{
             border: solid transparent 1px;
             border-radius: 3px;
-            background-color: $botton-background-a;
+            background-color: map-get($colors , botton-background-a);
             padding: 10px 25px;
             font-size: 20px;
             font-weight: bold;
-            color: $botton-letter-a;
+            color: map-get($colors , botton-letter-a);
             text-decoration: none;
             transition: all .1s;
             animation-name: boton-añadir;
@@ -103,7 +103,7 @@
 
     .letreroContainer{
         h3{
-            color: $sub-title-color;
+            color: map-get($colors , sub-title-color);
             font-weight: bold;
             font-size: 3rem;
             &:first-child{
@@ -133,6 +133,21 @@
         }
     }
 
+    hr{
+        width: 80vw;
+        border: 2px solid #f05913;
+        margin: auto;
+    }
+    
+    
+    .carousel{
+        margin: 5rem auto;
+                
+    }
+    .carousel img{
+        border-radius: 10px;
+    }
+    
     @keyframes rapido{
         from{
             opacity: 0;
