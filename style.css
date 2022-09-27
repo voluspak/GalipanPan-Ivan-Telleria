@@ -209,16 +209,18 @@ header .navBar__button:hover {
 }
 .mainIndex h1 {
   color: rgb(255, 140, 0);
-  font-size: 30px;
+  font-size: 3rem;
   display: inline-block;
   vertical-align: middle;
-  line-height: 30px;
+  line-height: 2.5rem;
   text-align: center;
+  margin-top: 1rem;
 }
 .mainIndex .textoSuperior__panaderia {
-  line-height: 30px;
-  letter-spacing: 2.5px;
-  font-size: 20px;
+  line-height: 2.5rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.87rem;
+  margin-top: 1rem;
 }
 .mainIndex .textoSuperior__panaderia i {
   font-weight: bold;
@@ -228,19 +230,19 @@ header .navBar__button:hover {
   flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: 14rem;
+  height: 15rem;
   width: 20rem;
   margin: auto;
 }
 .mainIndex .textoYButton .textoYButton__prueba {
   font-weight: 800;
   letter-spacing: 1px;
-  font-size: 22px;
+  font-size: 1.87rem;
 }
 .mainIndex .textoYButton .textoYButton__rollos {
   color: rgb(230, 129, 5);
   letter-spacing: 1px;
-  font-size: 22px;
+  font-size: 1.87rem;
   text-align: center;
 }
 .mainIndex .textoYButton .textoYButton__delivery-button {
@@ -248,10 +250,11 @@ header .navBar__button:hover {
   flex-flow: wrap row;
   justify-content: space-between;
   align-items: center;
-  width: 19.87rem;
+  width: 20rem;
 }
-.mainIndex .textoYButton .textoYButton__delivery {
+.mainIndex .textoYButton .delivery {
   line-height: 25px;
+  font-size: 1.3rem;
 }
 .mainIndex .textoYButton .textoYButton__button {
   border: solid transparent 1px;
@@ -282,9 +285,9 @@ header .navBar__button:hover {
   color: #f0f0f0;
 }
 .mainIndex .imgContainer {
+  margin-top: 1rem;
   width: 44.25rem;
-  height: 30rem;
-  border-radius: 10px;
+  height: 32rem;
   -webkit-animation-name: slide-img;
           animation-name: slide-img;
   -webkit-animation-iteration-count: 1;
@@ -292,6 +295,9 @@ header .navBar__button:hover {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   overflow: hidden;
+}
+.mainIndex .imgContainer img {
+  border-radius: 10px;
 }
 .mainIndex .textoSuperior,
 .mainIndex .textoYButton {
@@ -568,7 +574,7 @@ header .navBar__button:hover {
 .form-contacto h2 {
   text-align: center;
   color: rgb(230, 129, 5);
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 .form-contacto label {
   font-size: 1.5rem;
@@ -824,11 +830,11 @@ header .navBar__button:hover {
           animation-duration: 1s;
 }
 .historiaContainer .historia__superior {
-  font-size: 30px;
+  font-size: 1.87rem;
   line-height: 40px;
 }
 .historiaContainer .historia__inferior {
-  font-size: 30px;
+  font-size: 1.87rem;
   line-height: 30px;
   width: 100%;
   height: 100%;
