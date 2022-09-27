@@ -13,11 +13,14 @@ header .navbar-brand img {
   height: 9.37rem;
   width: 15.62rem;
 }
+header .navbar-nav {
+  margin-left: 5rem;
+}
 header .navbar-nav a {
   text-decoration: none;
   color: #a3a3a3;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 1.87rem;
 }
 header .navbar-nav a:hover {
   color: #fa8925;
@@ -32,15 +35,15 @@ header .navBar__button {
   border-radius: 5px;
   background-color: #ff2129;
   padding: 5px 10px;
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff !important;
   text-decoration: none;
-  transition: background-color color 0.1s ease;
+  transition: background-color color 0.5s ease;
   margin-right: 3rem;
 }
 header .navBar__button:hover {
-  font-size: 26px;
+  font-size: 2.1rem;
   background-color: #f52f2f;
   color: #f0f0f0;
 }
@@ -367,6 +370,7 @@ header .navBar__button:hover {
 }
 .mainIndex .carousel img {
   border-radius: 10px;
+  height: 30rem;
 }
 @-webkit-keyframes rapido {
   from {
@@ -773,9 +777,18 @@ header .navBar__button:hover {
 }
 
 .mainContainerMenu {
+  width: 50%;
+  margin: auto;
+}
+.mainContainerMenu h1 {
+  color: rgb(255, 140, 0);
+  font-size: 3rem;
+}
+.mainContainerMenu .carousel .carousel-item {
   width: 100%;
 }
-.mainContainerMenu .carousel-item img {
+.mainContainerMenu .carousel .carousel-item img {
+  width: 100%;
   height: 50rem;
   -o-object-fit: fill;
      object-fit: fill;
