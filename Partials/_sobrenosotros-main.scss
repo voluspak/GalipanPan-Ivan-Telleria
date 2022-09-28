@@ -3,6 +3,9 @@
     height: 62.5rem;
     margin: 1.25rem 0;
 
+    img{
+        display: none;
+    }
     .historia-A, .historia-B{
         width: 100%;
         height: 50%;
@@ -50,18 +53,14 @@
     }
 
     .parallax-a{
-        background-attachment: fixed;
-        background-color: #fff;
-        background-repeat: no-repeat;
+        @extend %parallax-base;
         background-position: 0 50%;
         background-size: 50% 65%;
     }
 
     
     .parallax-b{
-        background-attachment: fixed;
-        background-color: #fff;
-        background-repeat: no-repeat;
+        @extend %parallax-base;
         background-size: 50% 100%;
         background-position: 100% 50%;
     }
@@ -127,18 +126,22 @@
             order: 4;
             
         }
-    
-        .parallax-a{
-            background-position: 50% 40%;
-            background-size: 70% 25%;
-            order: 1;
-        }
-    
         
-        .parallax-b{
-            background-position: 40% 80%;
-            background-size: 150% 100%;
-            order: 3;
+        .logoHistoria,
+        .rolesHistoria{
+            background-image: none;
+        }
+        img{
+            &:first-child, &:last-child{
+                display: inline-block;
+            }
+            &:first-child{
+                order: 1;
+            }
+            &:last-child{
+                order: 3;
+
+            }
         }
     }
 }

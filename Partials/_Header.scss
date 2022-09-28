@@ -29,14 +29,11 @@ header{
     }
 
     .navBar__button{
-        border: solid transparent 1px;
-        border-radius: 5px;
+        @extend %button-default;
         background-color: #ff2129;
-        padding: 5px 10px;
         font-size: 2rem;
         font-weight: bold;
         color: #fff !important;
-        text-decoration: none;
         transition: background-color color .5s ease;
         margin-right: 3rem;
         &:hover{

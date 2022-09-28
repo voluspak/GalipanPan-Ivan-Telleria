@@ -28,16 +28,12 @@
         }
 
         a{
+            @extend %button-default;
             display: inline-block;
-            padding: 10px;
-            margin-top: 10px;
             color: map-get($colors, botton-letter-b );
             border: 1px solid #ff6e2b;
             background-color: map-get($colors , botton-background-b );
-            border-radius: 4px;
             transition: all 400ms ease;
-            font-weight: bold;
-            text-decoration: none;
             &:hover{
                 background-color: map-get($colors, botton-background-a);
                 color: map-get($colors, botton-letter-a);
