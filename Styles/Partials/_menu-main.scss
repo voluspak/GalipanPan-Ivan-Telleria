@@ -18,16 +18,10 @@
             }
         }
     }
-    @media screen and (max-width: 600px){
-        .mainContainerMenu{
-             width: 200%;
-            .carousel-item{
-                img{
-                    height: 35rem;
-                    object-fit: fill;
-                    margin: auto;
-                }
-            }
-        }
+}
+@media screen and (max-width: 600px){
+    .mainContainerMenu{
+        width: 100%;
     }
 }
+

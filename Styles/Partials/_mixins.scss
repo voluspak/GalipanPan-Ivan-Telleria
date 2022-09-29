@@ -34,8 +34,32 @@
 @mixin history-flex-row ($history-responsiveH){
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: space-evenly;
+    align-content: flex-start;
     width: 100%;
     height: $history-responsiveH;
+}
+
+@mixin button-form ($backColor: false, $button-form-w){
+    @extend %button-default;
+    @if ($backColor){
+        background-color: map-get($colors , botton-background-b);
+        color: map-get($colors, botton-letter-b);
+        border: 1px solid rgb(247, 156, 45);
+        width: $button-form-w;
+        &:active{
+            background-color: map-get($colors , botton-background-a);
+            color: map-get($colors, botton-letter-a);
+        }
+    } @else{
+        background-color: map-get($colors , botton-background-a);
+        color: map-get($colors, botton-letter-a);
+        width: $button-form-w;
+        &:active{
+            background-color: map-get($colors , botton-background-b);
+            color: map-get($colors, botton-letter-b);
+            border: 1px solid rgb(247, 156, 45);
+        }
+    }
+    
 }

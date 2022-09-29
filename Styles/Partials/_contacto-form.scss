@@ -55,28 +55,12 @@
     }
 
     .form-contacto__button-send{
-        @extend %button-default;
-        background-color: map-get($colors , botton-background-a);
-        color: map-get($colors, botton-letter-a);
-        width: 8rem;
+        @include button-form ($backColor: false, $button-form-w: 8rem);
         margin-bottom: .5rem; 
-        &:active{
-            background-color: map-get($colors , botton-background-b);
-            color: map-get($colors, botton-letter-b);
-            border: 1px solid rgb(247, 156, 45);
-        }
     }
 
     .form-contacto__button-reset{
-        @extend %button-default;
-        background-color: map-get($colors , botton-background-b);
-        color: map-get($colors, botton-letter-b);
-        border: 1px solid rgb(247, 156, 45);
-        width: 10rem;
-        &:active{
-            background-color: map-get($colors , botton-background-a);
-            color: map-get($colors, botton-letter-a);
-        }
+        @include button-form ($backColor: true, $button-form-w: 10rem);
     }
 }
 @media screen and (max-width: 600px){
