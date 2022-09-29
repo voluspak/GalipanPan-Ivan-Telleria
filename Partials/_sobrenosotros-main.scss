@@ -7,19 +7,9 @@
         display: none;
     }
     .historia-A, .historia-B{
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-flow: column row;
-        justify-content: space-around;
-        align-items: center;
+        @include history-flex-col ($history-h: 50%, $history-w: 100%, $history-jc: space-around);
         div{ 
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-evenly;
-            align-content: center;
+            @include history-flex-col ($history-h: 100%, $history-w: 50%, $history-jc: space-evenly);
         }
     }
 
@@ -90,21 +80,11 @@
         height: 120rem;
     
         .historia-A, .historia-B{
-            width: 100%;
-            height: 40%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            align-items: center;
+            @include history-flex-row ($history-responsiveH: 40%)
         }
     
         .historia-A div, .historia-B div{ 
-            width: 100%;
-            height: 30%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            align-content: center;
+            @include history-flex-row ($history-responsiveH: 30%)
         }
     
         .historia__superior h1{

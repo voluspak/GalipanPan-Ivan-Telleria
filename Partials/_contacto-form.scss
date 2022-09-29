@@ -33,37 +33,15 @@
     }
 
     input{
-        font-size: 20px;
-        height: 1.2rem;
-        width: 15rem;
-        border: none;
-        border-bottom: 2px solid rgb(255, 140, 0);
-        padding-left: 5px;
-        border-radius: 0;
-        &:focus{
-            background: linear-gradient(to bottom, transparent, rgba(252, 136, 5, 0.521));
-            outline: none;
-            box-shadow: none;
-            border-bottom: 1px solid rgb(255, 140, 0);
-        }
+        @include inputsPattern ($shadow: none, $inputH: 1.2rem, $inputW: 15rem, $bradius: 0, $inputOL: none);
     }
 
     textarea{
-        height: 12.5rem;
-         width: 20rem;
-         min-width: 18.75rem;
-         min-height: 12.5rem;
-         max-height: 13.75rem;
-           max-width: 22rem;
-         font-size: 1.25rem;
-         border: none;
-         border-bottom: 1px solid rgb(255, 140, 0);
-         padding-left: 5px;
-         &:focus{
-             background: linear-gradient(to bottom, transparent, rgba(248, 207, 157, 0.63));
-             outline:  5px solid rgba(255, 166, 0, 0.87);
-             box-shadow: 5px solid rgb(255, 140, 0);
-        }
+        @include inputsPattern ($shadow: 5px solid rgb(255, 140, 0), $inputH: 12.5rem, $inputW: 20rem, $bradius: 5px, $inputOL: 5px solid rgba(255, 166, 0, 0.87));
+        min-width: 18.75rem;
+        min-height: 12.5rem;
+        max-height: 13.75rem;
+        max-width: 22rem;
     }
 
     .form-contacto__button{

@@ -296,27 +296,37 @@ header .navBar__button:hover {
   margin-top: 1rem;
   width: 44.25rem;
   height: 32rem;
+  overflow: hidden;
+  -webkit-animation-delay: default;
+          animation-delay: default;
   -webkit-animation-name: slide-img;
           animation-name: slide-img;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  overflow: hidden;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .mainIndex .imgContainer img {
   border-radius: 10px;
 }
 .mainIndex .textoSuperior,
 .mainIndex .textoYButton {
+  -webkit-animation-delay: default;
+          animation-delay: default;
   -webkit-animation-name: slide-texto;
           animation-name: slide-texto;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .mainIndex .letreroContainer h3 {
   color: rgb(230, 129, 5);
@@ -520,7 +530,7 @@ header .navBar__button:hover {
   margin-bottom: 3rem;
 }
 .mainContainerContacto .textoContactanos p {
-  font-size: 30px;
+  font-size: 1.87rem;
 }
 .mainContainerContacto .textoContactanos a, .mainContainerContacto .textoContactanos i {
   color: rgb(116, 201, 77);
@@ -603,12 +613,12 @@ header .navBar__button:hover {
   border-bottom: 1px solid rgb(255, 140, 0);
 }
 .form-contacto input {
-  font-size: 20px;
-  height: 1.2rem;
   width: 15rem;
-  border: none;
-  border-bottom: 2px solid rgb(255, 140, 0);
+  height: 1.2rem;
   padding-left: 5px;
+  border: none;
+  font-size: 1.25rem;
+  border-bottom: 2px solid rgb(255, 140, 0);
   border-radius: 0;
 }
 .form-contacto input:focus {
@@ -618,21 +628,23 @@ header .navBar__button:hover {
   border-bottom: 1px solid rgb(255, 140, 0);
 }
 .form-contacto textarea {
-  height: 12.5rem;
   width: 20rem;
+  height: 12.5rem;
+  padding-left: 5px;
+  border: none;
+  font-size: 1.25rem;
+  border-bottom: 2px solid rgb(255, 140, 0);
+  border-radius: 5px;
   min-width: 18.75rem;
   min-height: 12.5rem;
   max-height: 13.75rem;
   max-width: 22rem;
-  font-size: 1.25rem;
-  border: none;
-  border-bottom: 1px solid rgb(255, 140, 0);
-  padding-left: 5px;
 }
 .form-contacto textarea:focus {
-  background: linear-gradient(to bottom, transparent, rgba(248, 207, 157, 0.63));
+  background: linear-gradient(to bottom, transparent, rgba(252, 136, 5, 0.521));
   outline: 5px solid rgba(255, 166, 0, 0.87);
   box-shadow: 5px solid rgb(255, 140, 0);
+  border-bottom: 1px solid rgb(255, 140, 0);
 }
 .form-contacto .form-contacto__button {
   display: flex;
@@ -814,20 +826,20 @@ main .cards-container .card .card-title {
   display: none;
 }
 .historiaContainer .historia-A, .historiaContainer .historia-B {
-  width: 100%;
-  height: 50%;
   display: flex;
-  flex-flow: column row;
+  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 50%;
 }
 .historiaContainer .historia-A div, .historiaContainer .historia-B div {
-  width: 50%;
-  height: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
-  align-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
 }
 .historiaContainer .historia__superior h1 {
   font-size: 3rem;
@@ -897,20 +909,20 @@ main .cards-container .card .card-title {
     height: 120rem;
   }
   .historiaContainer .historia-A, .historiaContainer .historia-B {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .historiaContainer .historia-A div, .historiaContainer .historia-B div {
-    width: 100%;
-    height: 30%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
+    width: 100%;
+    height: 40%;
+  }
+  .historiaContainer .historia-A div, .historiaContainer .historia-B div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    height: 30%;
   }
   .historiaContainer .historia__superior h1 {
     font-size: 2rem;

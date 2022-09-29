@@ -84,10 +84,8 @@
         margin-top: 1rem;
         width: 44.25rem;
         height: 32rem;
-        animation-name: slide-img;
-        animation-iteration-count: 1;
-        animation-duration: 1s;
         overflow: hidden;
+        @include animation ($aniName: slide-img , $aniDelay: default);
         img{
             border-radius: 10px;
         }
@@ -95,10 +93,7 @@
 
     .textoSuperior,
     .textoYButton{
-        animation-name: slide-texto;
-        animation-iteration-count: 1;
-        animation-timing-function: ease;
-        animation-duration: 1s;
+        @include animation ($aniName: slide-texto , $aniDelay: default)
     }
 
     .letreroContainer{
@@ -107,28 +102,13 @@
             font-weight: bold;
             font-size: 3rem;
             &:first-child{
-                animation-delay: 1.5s;
-                animation-name: rapido;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
+                @include animation($aniName: rapido , $aniDelay: 1.5s)
             }
             &:nth-child(2){
-                animation-delay: 2.5s;
-                animation-name: sencillo;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
+                @include animation($aniName: sencillo , $aniDelay: 2.5s)
             }
             &:last-child{
-                animation-delay: 3.5s;
-                animation-name: horno;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
+                @include animation($aniName: horno , $aniDelay: 3.5s)
             }
         }
     }

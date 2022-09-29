@@ -1,0 +1,41 @@
+@mixin animation ($aniName, $aniDelay: 0) {
+    animation-delay: $aniDelay;
+    animation-name: $aniName;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@mixin inputsPattern ($shadow, $inputW, $inputH, $bradius, $inputOL){
+    width: $inputW;
+    height: $inputH;
+    padding-left: 5px;
+    border: none;
+    font-size: 1.25rem;
+    border-bottom: 2px solid rgb(255, 140, 0);
+    border-radius: $bradius;
+    &:focus{
+        background: linear-gradient(to bottom, transparent, rgba(252, 136, 5, 0.521));
+        outline: $inputOL;
+        box-shadow: $shadow;
+        border-bottom: 1px solid rgb(255, 140, 0);
+    }
+}
+@mixin history-flex-col ($history-h, $history-w, $history-jc){
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: $history-jc;
+    align-items: center;
+    width: $history-w;
+    height: $history-h;
+}
+
+@mixin history-flex-row ($history-responsiveH){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    height: $history-responsiveH;
+}
