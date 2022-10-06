@@ -122,11 +122,10 @@
     
     .carousel{
         margin: 5rem auto;
-                
-    }
-    .carousel img{
-        border-radius: 10px;
-        height: 30rem;
+        img{
+            border-radius: 10px;
+            height: 30rem;
+        }
     }
     
     @keyframes rapido{
