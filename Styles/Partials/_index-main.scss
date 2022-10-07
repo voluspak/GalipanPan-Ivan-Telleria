@@ -90,7 +90,6 @@
             border-radius: 10px;
         }
     }
-
     .textoSuperior,
     .textoYButton{
         @include animation ($aniName: slide-texto , $aniDelay: default)
@@ -201,9 +200,7 @@
             .delivery{
                 font-size: 1.1rem;
             }
-            
-        }
-        
+        }     
     }
 
     @media screen and (max-width: 400px) and (orientation: portrait){
