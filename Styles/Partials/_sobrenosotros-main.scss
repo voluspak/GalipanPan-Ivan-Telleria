@@ -4,7 +4,7 @@
     margin: 1.25rem 0;
 
     img{
-        display: none;
+        display: inline-block;
     }
     .historia-A, .historia-B{
         @include history-flex-col ($history-h: 50%, $history-w: 100%, $history-jc: space-around);
@@ -42,26 +42,6 @@
         
     }
 
-    .parallax-a{
-        @extend %parallax-base;
-        background-position: 0 50%;
-        background-size: 50% 65%;
-    }
-
-    
-    .parallax-b{
-        @extend %parallax-base;
-        background-size: 50% 100%;
-        background-position: 100% 50%;
-    }
-
-    .logoHistoria{
-        background-image: url("../../assets/Logo.jpg");
-    }
-
-    .rolesHistoria{
-        background-image: url("../../assets/cupcake.jpg");
-    } 
     @keyframes h1-historia{
         0%{
             font-size: 60px;
