@@ -1,7 +1,4 @@
 header{
-    .navbar-nav{
-        margin-left: 10rem;
-    }
     
     .navbar-brand{
 
@@ -11,12 +8,12 @@ header{
         }
     }
     .navbar-nav{
-        margin-left: 5rem;
+        margin-left: 2rem;
         a{
             text-decoration: none;
             color: #a3a3a3;
             font-weight: bold;
-            font-size: map-get($sizes, text-size);
+            font-size: 1.7rem;
             &:hover{
                 color: #fa8925;
                 transform: rotate(5deg);

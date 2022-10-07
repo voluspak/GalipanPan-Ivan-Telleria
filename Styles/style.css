@@ -21,21 +21,18 @@ main .cards-container .card a, .form-contacto .form-contacto__button-reset, .for
   box-sizing: border-box;
 }
 
-header .navbar-nav {
-  margin-left: 10rem;
-}
 header .navbar-brand img {
   height: 9.37rem;
   width: 15.62rem;
 }
 header .navbar-nav {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 header .navbar-nav a {
   text-decoration: none;
   color: #a3a3a3;
   font-weight: bold;
-  font-size: 1.87rem;
+  font-size: 1.7rem;
 }
 header .navbar-nav a:hover {
   color: #fa8925;
