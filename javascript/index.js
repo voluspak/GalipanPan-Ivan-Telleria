@@ -1,19 +1,21 @@
-let opcionMenu = 0;
-let iva = .19;
-let cantidad = 0;
-let rollosCanela = 22;
-let panJamon = 15;
-let golfeado = 20;
-let ponquecitos = 16;
-let tortarol= 25;
 let resultado = 0;
 let respuesta;
+let opcionMenu = 0;
+let cantidad = 0;
+const iva = .19;
+const rollosCanela = 22;
+const panJamon = 15;
+const golfeado = 20;
+const ponquecitos = 16;
+const tortarol= 25;
 
-const carritoRoles = (cantidad) => resultado = rollosCanela * cantidad + ((rollosCanela*cantidad) * iva);
-const carritoPanJamon = (cantidad) => resultado = panJamon * cantidad + ((panJamon*cantidad) * iva);
-const carritoGolfeado = (cantidad) => resultado = golfeado * cantidad + ((golfeado*cantidad) * iva);
-const carritoCupcake = (cantidad) => resultado = ponquecitos * cantidad + ((ponquecitos*cantidad) * iva);
-const carritoTortarol = (cantidad) => resultado = tortarol * cantidad + ((tortarol*cantidad) * iva);
+
+const calcularPrecio = (cantidad, costoPan) => resultado = costoPan * cantidad + ((costoPan*cantidad) * iva);
+const confirmacion = () => respuesta = prompt(`Vas a llevar ${cantidad} unidades por COP$ ${resultado}k ¿Ok, volver o inicio?`);
+const salida =() => {
+    opcionMenu = 6;
+    alert("Excelente, Gracias por elegirnos ¡Que lo disfrutes!")
+}
 alert("¡Bienvenido a Galipan pan!");
 
 while (opcionMenu != 6){
@@ -21,10 +23,10 @@ while (opcionMenu != 6){
     switch (opcionMenu) {
         case 1:
             cantidad = parseFloat(prompt("¿Cuantos quieres? (1und = 12 roles)"));
-            carritoRoles(cantidad);
-            respuesta = prompt(`Vas a llevar ${cantidad} unidades por COP$ ${resultado}k ¿Ok, volver o inicio?`)
+            calcularPrecio(cantidad, rollosCanela);
+            confirmacion();
             if(respuesta == "ok" || respuesta == "OK" || respuesta == "Ok" || respuesta == "oK"){
-                alert("Excelente, Gracias por elegirnos ¡Que lo disfrutes!")
+                salida()
                 break;
             }
             else if(respuesta == "inicio" || respuesta == "Inicio"){
@@ -32,10 +34,10 @@ while (opcionMenu != 6){
             }
         case 2:
             cantidad = parseFloat(prompt("¿Cuantos quieres? (1und = 2 panes)"));            
-            carritoPanJamon(cantidad);
-            respuesta = prompt(`Vas a llevar ${cantidad} unidades por COP$ ${resultado}k ¿Ok, volver o inicio?`)
+            calcularPrecio(cantidad, panJamon);
+            confirmacion();
             if(respuesta == "ok" || respuesta == "OK" || respuesta == "Ok" || respuesta == "oK"){
-                alert("Excelente, Gracias por elegirnos ¡Que lo disfrutes!");
+                salida()
                 break;
             }else if(respuesta == "inicio" || respuesta == "Inicio"){
                 break;
@@ -43,10 +45,10 @@ while (opcionMenu != 6){
             break;            
         case 3:
             cantidad = parseFloat(prompt("¿Cuantos quieres? (1und = 4 roles)"));            
-            carritoGolfeado(cantidad); 
-            respuesta = prompt(`Vas a llevar ${cantidad} unidades por COP$ ${resultado}k ¿Ok, volver o inicio?`)           
+            calcularPrecio(cantidad, golfeado);             
+            confirmacion();           
             if(respuesta == "ok" || respuesta == "OK" || respuesta == "Ok" || respuesta == "oK"){
-                alert("Excelente, Gracias por elegirnos ¡Que lo disfrutes!")
+                salida()
                 break;
             }else if(respuesta == "inicio" || respuesta == "Inicio"){
                 break;
@@ -54,10 +56,10 @@ while (opcionMenu != 6){
             break;
         case 4:
             cantidad = parseFloat(prompt("¿Cuantos quieres? (1und = 6 cupcakes)"));                
-            carritoCupcake(cantidad); 
-            respuesta = prompt(`Vas a llevar ${cantidad} unidades por COP$ ${resultado}k ¿Ok, volver o inicio?`);           
+            calcularPrecio(cantidad, ponquecitos);             
+            confirmacion();          
             if(respuesta == "ok" || respuesta == "OK" || respuesta == "Ok" || respuesta == "oK"){
-                alert("Excelente, Gracias por elegirnos ¡Que lo disfrutes!");
+                salida()
                 break;
             }else if(respuesta == "inicio" || respuesta == "Inicio"){
                 break;
@@ -65,10 +67,10 @@ while (opcionMenu != 6){
             break;
         case 5:
             cantidad = parseFloat(prompt("¿Cuantos quieres?"));            
-            carritoTortarol(cantidad);  
-            respuesta = prompt(`Vas a llevar ${cantidad} unidades por COP$ ${resultado}k ¿Ok, volver o inicio?`);       
+            calcularPrecio(cantidad, tortarol);              
+            confirmacion();       
             if(respuesta == "ok" || respuesta == "OK" || respuesta == "Ok" || respuesta == "oK"){
-                alert("Excelente, Gracias por elegirnos ¡Que lo disfrutes!");
+                salida()
                 break;
             }else if(respuesta == "inicio" || respuesta == "Inicio"){
                 break;
