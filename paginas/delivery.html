@@ -44,80 +44,39 @@
                 </li>
 					    </ul>
 					    <span class="navbar-text">
-					    	<a href="./delivery.html" class="navBar__button">Delivery</a>
+					    	<button type="button" class="navBar__button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Carrito
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito</h1>
+                        <button type="button" class="btnCerrarCarrito" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-x"></i></button>
+                      </div>
+                      <div class="modal-body carrito-contenedor">
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <p class="precioProducto">Precio total: <span id="precioTotal">0</span></p>
+                        <div class="btnComprarYVaciar">
+                          <button type="button" class="btn btn-vaciar" data-bs-dismiss="modal">Vaciar</button>
+                          <button type="button" class="btn btn-comprar">Comprar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 					    </span>
 					</div>
 				</div>
 			</nav>
         </header>
         <main>
-            <div class="row text-center cards-container">
-              <h1>¡Panaderia, roles y más!</h1>
-                <div class="card" style="width: 18rem;">
-                    <img src="../assets/rol1.jpg" class="card-img-top front" alt="Rol de Canela">
-                    <div class="card-body">
-                      <h5 class="card-title">Rollos de Canela</h5>
-                      <p class="card-text"><i>COP$19K x 4 Rolls</i> <br> <b>+ delivery</b></p>
-                      <a href="#">Añadir</a>
-                    </div>
-                    <div class="back"></div>
-                  </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <img src="../assets/rol2.jpg" class="card-img-top" alt="Rollos de Canela">
-                    <div class="card-body">
-                      <h5 class="card-title">Rollos de Canela</h5>
-                      <p class="card-text"><i>COP$22K x 6 Rolls</i> <br>
-                        <b>+ delivery</b></p>
-                      <a href="#">Añadir</a>
-                    </div>
-                    <div class="back"></div>
-                  </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <img src="../assets/pan-de-jamón.jpg" class="card-img-top" alt="Pan relleno de jamon, pasas y aceitunas">
-                    <div class="card-body">
-                      <h5 class="card-title">Pan de jamón</h5>
-                      <p class="card-text">COP$15K x 2 panes</i> <br>
-                        <b>+ delivery</b></p>
-                      <a href="#" >Añadir</a>
-                    </div>
-                    <div class="back"></div>
-                  </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <img src="../assets/golfeado.jpg" class="card-img-top" alt="Rollo de panela y queso">
-                    <div class="card-body">
-                      <h5 class="card-title">Golfeado</h5>
-                      <p class="card-text"><i>COP$20K x 4 Rollos</i> <br>
-                        <b>+ delivery</b></p>
-                      <a href="#">Añadir</a>
-                    </div>
-                    <div class="back"></div>
-                  </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <img src="../assets/cupcake.jpg" class="card-img-top" alt="Ponquecitos">
-                    <div class="card-body">
-                      <h5 class="card-title">Ponquecitos</h5>
-                      <p class="card-text"><i>COP$16K x 6u</i> <br>
-                        <b>+ delivery</b></p>
-                      <a href="#">Añadir</a>
-                    </div>
-                    <div class="back"></div>
-                  </div>
-
-                  <div class="card" style="width: 18rem;">
-                    <img src="../assets/tortarol.jpg" class="card-img-top" alt="Torta hecha de rol de Canela">
-                    <div class="card-body">
-                      <h5 class="card-title">Tortarol</h5>
-                      <p class="card-text"><i>COP$25K</i> <br>
-                        <b>+ delivery</b></p>
-                      <a href="#">Añadir</a>
-                    </div>
-                    <div class="back"></div>
-                  </div>
-            </div>
+          <div class="row text-center cards-container" id="contenedor-productos">
+            <h1>¡Panaderia, roles y más!</h1>
+          </div>
         </main>
 
         <footer class="row">
@@ -159,6 +118,7 @@
             </div>
         </footer>
     </div>
+    <script src="../javascript/delivery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     </body>
     </html>

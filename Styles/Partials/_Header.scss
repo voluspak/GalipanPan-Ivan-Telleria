@@ -39,7 +39,44 @@ header{
             color: #f0f0f0;
         }
     }
-   
+    .btnCerrarCarrito{
+        border: none;
+        background: transparent
+    }
+
+    .btnEliminarDelCarrito{
+        color: #f52f2f
+    }
+    .btn-comprar{
+        @extend %button-default;
+        padding: 5px 15px;
+        background-color: rgb(18, 177, 18);
+        font-size: 1rem;
+        color: rgb(238, 237, 237);
+        &:hover{
+            color: rgb(18, 177, 18) !important;
+            border: solid .5px rgb(18, 177, 18) !important;
+        }
+    }
+    .btn-vaciar{
+        @extend %button-default;
+        padding: 5px 15px;
+        background-color: #f52f2f;
+        font-size: 1rem;
+        color: rgb(238, 237, 237);
+        &:hover{
+            color: #f52f2f !important;
+            border: solid .5px #f52f2f !important;
+        }
+    }
+    .modal-footer{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .precioProducto{
+            font-size: 1.2rem;
+        }
+    }
     @media screen and (max-width: 600px){
     
         .responsiveButton{

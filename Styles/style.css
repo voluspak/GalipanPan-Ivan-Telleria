@@ -1,5 +1,5 @@
 @charset "UTF-8";
-main .cards-container .card a, .form-contacto .form-contacto__button-reset, .form-contacto .form-contacto__button-send, .mainIndex .textoYButton .textoYButton__button, header .navBar__button {
+main .cards-container .card button, .form-contacto .form-contacto__button-reset, .form-contacto .form-contacto__button-send, .mainIndex .textoYButton .textoYButton__button, header .btn-vaciar, header .btn-comprar, header .navBar__button {
   padding: 10px 25px;
   font-size: 20px;
   font-weight: bold;
@@ -48,6 +48,41 @@ header .navBar__button:hover {
   font-size: 2.1rem;
   background-color: #f52f2f;
   color: #f0f0f0;
+}
+header .btnCerrarCarrito {
+  border: none;
+  background: transparent;
+}
+header .btnEliminarDelCarrito {
+  color: #f52f2f;
+}
+header .btn-comprar {
+  padding: 5px 15px;
+  background-color: rgb(18, 177, 18);
+  font-size: 1rem;
+  color: rgb(238, 237, 237);
+}
+header .btn-comprar:hover {
+  color: rgb(18, 177, 18) !important;
+  border: solid 0.5px rgb(18, 177, 18) !important;
+}
+header .btn-vaciar {
+  padding: 5px 15px;
+  background-color: #f52f2f;
+  font-size: 1rem;
+  color: rgb(238, 237, 237);
+}
+header .btn-vaciar:hover {
+  color: #f52f2f !important;
+  border: solid 0.5px #f52f2f !important;
+}
+header .modal-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+header .modal-footer .precioProducto {
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 600px) {
   header .responsiveButton {
@@ -666,6 +701,9 @@ header .navBar__button:hover {
   background-color: #ff6e2b;
   color: #fff;
 }
+.form-contacto .precioProducto {
+  text-align: left;
+}
 
 @media screen and (max-width: 600px) {
   .form-contacto {
@@ -721,14 +759,14 @@ main .cards-container .card p {
   line-height: 1.5;
   color: #6a6a6a;
 }
-main .cards-container .card a {
+main .cards-container .card button {
   display: inline-block;
   color: rgb(255, 140, 0);
   border: 1px solid #ff6e2b;
   background-color: #fff;
   transition: all 400ms ease;
 }
-main .cards-container .card a:hover {
+main .cards-container .card button:hover {
   background-color: #ff6e2b;
   color: #fff;
   cursor: pointer;

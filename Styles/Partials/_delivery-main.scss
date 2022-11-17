@@ -33,7 +33,7 @@ main{
                 color: #6a6a6a;    
             }
 
-            a{
+            button{
                 @extend %button-default;
                 display: inline-block;
                 color: map-get($colors, botton-letter-b );
