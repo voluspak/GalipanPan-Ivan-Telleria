@@ -88,7 +88,7 @@ const mostrarCarrito = () => {
     })
     carrito.length == 0 ? modalBody.innerHTML = `<p class="text-center textoModal">¡Aun no agregaste nada!</p>`:
 
-    contadorCarrito.textContent = carrito.length
+    contadorCarrito.textContent = carrito.length;
 
     precioTotal.innerText = "COP$" + carrito.reduce((acc, prod)=> acc + prod.cantidad * prod.precio, 0) + "K"
     
@@ -118,39 +118,4 @@ const eliminarProducto = (id) =>{
     carrito = carrito.filter((prod)=> prod.id !== prodID);
     mostrarCarrito();
 }
-
-
-
-
-
-
-
-
-// let opcionCompra = prompt("¡Bienvenido a Galipan Pan!, ¿Que producto te gustaria llevar? (Escribe el nombre del producto)  Rollos de canela, Pan de jamon, Golfeado, Cupcake, Torta rol")
-// let existe = false;
-// let posicion = -1;
-// let resultado = 0;
-// let respuesta;
-
-// productos.forEach((item, i)=> {
-//     if(opcionCompra == item.nombre){
-//         existe = true;
-//         posicion = i;
-//     }
-// });
-
-// if(existe){
-//     let cantidad = parseInt(prompt("¿Cuantos quieres?"));
-//     productos[posicion].PrecioPorCantidad(cantidad);
-//     respuesta = prompt(`Estas llevando ${cantidad} ${productos[posicion].nombre} por COP$${resultado}k, ¿Ok o salir?`);
-//     if(respuesta == "ok" || respuesta == "Ok"){    
-//         productos[posicion].venta(cantidad);
-//         if(!productos[posicion].disponible){
-//             productos.splice(posicion, 1);
-//         }
-//         alert("¡Gracias por su compra!");
-//     }
-// }else{
-//     alert("Lo siento, no tengo eso")
-// }
 
