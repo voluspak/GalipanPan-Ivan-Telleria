@@ -15,6 +15,32 @@ main .cards-container .card button, .form-contacto .form-contacto__button-reset,
   box-sizing: border-box;
 }
 
+header .modal-body div:first-child {
+  border: none;
+  margin-top: 0;
+}
+header .modal-body div:last-child {
+  margin-bottom: 0;
+}
+header .modal-body .modalContenedor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(235, 92, 26, 0.4784313725);
+}
+header .modal-body .modalContenedor .img-carrito {
+  width: 20rem;
+  padding: 20px;
+  border-radius: 12%;
+}
+header .modal-body .modalContenedor div:last-child {
+  display: flex;
+  flex-flow: column wrap;
+}
+header .modal-body .modalContenedor div:last-child .btn {
+  align-self: center;
+}
 header .navbar-brand img {
   height: 9.37rem;
   width: 15.62rem;

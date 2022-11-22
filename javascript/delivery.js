@@ -1,10 +1,11 @@
 class Producto{
-    constructor(id, img, nombre, precio, stock){
+    constructor(id, img, nombre, precio, unid, cantidad){
         this.id = id;
         this.img = img;
         this.nombre = nombre;
         this.precio = parseFloat(precio);
-        this.stock = stock;
+        this.unid = unid
+        this.cantidad = cantidad;
         this.disponible = true;
     }
     PrecioPorCantidad(cantidad){
@@ -21,45 +22,92 @@ class Producto{
     }
 }
 
-const productos = [];
+//  QUERIES, ARRAYS Y PRODUCTOS
 
-let contenedor = document.getElementById("contenedor-productos");
+const contenedor = document.querySelector("#contenedor")
+let modalBody = document.querySelector(".modal .carrito-contenedor")
+let contadorCarrito = document.querySelector("#contadorCarrito")
+let productos = [];
+let carrito = [];
 
 
-productos.push(new Producto(1,"../assets/rol1.jpg","Rollos de canela", 19, 10));
-productos.push(new Producto(2,"../assets/rol2.jpg","Rollos de canela", 22, 10));
-productos.push(new Producto(3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, 5));
-productos.push(new Producto(4,"../assets/golfeado.jpg", "Golfeado", 20, 10));
-productos.push(new Producto(5,"../assets/cupcake.jpg", "Cupcake", 26, 5));
-productos.push(new Producto(6,"../assets/tortarol.jpg", "Torta rol", 25, 3));
+productos.push(new Producto(1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1));
+productos.push(new Producto(2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1));
+productos.push(new Producto(3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, "x 1 unid", 1));
+productos.push(new Producto(4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 unid", 1));
+productos.push(new Producto(5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1));
+productos.push(new Producto(6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1));
 
 
 productos.forEach((prod)=>{
     
-    prod.iva();
-    const{id,img,nombre,precio,stock} = prod;
+    const{id,img,nombre,precio,unid,cantidad} = prod;
     contenedor.innerHTML += `
     <div class="card" style="width: 18rem;">
-        <img src=${img} class="card-img-top front" alt="Rol de Canela">
+        <img src=${img} class="card-img-top front" alt="${nombre}">
         <div class="card-body">
             <h5 class="card-title">${nombre}</h5>
-            <p class="card-text"><i>COP$${precio}K x 4 Rolls</i> <br> <b>+ delivery</b></p>
-            <button id="agregarProducto${id}">Añadir <i clas="fas-fa-shopping-cart"></i></a>
+            <p class="card-text"><i>COP$${precio}K ${unid}</i> <br> <b>+ delivery</b></p>
+            <p class="card-text"><i>Cantidad:</i> <b>${cantidad}</b></p>
+            <button onclick="agregarProducto(${id})">Añadir</i></a>
         </div>
     </div>`
 })
 
-function agregarProducto(id){
-    console.log(id);
+
+//   FUNCIONES
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    mostrarCarrito();
+})
+
+const guardarLS = () =>{
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
-let boton = document.getElementById("agregarProducto${id}")
+const mostrarCarrito = () => {
+    modalBody;
+    modalBody.innerHTML = ""
 
-if(boton){
-    console.log("Si existe compa")
-}else{
-    console.log("Seguimos en problemas compa")
+    carrito.forEach((prod)=>{
+        const{id,img,nombre,precio,unid,cantidad} = prod;
+        modalBody.innerHTML += `
+        <div class="modalContenedor bg-lg">
+            <div>
+                <img class="img-fluid img-carrito" src=${img}>
+            </div>
+            <div>
+                <p><b>Producto:</b> ${nombre}</p>
+                <p><b>Precio:</b> COP$${precio}K</p>
+                <p><b>Cantidad:</b> ${cantidad}</p>
+                <button onclick="eliminarProducto(${id})" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+        `
+    })
+
+    contadorCarrito.textContent = carrito.length
+
+    guardarLS()
 }
+
+const agregarProducto = (id) =>{
+    let item = productos.find((prod) => prod.id == id);
+    carrito.push(item);
+    mostrarCarrito()
+}
+const eliminarProducto = (id) =>{
+    let prodID = id;
+    carrito = carrito.filter((prod)=> prod.id !== prodID);
+    mostrarCarrito();
+}
+
+
+
+
+
+
 
 
 // let opcionCompra = prompt("¡Bienvenido a Galipan Pan!, ¿Que producto te gustaria llevar? (Escribe el nombre del producto)  Rollos de canela, Pan de jamon, Golfeado, Cupcake, Torta rol")

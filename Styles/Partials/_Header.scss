@@ -1,5 +1,36 @@
 header{
-    
+    .modal-body{
+        div{
+            &:first-child{
+                border: none;
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .modalContenedor{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            border-top: 1px solid #eb5c1a7a;
+            .img-carrito{
+            width: 20rem;
+            padding: 20px;
+            border-radius: 12%;
+            }
+            div{
+                &:last-child{
+                    display: flex;
+                    flex-flow: column wrap;
+                    .btn{
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
     .navbar-brand{
 
         img{
