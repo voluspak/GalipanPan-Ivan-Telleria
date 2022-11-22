@@ -22,6 +22,10 @@ header .modal-body div:first-child {
 header .modal-body div:last-child {
   margin-bottom: 0;
 }
+header .modal-body .textoModal {
+  color: #f05913;
+  font-weight: 700;
+}
 header .modal-body .modalContenedor {
   display: flex;
   align-items: center;

@@ -8,25 +8,18 @@ class Producto{
         this.cantidad = cantidad;
         this.disponible = true;
     }
-    PrecioPorCantidad(cantidad){
-        resultado = this.precio * cantidad;
-    }
     iva(){
         this.precio = Math.round(this.precio * 1.19);
-    }
-    venta(cantidad){
-        this.stock -= cantidad;
-        if(this.stock < 1){
-            this.disponible = false;
-        }
     }
 }
 
 //  QUERIES, ARRAYS Y PRODUCTOS
 
 const contenedor = document.querySelector("#contenedor")
-let modalBody = document.querySelector(".modal .carrito-contenedor")
-let contadorCarrito = document.querySelector("#contadorCarrito")
+const modalBody = document.querySelector(".modal .carrito-contenedor")
+const contadorCarrito = document.querySelector("#contadorCarrito")
+const vaciarCarrito = document.querySelector("#vaciarCarrito")
+const precioTotal = document.querySelector("#precioTotal");
 let productos = [];
 let carrito = [];
 
@@ -38,9 +31,8 @@ productos.push(new Producto(4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 uni
 productos.push(new Producto(5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1));
 productos.push(new Producto(6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1));
 
-
+iva();
 productos.forEach((prod)=>{
-    
     const{id,img,nombre,precio,unid,cantidad} = prod;
     contenedor.innerHTML += `
     <div class="card" style="width: 18rem;">
@@ -56,6 +48,13 @@ productos.forEach((prod)=>{
 
 
 //   FUNCIONES
+
+
+
+vaciarCarrito.addEventListener("click", ()=> {
+    carrito.length = [];
+    mostrarCarrito();
+})
 
 document.addEventListener("DOMContentLoaded", ()=>{
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -86,15 +85,31 @@ const mostrarCarrito = () => {
         </div>
         `
     })
+    carrito.length == 0 ? modalBody.innerHTML = `<p class="text-center textoModal">¡Aun no agregaste nada!</p>`:
 
     contadorCarrito.textContent = carrito.length
 
+    precioTotal.innerText = "COP$" + carrito.reduce((acc, prod)=> acc + prod.cantidad * prod.precio, 0) + "K"
+    
     guardarLS()
 }
 
 const agregarProducto = (id) =>{
+    let existe = carrito.some(prod => prod.id == id);
+
+    if(existe){
+        let prod = carrito.map(prod=>{
+            if(prod.id == id){
+                prod.cantidad++
+            }
+        })
+    }else{
+
     let item = productos.find((prod) => prod.id == id);
     carrito.push(item);
+    }
+
+
     mostrarCarrito()
 }
 const eliminarProducto = (id) =>{
