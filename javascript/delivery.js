@@ -31,8 +31,9 @@ productos.push(new Producto(4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 uni
 productos.push(new Producto(5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1));
 productos.push(new Producto(6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1));
 
-iva();
+
 productos.forEach((prod)=>{
+    prod.iva();
     const{id,img,nombre,precio,unid,cantidad} = prod;
     contenedor.innerHTML += `
     <div class="card" style="width: 18rem;">
