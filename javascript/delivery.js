@@ -20,16 +20,15 @@ const modalBody = document.querySelector(".modal .carrito-contenedor")
 const contadorCarrito = document.querySelector("#contadorCarrito")
 const vaciarCarrito = document.querySelector("#vaciarCarrito")
 const precioTotal = document.querySelector("#precioTotal");
-let productos = [];
+let productos = [
+    (1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1),
+    (2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1),
+    (3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, "x 1 unid", 1),
+    (4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 unid", 1),
+    (5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1),
+    (6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1)
+];
 let carrito = [];
-
-
-productos.push(new Producto(1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1));
-productos.push(new Producto(2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1));
-productos.push(new Producto(3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, "x 1 unid", 1));
-productos.push(new Producto(4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 unid", 1));
-productos.push(new Producto(5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1));
-productos.push(new Producto(6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1));
 
 
 productos.forEach((prod)=>{
