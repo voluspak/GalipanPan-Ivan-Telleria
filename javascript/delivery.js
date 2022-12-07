@@ -1,18 +1,3 @@
-class Producto{
-    constructor(id, img, nombre, precio, unid, cantidad){
-        this.id = id;
-        this.img = img;
-        this.nombre = nombre;
-        this.precio = parseFloat(precio);
-        this.unid = unid
-        this.cantidad = cantidad;
-        this.disponible = true;
-    }
-    iva(){
-        this.precio = Math.round(this.precio * 1.19);
-    }
-}
-
 //  QUERIES, ARRAYS Y PRODUCTOS
 
 const contenedor = document.querySelector("#contenedor");
@@ -22,35 +7,22 @@ const vaciarCarrito = document.querySelector("#vaciarCarrito");
 const precioTotal = document.querySelector("#precioTotal");
 const comprarCarrito = document.querySelector("#comprarCarrito");
 
-fetch("/data.json")
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-
-let productos = [
-    // new Producto (1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1),
-    // new Producto (2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1),
-    // new Producto (3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, "x 1 unid", 1),
-    // new Producto (4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 unid", 1),
-    // new Producto (5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1),
-    // new Producto (6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1)
-];
 let carrito = [];
 
 
-productos.forEach((prod)=>{
-    prod.iva();
-    const{id,img,nombre,precio,unid,cantidad} = prod;
-    contenedor.innerHTML += `
-    <div class="card" style="width: 18rem;">
-        <img src=${img} class="card-img-top front" alt="${nombre}">
-        <div class="card-body">
-            <h5 class="card-title">${nombre}</h5>
-            <p class="card-text"><i>COP$${precio}K ${unid}</i> <br> <b>+ delivery</b></p>
-            <p class="card-text"><i>Cantidad:</i> <b>${cantidad}</b></p>
-            <button onclick="agregarProducto(${id})">Añadir</i></a>
-        </div>
-    </div>`
-})
+// productos.forEach((prod)=>{
+//     const{id,img,nombre,precio,unid,cantidad} = prod;
+//     contenedor.innerHTML += `
+//     <div class="card" style="width: 18rem;">
+//         <img src=${img} class="card-img-top front" alt="${nombre}">
+//         <div class="card-body">
+//             <h5 class="card-title">${nombre}</h5>
+//             <p class="card-text"><i>COP$${precio}K ${unid}</i> <br> <b>+ delivery</b></p>
+//             <p class="card-text"><i>Cantidad:</i> <b>${cantidad}</b></p>
+//             <button onclick="agregarProducto(${id})">Añadir</i></a>
+//         </div>
+//     </div>`
+// })
 
 
 //   FUNCIONES
