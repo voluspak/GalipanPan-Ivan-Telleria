@@ -1,55 +1,56 @@
 [
     {
-        "id": 1,
+        "img": "https://cdn.pixabay.com/photo/2020/04/23/22/24/cinamonn-5084293_960_720.jpg",
+        "nombre": "Roles en bandeja"
+    },
+
+    {
+        "img": "https://cdn.pixabay.com/photo/2021/06/12/02/39/cinnamon-swirls-6329832_960_720.jpg",
+        "nombre": "Roles con glaseado"
+    },
+
+    {
+        "img": "../assets/RolesEnBandeja.webp",
+        "nombre": "Roles de canela" 
+    },
+
+    {
+        "img": "../assets/CupcakesReal.webp" ,
+        "nombre": "Cupcakes"
+    },
+
+    {
         "img": "../assets/rol1.jpg",
-        "nombre": "Rollos de canela",
-        "precio": 19,
-        "unid": "x 4 Rolls",
-        "cantidad": 1
+        "nombre": "Roles con topping" 
     },
 
     {
-        "id": 2,
-        "img": "../assets/rol2.jpg",
-        "nombre": "Rollos de canela",
-        "precio": 22,
-        "unid": "x 6 Rolls",
-        "cantidad": 1
-    },
-
-    {
-        "id": 3,
-        "img": "../assets/pan-de-jamón.jpg", 
-        "nombre": "Pan de jamon", 
-        "precio": 15, 
-        "unid": "x 1 unid", 
-        "cantidad": 1
-    },
-
-    {
-        "id": 4,
-        "img": "../assets/golfeado.jpg", 
-        "nombre": "Golfeado", 
-        "precio": 20, 
-        "unid": "x 4 unid", 
-        "cant": 1
-    },
-
-    {
-        "id": 5,
-        "img": "../assets/cupcake.jpg", 
-        "nombre": "Cupcake", 
-        "precio": 26, 
-        "unid": "x 6 unid",
-        "cant": 1
-    },
-
-    {
-        "id": 6,
         "img": "../assets/tortarol.jpg",
-        "nombre": "Torta rol",
-        "precio": 25,
-        "unid": "1 unid", 
-        "cantidad": 1
+        "nombre": "Tortarol"
+    },
+    
+    {
+        "img": "../assets/CupcakesReal2.webp",
+        "nombre": "Cupcakes"
+    },
+    
+    {
+        "img": "../assets/Preparacion.webp",
+        "nombre": "Panadero preparando la masa"
+    },
+    
+    {
+        "img": "../assets/pan-de-jamón.jpg",
+        "nombre": "Pan de jamon"
+    },
+    
+    {
+        "img": "../assets/Pancitos.webp",
+        "nombre": "Pan frances"
+    },
+
+    {
+        "img": "../assets/golfeado.jpg",
+        "nombre": "golfeado"
     }
 ]
