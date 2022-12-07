@@ -15,18 +15,24 @@ class Producto{
 
 //  QUERIES, ARRAYS Y PRODUCTOS
 
-const contenedor = document.querySelector("#contenedor")
-const modalBody = document.querySelector(".modal .carrito-contenedor")
-const contadorCarrito = document.querySelector("#contadorCarrito")
-const vaciarCarrito = document.querySelector("#vaciarCarrito")
+const contenedor = document.querySelector("#contenedor");
+const modalBody = document.querySelector(".modal .carrito-contenedor");
+const contadorCarrito = document.querySelector("#contadorCarrito");
+const vaciarCarrito = document.querySelector("#vaciarCarrito");
 const precioTotal = document.querySelector("#precioTotal");
+const comprarCarrito = document.querySelector("#comprarCarrito");
+
+fetch("/data.json")
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+
 let productos = [
-    (1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1),
-    (2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1),
-    (3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, "x 1 unid", 1),
-    (4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 unid", 1),
-    (5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1),
-    (6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1)
+    // new Producto (1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1),
+    // new Producto (2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1),
+    // new Producto (3,"../assets/pan-de-jamón.jpg", "Pan de jamon", 15, "x 1 unid", 1),
+    // new Producto (4,"../assets/golfeado.jpg", "Golfeado", 20, "x 4 unid", 1),
+    // new Producto (5,"../assets/cupcake.jpg", "Cupcake", 26, "x 6 unid", 1),
+    // new Producto (6,"../assets/tortarol.jpg", "Torta rol", 25, "1 unid", 1)
 ];
 let carrito = [];
 
@@ -48,13 +54,30 @@ productos.forEach((prod)=>{
 
 
 //   FUNCIONES
-
-
-
 vaciarCarrito.addEventListener("click", ()=> {
-    carrito.length = [];
-    mostrarCarrito();
+    Swal.fire({
+        title: '¿Quieres vaciar el carrito?',
+        text: "Se eliminaran todos los productos de tu carrito de compra",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: 'rgb(156, 155, 155)',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Vaciar',
+        cancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            carrito.length = [];
+            mostrarCarrito();
+        Swal.fire({
+            title: 'Carrito vaciado!',
+            text: 'Todos los productos han sido eliminados',
+            icon: 'success',
+            confirmButtonColor: 'rgb(156, 155, 155)',
+        })
+        }
+    })
 })
+
 
 document.addEventListener("DOMContentLoaded", ()=>{
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -66,7 +89,6 @@ const guardarLS = () =>{
 }
 
 const mostrarCarrito = () => {
-    modalBody;
     modalBody.innerHTML = ""
 
     carrito.forEach((prod)=>{
@@ -80,12 +102,19 @@ const mostrarCarrito = () => {
                 <p><b>Producto:</b> ${nombre}</p>
                 <p><b>Precio:</b> COP$${precio}K</p>
                 <p><b>Cantidad:</b> ${cantidad}</p>
-                <button onclick="eliminarProducto(${id})" class="btn btn-danger">Eliminar</button>
+                <button onclick="eliminarProducto(${id})" onclick="Toastify()" class="btn btn-danger">Eliminar</button>
             </div>
         </div>
         `
     })
-    carrito.length == 0 ? modalBody.innerHTML = `<p class="text-center textoModal">¡Aun no agregaste nada!</p>`:
+    if(carrito.length == 0){
+        modalBody.innerHTML = `<p class="text-center textoModal">¡Aun no agregaste nada!</p>`
+        vaciarCarrito.disabled = true;
+        comprarCarrito.disabled = true;
+    }else{
+        vaciarCarrito.disabled = false;
+        comprarCarrito.disabled = false;
+    }
 
     contadorCarrito.textContent = carrito.length;
 
@@ -104,12 +133,17 @@ const agregarProducto = (id) =>{
             }
         })
     }else{
-
-    let item = productos.find((prod) => prod.id == id);
-    carrito.push(item);
+        let item = productos.find((prod) => prod.id == id);
+        carrito.push(item);
     }
-
-
+    Toastify({
+        text: `Agregado al carrito exitosamente!🎉`,
+        gravity: "bottom",
+        duration: 3000,
+        style: {
+          background: "rgba(255, 142, 5, 0.9)",
+        }
+    }).showToast();
     mostrarCarrito()
 }
 const eliminarProducto = (id) =>{
@@ -117,4 +151,3 @@ const eliminarProducto = (id) =>{
     carrito = carrito.filter((prod)=> prod.id !== prodID);
     mostrarCarrito();
 }
-
