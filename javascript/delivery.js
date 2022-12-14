@@ -17,6 +17,11 @@ const contadorCarrito = document.querySelector("#contadorCarrito");
 const vaciarCarrito = document.querySelector("#vaciarCarrito");
 const precioTotal = document.querySelector("#precioTotal");
 const comprarCarrito = document.querySelector("#comprarCarrito");
+const fragmento = document.createDocumentFragment();
+const cardsDiv = document.createElement("div");
+
+cardsDiv.classList.add("row", "text-center", "cards-container");
+
 let productos = [
     new Producto (1,"../assets/rol1.jpg","Rollos de canela",19, "x 4 Rolls", 1),
     new Producto (2,"../assets/rol2.jpg","Rollos de canela", 22, "x 6 Rolls", 1),
@@ -33,7 +38,7 @@ let carrito = [];
 
 productos.forEach((prod)=>{
     const{id,img,nombre,precio,unid,cantidad} = prod;
-    contenedor.innerHTML += `
+    cardsDiv.innerHTML += `
     <div class="card" style="width: 18rem;">
         <img src=${img} class="card-img-top front" alt="${nombre}">
         <div class="card-body">
@@ -43,7 +48,11 @@ productos.forEach((prod)=>{
             <button onclick="agregarProducto(${id})">Añadir</i></a>
         </div>
     </div>`
+    fragmento.appendChild(cardsDiv);
 })
+
+contenedor.appendChild(fragmento)
+
 
 vaciarCarrito.addEventListener("click", ()=> {
     Swal.fire({
