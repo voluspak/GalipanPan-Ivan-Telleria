@@ -1,0 +1,106 @@
+---
+const navLinks = [
+  { href: '/menu', label: 'Menú' },
+  { href: '/galeria', label: 'Galeria' },
+  { href: '/delivery', label: 'Pedido Online' },
+  { href: '/contacto', label: 'Contactanos' },
+  { href: '/sobre-nosotros', label: 'Sobre Nosotros' }
+];
+
+const socialLinks = [
+  {
+    href: 'https://www.instagram.com/galipanpan/',
+    icon: 'fa-instagram',
+    label: 'Instagram'
+  },
+  {
+    href: 'https://www.facebook.com/galipanpan',
+    icon: 'fa-facebook',
+    label: 'Facebook'
+  },
+  {
+    href: 'https://api.whatsapp.com/send?phone=573173934277',
+    icon: 'fa-whatsapp',
+    label: 'Whatsapp'
+  }
+];
+---
+
+<footer class="w-full bg-gray-900 text-white mt-auto">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Mapa del Sitio - Desktop -->
+      <div class="hidden md:block">
+        <h2 class="text-xl font-bold mb-4 font-[Courgette]">Mapa del Sitio</h2>
+        <ul class="space-y-2">
+          {navLinks.map(link => (
+            <li>
+              <a
+                href={link.href}
+                class="text-gray-300 hover:text-orange-500 transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Redes Sociales y Copyright -->
+      <div class="space-y-6">
+        <div>
+          <h2 class="text-xl font-bold mb-4 font-[Courgette] md:hidden">Mapa del Sitio</h2>
+          <ul class="space-y-2 md:hidden">
+            {navLinks.map(link => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            {socialLinks.map(social => (
+              <li>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                >
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Redes Sociales Desktop -->
+        <div class="hidden md:block">
+          <ul class="flex space-x-6 text-2xl">
+            {socialLinks.map(social => (
+              <li>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-300 hover:text-orange-500 transition-colors"
+                  title={social.label}
+                >
+                  <i class={`fa-brands ${social.icon}`}></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm text-gray-400">
+            Galipan Pan 2020. Todos los derechos reservados.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
