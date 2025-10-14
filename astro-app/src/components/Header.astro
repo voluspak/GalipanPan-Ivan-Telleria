@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logoImg from '../../public/assets/Logo.webp';
+
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
@@ -15,10 +18,13 @@ const navLinks = [
     <div class="flex items-center justify-between py-3">
       <!-- Logo -->
       <a href="/" class="flex-shrink-0">
-        <img
-          src="/assets/Logo.jpg"
+        <Image
+          src={logoImg}
           alt="Logo Galipan Pan"
           class="h-16 w-16 rounded-full object-cover"
+          width={64}
+          height={64}
+          loading="eager"
         />
       </a>
 

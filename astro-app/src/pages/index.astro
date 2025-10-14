@@ -1,32 +1,39 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Carousel from '../components/Carousel.astro';
 
+import panDeJamonImg from '../../public/assets/pan-de-jamón.webp';
+import canillaImg from '../../public/assets/canilla.webp';
+import rol1Img from '../../public/assets/rol1.webp';
+import cupcakeImg from '../../public/assets/cupcake.webp';
+import rol2Img from '../../public/assets/rol2.webp';
+
 const carouselImages = [
   {
-    src: '/assets/pan-de-jamón.jpg',
+    src: panDeJamonImg,
     alt: 'Pan de jamon',
     title: 'Pan de Jamon'
   },
   {
-    src: '/assets/canilla.jpg',
+    src: canillaImg,
     alt: 'Pan frances',
     title: 'Pan Frances'
   },
   {
-    src: '/assets/rol1.jpg',
+    src: rol1Img,
     alt: 'Rol de canela',
     title: 'Rol de canela'
   },
   {
-    src: '/assets/cupcake.jpg',
+    src: cupcakeImg,
     alt: 'Cupcake',
     title: 'Cupcake'
   },
   {
-    src: '/assets/rol2.jpg',
+    src: rol2Img,
     alt: 'Rol de canela',
     title: 'Rol de Canela'
   }
@@ -82,11 +89,12 @@ const carouselImages = [
 
         <!-- Hero Image -->
         <div class="order-first md:order-last">
-          <img
-            src="/assets/rol2.jpg"
+          <Image
+            src={rol2Img}
             alt="Roles De Canela"
             title="Roles de Canela"
             class="w-full rounded-lg shadow-2xl"
+            loading="eager"
           />
         </div>
       </div>

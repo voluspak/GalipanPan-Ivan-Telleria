@@ -1,7 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+import logoImg from '../../public/assets/Logo.webp';
+import rol1Img from '../../public/assets/rol1.webp';
 ---
 
 <BaseLayout
@@ -15,10 +19,12 @@ import Footer from '../components/Footer.astro';
       <!-- Section A -->
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 items-center">
         <div class="flex justify-center">
-          <img
-            src="/assets/Logo.jpg"
+          <Image
+            src={logoImg}
             alt="Logo de la empresa"
             class="w-64 h-64 rounded-full shadow-lg object-cover"
+            width={256}
+            height={256}
           />
         </div>
 
@@ -51,8 +57,8 @@ import Footer from '../components/Footer.astro';
         </div>
 
         <div class="flex justify-center">
-          <img
-            src="/assets/rol1.jpg"
+          <Image
+            src={rol1Img}
             alt="Rol de canela cubierto de caramelo"
             class="w-full max-w-md rounded-lg shadow-2xl object-cover"
           />

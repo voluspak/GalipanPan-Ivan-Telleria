@@ -3,54 +3,44 @@
         "img": "https://cdn.pixabay.com/photo/2020/04/23/22/24/cinamonn-5084293_960_720.jpg",
         "nombre": "Roles en bandeja"
     },
-
     {
         "img": "https://cdn.pixabay.com/photo/2021/06/12/02/39/cinnamon-swirls-6329832_960_720.jpg",
         "nombre": "Roles con glaseado"
     },
-
     {
-        "img": "../assets/RolesEnBandeja.webp",
-        "nombre": "Roles de canela" 
+        "img": "/assets/RolesEnBandeja.webp",
+        "nombre": "Roles de canela"
     },
-
     {
-        "img": "../assets/CupcakesReal.webp" ,
+        "img": "/assets/CupcakesReal.webp",
         "nombre": "Cupcakes"
     },
-
     {
-        "img": "../assets/rol1.jpg",
-        "nombre": "Roles con topping" 
+        "img": "/assets/rol1.webp",
+        "nombre": "Roles con topping"
     },
-
     {
-        "img": "../assets/tortarol.jpg",
+        "img": "/assets/tortarol.webp",
         "nombre": "Tortarol"
     },
-    
     {
-        "img": "../assets/CupcakesReal2.webp",
+        "img": "/assets/CupcakesReal2.webp",
         "nombre": "Cupcakes"
     },
-    
     {
-        "img": "../assets/Preparacion.webp",
+        "img": "/assets/Preparacion.webp",
         "nombre": "Panadero preparando la masa"
     },
-    
     {
-        "img": "../assets/pan-de-jamón.jpg",
+        "img": "/assets/pan-de-jamón.webp",
         "nombre": "Pan de jamon"
     },
-    
     {
-        "img": "../assets/Pancitos.webp",
+        "img": "/assets/Pancitos.webp",
         "nombre": "Pan frances"
     },
-
     {
-        "img": "../assets/golfeado.jpg",
-        "nombre": "golfeado"
+        "img": "/assets/golfeado.webp",
+        "nombre": "Golfeado"
     }
 ]
