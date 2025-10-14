@@ -1,9 +1,10 @@
 {
-  "name": "astro-app",
+  "name": "galipan-pan",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "./scripts/run-dev.sh",
+    "dev:skip-tests": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
