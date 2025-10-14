@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-import logoImg from '../../public/assets/Logo.webp';
-import rol1Img from '../../public/assets/rol1.webp';
+import logoImg from "../../public/assets/Logo.webp";
+import rol1Img from "../../public/assets/rol1.webp";
 ---
 
 <BaseLayout
@@ -22,21 +22,24 @@ import rol1Img from '../../public/assets/rol1.webp';
           <Image
             src={logoImg}
             alt="Logo de la empresa"
-            class="w-64 h-64 rounded-full shadow-lg object-cover"
-            width={256}
-            height={256}
+            class="w-full shadow-lg object-fill rounded-2xl"
           />
         </div>
 
         <div class="space-y-6">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 font-[Courgette]">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-800 font-[Courgette]"
+          >
             Nuestra Historia
           </h1>
-          <p class="text-lg text-gray-600 leading-relaxed">
-            Una pareja de <em class="text-orange-500">venezolanos</em>, que habían <br />
-            emigrado a <em class="text-orange-500">Fusagasugá</em>, una pequeña ciudad <br />
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Una pareja de <em class="text-orange-500">venezolanos</em>, que
+            habían <br />
+            emigrado a <em class="text-orange-500">Fusagasugá</em>, una pequeña
+            ciudad <br />
             a las afueras de Bogotá, decide a principios <br />
-            del año <em class="text-orange-500">2020</em> emprender su propio negocio de <br />
+            del año <em class="text-orange-500">2020</em> emprender su propio negocio
+            de <br />
             <em class="text-orange-500">panaderia artesanal venezolana.</em>
           </p>
         </div>
@@ -45,9 +48,10 @@ import rol1Img from '../../public/assets/rol1.webp';
       <!-- Section B -->
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div class="space-y-6 order-last lg:order-first">
-          <p class="text-lg text-gray-600 leading-relaxed">
+          <p class="text-xl text-gray-600 leading-relaxed">
             Debido a la pandemia del Covid-19, hemos <br />
-            vuelto los pedidos a <em class="text-orange-500">domicilio</em> una fortaleza <br />
+            vuelto los pedidos a <em class="text-orange-500">domicilio</em> una fortaleza
+            <br />
             y nuestra principal forma de servicio. <br /><br />
             Al hacer todos nuestros productos al dia, <br />
             podemos brindarle panaderia fresca, <br />
@@ -60,7 +64,7 @@ import rol1Img from '../../public/assets/rol1.webp';
           <Image
             src={rol1Img}
             alt="Rol de canela cubierto de caramelo"
-            class="w-full max-w-md rounded-lg shadow-2xl object-cover"
+            class="w-full rounded-lg shadow-2xl object-cover"
           />
         </div>
       </section>
