@@ -1,43 +1,102 @@
-# Astro Starter Kit: Minimal
+# 🥐 Galipan Pan - Sitio Web con Astro
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+Sitio web moderno para Galipan Pan, panadería artesanal venezolana. Migración del sitio legacy HTML/CSS a **Astro + TypeScript + Tailwind CSS**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📋 Fase 1: Sitio Estático (Completado)
 
-## 🚀 Project Structure
+- ✅ Migración de 5 páginas estáticas
+- ✅ Componentes reutilizables (Header, Footer, Carousel)
+- ✅ Layout base con SEO
+- ✅ Estilos con Tailwind CSS
+- ✅ Responsive design
+- ✅ Optimización de imágenes
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Estructura del Proyecto
 
 ```text
-/
+astro-app/
 ├── public/
+│   └── assets/           # Imágenes y recursos estáticos
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/       # Componentes reutilizables
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   └── Carousel.astro
+│   ├── layouts/
+│   │   └── BaseLayout.astro
+│   ├── pages/            # Páginas del sitio (enrutamiento automático)
+│   │   ├── index.astro   # Inicio
+│   │   ├── menu.astro
+│   │   ├── galeria.astro
+│   │   ├── contacto.astro
+│   │   └── sobre-nosotros.astro
+│   ├── content/          # Datos JSON
+│   │   └── galeria/
+│   └── styles/
+│       └── global.css    # Estilos globales + Tailwind
+├── astro.config.mjs      # Configuración Astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Tecnologías
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Astro 5.14.4** - Framework web
+- **TypeScript** - Tipado estático
+- **Tailwind CSS 4.x** - Estilos utility-first
+- **React 19** - Integración para Fase 2
+- **pnpm** - Gestor de paquetes
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🧞 Comandos
 
-## 🧞 Commands
+Todos los comandos se ejecutan desde la raíz del proyecto:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`            | Instalar dependencias                            |
+| `pnpm dev`                | Iniciar servidor de desarrollo en `localhost:4321` |
+| `pnpm build`              | Construir sitio para producción en `./dist/`     |
+| `pnpm preview`            | Previsualizar build local antes de desplegar     |
+| `pnpm astro ...`          | Ejecutar comandos CLI de Astro                   |
 
-## 👀 Want to learn more?
+## 📝 Desarrollo
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Iniciar el proyecto
+
+```bash
+cd astro-app
+pnpm install
+pnpm dev
+```
+
+El sitio estará disponible en `http://localhost:4321`
+
+### Build para producción
+
+```bash
+pnpm build
+```
+
+Los archivos optimizados se generarán en `./dist/`
+
+## 🔮 Fase 2: Integración App de Delivery (Pendiente)
+
+- [ ] Migrar app React de delivery
+- [ ] Integrar componentes React como Islands
+- [ ] Configurar ruta `/delivery`
+- [ ] Unificar estilos entre sitio estático y app
+- [ ] Integrar panel administrativo
+
+## 📦 Historial de Commits
+
+```
+b74125a - style: Configurar estilos globales con Tailwind
+668ddb3 - feat: Migrar páginas contacto y galeria
+3833b8d - feat: Migrar páginas menu y sobre-nosotros
+b42961e - feat: Migrar página de inicio con hero, features y carousel
+74555c9 - feat: Crear layout base y componentes compartidos
+f9d6f23 - feat: Inicializar proyecto Astro con TypeScript, Tailwind y React
+```
+
+## 📄 Licencia
+
+Todos los derechos reservados - Galipan Pan © 2020
