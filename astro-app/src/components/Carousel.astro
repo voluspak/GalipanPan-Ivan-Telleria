@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 interface Props {
   images: Array<{
@@ -15,24 +15,28 @@ const { images } = Astro.props;
 
 <div class="relative w-full mx-auto">
   <!-- Carousel Container -->
-  <div class="relative overflow-hidden rounded-lg shadow-lg aspect-video bg-zinc-100">
-    {images.map((image, index) => (
-      <div
-        class={`carousel-item absolute w-full h-full transition-opacity duration-500 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
-        data-index={index}
-      >
-        <Image
-          src={image.src}
-          alt={image.alt}
-          title={image.title}
-          class="w-full h-full object-cover lg:object-contain"
-          loading={index === 0 ? 'eager' : 'lazy'}
-          width={1280}
-          height={720}
-          quality={90}
-        />
-      </div>
-    ))}
+  <div
+    class="relative overflow-hidden rounded-lg shadow-lg aspect-video bg-zinc-100"
+  >
+    {
+      images.map((image, index) => (
+        <div
+          class={`carousel-item absolute w-full h-full transition-opacity duration-500 ${index === 0 ? "opacity-100" : "opacity-0"}`}
+          data-index={index}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            title={image.title}
+            class="w-full h-full object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
+            width={1280}
+            height={720}
+            quality={90}
+          />
+        </div>
+      ))
+    }
   </div>
 
   <!-- Previous Button -->
@@ -41,7 +45,11 @@ const { images } = Astro.props;
     aria-label="Anterior"
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"></path>
     </svg>
   </button>
 
@@ -51,48 +59,54 @@ const { images } = Astro.props;
     aria-label="Siguiente"
   >
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9 5l7 7-7 7"></path>
     </svg>
   </button>
 
   <!-- Indicators -->
   <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-    {images.map((_, index) => (
-      <button
-        class={`carousel-indicator w-3 h-3 rounded-full transition-colors ${index === 0 ? 'bg-white' : 'bg-white/50'}`}
-        data-index={index}
-        aria-label={`Ir a imagen ${index + 1}`}
-      ></button>
-    ))}
+    {
+      images.map((_, index) => (
+        <button
+          class={`carousel-indicator w-3 h-3 rounded-full transition-colors ${index === 0 ? "bg-white" : "bg-white/50"}`}
+          data-index={index}
+          aria-label={`Ir a imagen ${index + 1}`}
+        />
+      ))
+    }
   </div>
 </div>
 
 <script>
-  document.querySelectorAll('.relative.w-full.mx-auto').forEach((carousel) => {
-    const items = carousel.querySelectorAll('.carousel-item');
-    const indicators = carousel.querySelectorAll('.carousel-indicator');
-    const prevBtn = carousel.querySelector('.carousel-prev');
-    const nextBtn = carousel.querySelector('.carousel-next');
+  document.querySelectorAll(".relative.w-full.mx-auto").forEach((carousel) => {
+    const items = carousel.querySelectorAll(".carousel-item");
+    const indicators = carousel.querySelectorAll(".carousel-indicator");
+    const prevBtn = carousel.querySelector(".carousel-prev");
+    const nextBtn = carousel.querySelector(".carousel-next");
     let currentIndex = 0;
 
     function showSlide(index: number) {
       items.forEach((item, i) => {
         if (i === index) {
-          item.classList.remove('opacity-0');
-          item.classList.add('opacity-100');
+          item.classList.remove("opacity-0");
+          item.classList.add("opacity-100");
         } else {
-          item.classList.remove('opacity-100');
-          item.classList.add('opacity-0');
+          item.classList.remove("opacity-100");
+          item.classList.add("opacity-0");
         }
       });
 
       indicators.forEach((indicator, i) => {
         if (i === index) {
-          indicator.classList.remove('bg-white/50');
-          indicator.classList.add('bg-white');
+          indicator.classList.remove("bg-white/50");
+          indicator.classList.add("bg-white");
         } else {
-          indicator.classList.remove('bg-white');
-          indicator.classList.add('bg-white/50');
+          indicator.classList.remove("bg-white");
+          indicator.classList.add("bg-white/50");
         }
       });
     }
@@ -107,11 +121,11 @@ const { images } = Astro.props;
       showSlide(currentIndex);
     }
 
-    nextBtn?.addEventListener('click', nextSlide);
-    prevBtn?.addEventListener('click', prevSlide);
+    nextBtn?.addEventListener("click", nextSlide);
+    prevBtn?.addEventListener("click", prevSlide);
 
     indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
+      indicator.addEventListener("click", () => {
         currentIndex = index;
         showSlide(currentIndex);
       });

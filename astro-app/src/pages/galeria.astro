@@ -17,42 +17,62 @@ const isExternalUrl = (url: string) => url.startsWith('http');
 >
   <Header />
 
-  <main class="flex-1">
-    <div class="container mx-auto px-4 py-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 font-[Courgette] mb-12">
-        Fotos
+  <main class="flex-1 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-7xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-center text-zinc-900 mb-12">
+        Galería
       </h1>
 
-      <!-- Grid de galería -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {galeriaData.map((foto) => (
-          <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            {isExternalUrl(foto.img) ? (
-              <img
-                src={foto.img}
-                alt={foto.nombre}
-                title={foto.nombre}
-                class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            ) : (
-              <Image
-                src={foto.img}
-                alt={foto.nombre}
-                title={foto.nombre}
-                class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
-                width={400}
-                height={256}
-                loading="lazy"
-              />
-            )}
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-              <p class="text-white font-medium text-lg p-4">
-                {foto.nombre}
-              </p>
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-[200px]">
+        {galeriaData.map((foto, index) => {
+          // Patrón de tamaños bento: algunos items ocupan más espacio
+          const bentoClasses = [
+            'col-span-2 row-span-2', // 0: Grande
+            'col-span-1 row-span-1', // 1: Pequeño
+            'col-span-1 row-span-2', // 2: Alto
+            'col-span-2 row-span-1', // 3: Ancho
+            'col-span-1 row-span-1', // 4: Pequeño
+            'col-span-2 row-span-2', // 5: Grande
+            'col-span-1 row-span-1', // 6: Pequeño
+            'col-span-1 row-span-2', // 7: Alto
+            'col-span-2 row-span-1', // 8: Ancho
+            'col-span-1 row-span-1', // 9: Pequeño
+            'col-span-2 row-span-2', // 10: Grande
+          ];
+
+          const sizeClass = bentoClasses[index % bentoClasses.length];
+
+          return (
+            <div class={`group relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ${sizeClass}`}>
+              {isExternalUrl(foto.img) ? (
+                <img
+                  src={foto.img}
+                  alt={foto.nombre}
+                  title={foto.nombre}
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
+              ) : (
+                <Image
+                  src={foto.img}
+                  alt={foto.nombre}
+                  title={foto.nombre}
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  width={600}
+                  height={600}
+                  loading="lazy"
+                  quality={85}
+                />
+              )}
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <p class="text-white font-semibold text-base md:text-lg p-4">
+                  {foto.nombre}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   </main>
