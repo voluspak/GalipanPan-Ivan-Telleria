@@ -241,7 +241,10 @@ const { images } = Astro.props;
       });
 
       // Keyboard navigation
-      carousel.addEventListener("keydown", (e) => {
+      document.addEventListener("keydown", (e: KeyboardEvent) => {
+        // Solo responder si el carousel o sus hijos tienen el focus
+        if (!carousel.contains(document.activeElement)) return;
+
         if (e.key === "ArrowLeft") {
           e.preventDefault();
           prevSlide();
