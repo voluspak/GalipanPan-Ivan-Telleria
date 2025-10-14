@@ -6,7 +6,6 @@ import Footer from "../components/Footer.astro";
 import Carousel from "../components/Carousel.astro";
 
 import panDeJamonImg from "../../public/assets/pan-de-jamón.webp";
-import canillaImg from "../../public/assets/canilla.webp";
 import rol1Img from "../../public/assets/rol1.webp";
 import cupcakeImg from "../../public/assets/cupcake.webp";
 import rol2Img from "../../public/assets/rol2.webp";
@@ -16,11 +15,6 @@ const carouselImages = [
     src: panDeJamonImg,
     alt: "Pan de jamon",
     title: "Pan de Jamon",
-  },
-  {
-    src: canillaImg,
-    alt: "Pan frances",
-    title: "Pan Frances",
   },
   {
     src: rol1Img,
@@ -48,18 +42,29 @@ const carouselImages = [
 
   <main class="flex-1">
     <!-- Hero Section -->
-    <section class="relative">
-      <!-- Overlay -->
-      <div
-        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-[1]"
-      >
+    <section class="relative h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+      <!-- Background Image Container -->
+      <div class="absolute inset-0">
+        <!-- Image wrapper with max width for large screens -->
+        <div class="relative h-full w-full max-w-[1920px] mx-auto">
+          <Image
+            src={rol2Img}
+            alt="Deliciosos roles de canela"
+            title="Roles de Canela"
+            class="h-full w-full object-cover lg:object-contain lg:object-center"
+            loading="eager"
+            width={1920}
+            height={1080}
+            quality={90}
+          />
+        </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
       </div>
 
       <!-- Content -->
-      <div
-        class="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-48 flex items-center justify-center text-center relative z-10"
-      >
-        <div class="flex flex-col items-center gap-6 max-w-3xl">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col items-center gap-6 max-w-3xl mx-auto text-center">
           <h1
             class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tighter text-white"
           >
@@ -77,50 +82,38 @@ const carouselImages = [
           </a>
         </div>
       </div>
-
-      <!-- Background Image -->
-      <div class="absolute inset-0 -z-10">
-        <Image
-          src={rol2Img}
-          alt="Deliciosos roles de canela"
-          title="Roles de Canela"
-          class="h-full w-full object-cover"
-          loading="eager"
-          widths={[640, 768, 1024, 1280, 1536, 1920]}
-          sizes="100vw"
-          quality={90}
-        />
-      </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="max-w-2xl mx-auto">
-        <div
-          class="bg-white border-2 border-primary rounded-xl p-8 shadow-xl text-center space-y-6"
-        >
-          <h2 class="text-3xl md:text-4xl font-bold text-zinc-900">
-            Rollos de Canela
-          </h2>
-          <p class="text-2xl md:text-3xl text-zinc-700">
-            <span class="text-primary font-bold">COP$19k</span> x 12 Rolls <br
-            />
-            <span class="text-sm text-zinc-500">+ Delivery</span>
-          </p>
-          <a
-            href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
-            class="inline-flex items-center justify-center rounded-full h-12 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+    <section class="w-full py-16 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+          <div
+            class="bg-white border-2 border-primary rounded-xl p-8 shadow-xl text-center space-y-6"
           >
-            Añadir al Carrito
-          </a>
+            <h2 class="text-3xl md:text-4xl font-bold text-zinc-900">
+              Rollos de Canela
+            </h2>
+            <p class="text-2xl md:text-3xl text-zinc-700">
+              <span class="text-primary font-bold">COP$19k</span> x 12 Rolls <br
+              />
+              <span class="text-sm text-zinc-500">+ Delivery</span>
+            </p>
+            <a
+              href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
+              class="inline-flex items-center justify-center rounded-full h-12 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+            >
+              Añadir al Carrito
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="bg-zinc-50 py-12">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+    <section class="bg-zinc-50 py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div class="space-y-2">
             <h3 class="text-2xl md:text-3xl font-bold text-zinc-900">
               Rápido 🚀
@@ -144,13 +137,17 @@ const carouselImages = [
     </section>
 
     <!-- Carousel Section -->
-    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2
-        class="text-3xl md:text-4xl font-bold text-center text-zinc-900 mb-12"
-      >
-        Nuestros Productos
-      </h2>
-      <Carousel images={carouselImages} />
+    <section class="w-full py-16 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-zinc-900 mb-12"
+        >
+          Nuestros Productos
+        </h2>
+        <div class="max-w-5xl mx-auto">
+          <Carousel images={carouselImages} />
+        </div>
+      </div>
     </section>
   </main>
 

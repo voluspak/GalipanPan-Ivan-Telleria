@@ -13,9 +13,9 @@ interface Props {
 const { images } = Astro.props;
 ---
 
-<div class="relative w-full max-w-4xl mx-auto">
+<div class="relative w-full mx-auto">
   <!-- Carousel Container -->
-  <div class="relative overflow-hidden rounded-lg shadow-lg aspect-video">
+  <div class="relative overflow-hidden rounded-lg shadow-lg aspect-video bg-zinc-100">
     {images.map((image, index) => (
       <div
         class={`carousel-item absolute w-full h-full transition-opacity duration-500 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
@@ -25,8 +25,11 @@ const { images } = Astro.props;
           src={image.src}
           alt={image.alt}
           title={image.title}
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover lg:object-contain"
           loading={index === 0 ? 'eager' : 'lazy'}
+          width={1280}
+          height={720}
+          quality={90}
         />
       </div>
     ))}
@@ -65,7 +68,7 @@ const { images } = Astro.props;
 </div>
 
 <script>
-  document.querySelectorAll('.relative.w-full.max-w-4xl').forEach((carousel) => {
+  document.querySelectorAll('.relative.w-full.mx-auto').forEach((carousel) => {
     const items = carousel.querySelectorAll('.carousel-item');
     const indicators = carousel.querySelectorAll('.carousel-indicator');
     const prevBtn = carousel.querySelector('.carousel-prev');
