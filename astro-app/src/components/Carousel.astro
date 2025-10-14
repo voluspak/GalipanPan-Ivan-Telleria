@@ -242,7 +242,6 @@ const { images } = Astro.props;
 
       // Keyboard navigation
       document.addEventListener("keydown", (e: KeyboardEvent) => {
-        // Solo responder si el carousel o sus hijos tienen el focus
         if (!carousel.contains(document.activeElement)) return;
 
         if (e.key === "ArrowLeft") {

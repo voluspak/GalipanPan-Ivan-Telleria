@@ -56,21 +56,58 @@
 
 ## 🎯 Plan de Mejoras Prioritarias
 
-### Fase 1: Críticos (Inmediato)
+### ✅ Fase 1: Críticos (Completada)
 1. ✅ Mejorar accesibilidad del menú móvil
 2. ✅ Agregar soporte de teclado al carousel
 3. ✅ Implementar pausa en auto-advance del carousel
 4. ✅ Mejorar formulario con autocomplete y validación accesible
 
-### Fase 2: Moderados (Corto plazo)
+### ✅ Fase 2: Moderados (Completada)
 5. ✅ Agregar skip link
 6. ✅ Mejorar enlaces externos
 7. ✅ Verificar y corregir contrastes
 
-### Fase 3: Menores (Mejora continua)
-8. Documentar estándares de accesibilidad
-9. Tests automatizados de accesibilidad
-10. Auditoría con herramientas (Lighthouse, axe)
+### 🔄 Fase 3: Menores (En progreso)
+8. ⏳ Documentar estándares de accesibilidad
+9. ⏳ Tests automatizados de accesibilidad
+10. ⏳ Auditoría con herramientas (Lighthouse, axe)
+
+## 📈 Estado Actual
+
+**Última actualización:** Octubre 2025
+
+### Mejoras Implementadas
+
+**Header (src/components/Header.astro)**
+- ✅ ARIA completo: `aria-label`, `aria-expanded`, `aria-controls`
+- ✅ Navegación por teclado (Escape, click fuera)
+- ✅ Focus rings visibles en todos los elementos interactivos
+- ✅ Enlaces externos con avisos apropiados
+
+**Carousel (src/components/Carousel.astro)**
+- ✅ `role="region"` con `aria-label="Carrusel de productos"`
+- ✅ Región live (`aria-live="polite"`) para anuncios
+- ✅ Navegación por teclado completa (flechas, espacio)
+- ✅ Botón pausa/play (WCAG 2.2.2)
+- ✅ Pausa en hover
+- ✅ Indicadores con `aria-current` dinámico
+
+**Formulario (src/pages/contacto.astro)**
+- ✅ Atributos `autocomplete` (WCAG 1.3.5)
+- ✅ Estructura para mensajes de error con `role="alert"`
+- ✅ Indicadores visuales de campos requeridos
+- ✅ ARIA completo: `aria-required`, `aria-invalid`, `aria-describedby`
+
+**Global**
+- ✅ Skip link funcional
+- ✅ Clase `.sr-only` implementada
+- ✅ `id="main-content"` en todas las páginas
+
+### Próximos Pasos (Fase 3)
+
+1. **Tests automatizados:** Agregar tests de accesibilidad con @axe-core/playwright o vitest-axe
+2. **Auditoría Lighthouse:** Ejecutar y documentar resultados
+3. **Documentación:** Crear guía de estándares de accesibilidad para el equipo
 
 ## 📊 Estándares de Referencia
 
