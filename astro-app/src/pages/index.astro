@@ -1,42 +1,42 @@
 ---
-import { Image } from 'astro:assets';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Carousel from '../components/Carousel.astro';
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Carousel from "../components/Carousel.astro";
 
-import panDeJamonImg from '../../public/assets/pan-de-jamón.webp';
-import canillaImg from '../../public/assets/canilla.webp';
-import rol1Img from '../../public/assets/rol1.webp';
-import cupcakeImg from '../../public/assets/cupcake.webp';
-import rol2Img from '../../public/assets/rol2.webp';
+import panDeJamonImg from "../../public/assets/pan-de-jamón.webp";
+import canillaImg from "../../public/assets/canilla.webp";
+import rol1Img from "../../public/assets/rol1.webp";
+import cupcakeImg from "../../public/assets/cupcake.webp";
+import rol2Img from "../../public/assets/rol2.webp";
 
 const carouselImages = [
   {
     src: panDeJamonImg,
-    alt: 'Pan de jamon',
-    title: 'Pan de Jamon'
+    alt: "Pan de jamon",
+    title: "Pan de Jamon",
   },
   {
     src: canillaImg,
-    alt: 'Pan frances',
-    title: 'Pan Frances'
+    alt: "Pan frances",
+    title: "Pan Frances",
   },
   {
     src: rol1Img,
-    alt: 'Rol de canela',
-    title: 'Rol de canela'
+    alt: "Rol de canela",
+    title: "Rol de canela",
   },
   {
     src: cupcakeImg,
-    alt: 'Cupcake',
-    title: 'Cupcake'
+    alt: "Cupcake",
+    title: "Cupcake",
   },
   {
     src: rol2Img,
-    alt: 'Rol de canela',
-    title: 'Rol de Canela'
-  }
+    alt: "Rol de canela",
+    title: "Rol de Canela",
+  },
 ];
 ---
 
@@ -48,88 +48,105 @@ const carouselImages = [
 
   <main class="flex-1">
     <!-- Hero Section -->
-    <section class="container mx-auto px-4 py-12 md:py-20">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <!-- Text Content -->
-        <div class="text-center md:text-left space-y-8">
-          <div class="space-y-4">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 font-[Courgette] leading-tight">
-              Panaderia <br /> Venezolana Artesanal
-            </h1>
-            <p class="text-lg md:text-xl text-gray-600">
-              Deliciosa <em class="text-orange-500">panaderia</em> casera <br />
-              excelente para compartir un<br />
-              momento cálido y familiar
-            </p>
-          </div>
+    <section class="relative">
+      <!-- Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-[1]"
+      >
+      </div>
 
-          <div class="space-y-6 mt-8">
-            <p class="text-2xl md:text-3xl font-bold text-orange-500 font-[Courgette]">
-              Prueba YA <br /> Nuestros
-            </p>
-            <div class="space-y-4">
-              <p class="text-3xl md:text-4xl font-bold font-[Courgette] text-gray-800">
-                Rollos de Canela
-              </p>
-              <div class="bg-orange-50 border-2 border-orange-500 rounded-lg p-6 space-y-4">
-                <p class="text-lg md:text-xl">
-                  <em>COP$19k x 12 Rolls</em> <br />
-                  <strong>+ Delivery</strong>
-                </p>
-                <a
-                  href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
-                  class="inline-block bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors font-bold text-lg"
-                >
-                  Añadir
-                </a>
-              </div>
-            </div>
-          </div>
+      <!-- Content -->
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-48 flex items-center justify-center text-center relative z-10"
+      >
+        <div class="flex flex-col items-center gap-6 max-w-3xl">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tighter text-white"
+          >
+            El mejor rol de canela que probarás
+          </h1>
+          <p class="text-lg sm:text-xl font-normal text-white/90">
+            Disfruta de nuestros deliciosos roles de canela, hechos con
+            ingredientes frescos y una receta secreta que te encantará.
+          </p>
+          <a
+            href="/menu"
+            class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-primary text-white text-base font-bold shadow-2xl shadow-primary/40 hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+          >
+            Ver Menú
+          </a>
         </div>
+      </div>
 
-        <!-- Hero Image -->
-        <div class="order-first md:order-last">
-          <Image
-            src={rol2Img}
-            alt="Roles De Canela"
-            title="Roles de Canela"
-            class="w-full rounded-lg shadow-2xl"
-            loading="eager"
-          />
+      <!-- Background Image -->
+      <div class="absolute inset-0 -z-10">
+        <Image
+          src={rol2Img}
+          alt="Deliciosos roles de canela"
+          title="Roles de Canela"
+          class="h-full w-full object-cover"
+          loading="eager"
+        />
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-2xl mx-auto">
+        <div
+          class="bg-white border-2 border-primary rounded-xl p-8 shadow-xl text-center space-y-6"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold text-zinc-900">
+            Rollos de Canela
+          </h2>
+          <p class="text-2xl md:text-3xl text-zinc-700">
+            <span class="text-primary font-bold">COP$19k</span> x 12 Rolls <br
+            />
+            <span class="text-sm text-zinc-500">+ Delivery</span>
+          </p>
+          <a
+            href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
+            class="inline-flex items-center justify-center rounded-full h-12 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+          >
+            Añadir al Carrito
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="bg-orange-50 py-12">
-      <div class="container mx-auto px-4">
+    <section class="bg-zinc-50 py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div class="space-y-2">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
-              Rapido 🚀
+            <h3 class="text-2xl md:text-3xl font-bold text-zinc-900">
+              Rápido 🚀
             </h3>
+            <p class="text-zinc-600">Entrega en tiempo récord</p>
           </div>
           <div class="space-y-2">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+            <h3 class="text-2xl md:text-3xl font-bold text-zinc-900">
               Sencillo 😍
             </h3>
+            <p class="text-zinc-600">Proceso fácil y rápido</p>
           </div>
           <div class="space-y-2">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+            <h3 class="text-2xl md:text-3xl font-bold text-zinc-900">
               Del horno a tu mesa 🍞
             </h3>
+            <p class="text-zinc-600">Siempre fresco y caliente</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Divider -->
-    <div class="container mx-auto px-4 my-12">
-      <hr class="border-t-2 border-gray-200" />
-    </div>
-
     <!-- Carousel Section -->
-    <section class="container mx-auto px-4 py-12">
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-zinc-900 mb-12"
+      >
+        Nuestros Productos
+      </h2>
       <Carousel images={carouselImages} />
     </section>
   </main>

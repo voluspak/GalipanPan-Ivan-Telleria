@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+  /* Colores personalizados */
+  --color-primary: #ff6600;
+  --color-background-light: #f8f7f5;
+  --color-background-dark: #23170f;
+}
+
 /* Estilos globales personalizados */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

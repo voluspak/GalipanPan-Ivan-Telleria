@@ -23,12 +23,12 @@ const { title, description } = Astro.props;
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <title>{title} - Galipan Pan</title>
   <link rel="shortcut icon" href="/assets/Logo.jpg" type="image/x-icon">
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col bg-background-light text-zinc-900">
   <slot />
 </body>
 </html>

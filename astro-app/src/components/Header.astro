@@ -13,8 +13,8 @@ const navLinks = [
 ];
 ---
 
-<header class="w-full bg-gray-100 shadow-sm">
-  <nav class="container mx-auto px-4">
+<header class="sticky top-0 z-10 w-full bg-background-light/80 backdrop-blur-sm shadow-sm">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between py-3">
       <!-- Logo -->
       <a href="/" class="flex-shrink-0">
@@ -36,8 +36,10 @@ const navLinks = [
               <a
                 href={link.href}
                 class:list={[
-                  "text-gray-700 hover:text-orange-500 transition-colors font-medium",
-                  { "text-orange-500 font-bold": currentPath === link.href }
+                  "text-sm font-medium transition-colors",
+                  currentPath === link.href
+                    ? "text-primary font-bold"
+                    : "text-zinc-600 hover:text-primary"
                 ]}
               >
                 {link.label}
@@ -47,21 +49,21 @@ const navLinks = [
         </ul>
         <a
           href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
-          class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+          class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all duration-300"
         >
-          Delivery
+          Ordenar Ahora
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="lg:hidden flex flex-col space-y-1 p-2"
+        class="lg:hidden p-2 rounded-lg bg-primary/20 text-primary"
         aria-label="Menú"
       >
-        <div class="w-6 h-0.5 bg-gray-700"></div>
-        <div class="w-6 h-0.5 bg-gray-700"></div>
-        <div class="w-6 h-0.5 bg-gray-700"></div>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
       </button>
     </div>
 
@@ -73,8 +75,10 @@ const navLinks = [
             <a
               href={link.href}
               class:list={[
-                "block text-gray-700 hover:text-orange-500 transition-colors font-medium",
-                { "text-orange-500 font-bold": currentPath === link.href }
+                "block text-sm font-medium transition-colors",
+                currentPath === link.href
+                  ? "text-primary font-bold"
+                  : "text-zinc-700 hover:text-primary"
               ]}
             >
               {link.label}
@@ -84,9 +88,9 @@ const navLinks = [
         <li>
           <a
             href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
-            class="block bg-orange-500 text-white text-center px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium"
+            class="block text-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all duration-300 flex items-center justify-center"
           >
-            Delivery
+            Ordenar Ahora
           </a>
         </li>
       </ul>
