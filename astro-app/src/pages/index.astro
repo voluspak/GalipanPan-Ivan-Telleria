@@ -1,16 +1,130 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
 
+const carouselImages = [
+  {
+    src: '/assets/pan-de-jamón.jpg',
+    alt: 'Pan de jamon',
+    title: 'Pan de Jamon'
+  },
+  {
+    src: '/assets/canilla.jpg',
+    alt: 'Pan frances',
+    title: 'Pan Frances'
+  },
+  {
+    src: '/assets/rol1.jpg',
+    alt: 'Rol de canela',
+    title: 'Rol de canela'
+  },
+  {
+    src: '/assets/cupcake.jpg',
+    alt: 'Cupcake',
+    title: 'Cupcake'
+  },
+  {
+    src: '/assets/rol2.jpg',
+    alt: 'Rol de canela',
+    title: 'Rol de Canela'
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Inicio"
+  description="Pagina principal de Galipan Pan. Venta de roles de canela y panaderia artesanal venezolana"
+>
+  <Header />
+
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-12 md:py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <!-- Text Content -->
+        <div class="text-center md:text-left space-y-8">
+          <div class="space-y-4">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 font-[Courgette] leading-tight">
+              Panaderia <br /> Venezolana Artesanal
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600">
+              Deliciosa <em class="text-orange-500">panaderia</em> casera <br />
+              excelente para compartir un<br />
+              momento cálido y familiar
+            </p>
+          </div>
+
+          <div class="space-y-6 mt-8">
+            <p class="text-2xl md:text-3xl font-bold text-orange-500 font-[Courgette]">
+              Prueba YA <br /> Nuestros
+            </p>
+            <div class="space-y-4">
+              <p class="text-3xl md:text-4xl font-bold font-[Courgette] text-gray-800">
+                Rollos de Canela
+              </p>
+              <div class="bg-orange-50 border-2 border-orange-500 rounded-lg p-6 space-y-4">
+                <p class="text-lg md:text-xl">
+                  <em>COP$19k x 12 Rolls</em> <br />
+                  <strong>+ Delivery</strong>
+                </p>
+                <a
+                  href="https://galipan-delivery-jst7i3eb3-voluspak.vercel.app/"
+                  class="inline-block bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors font-bold text-lg"
+                >
+                  Añadir
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="order-first md:order-last">
+          <img
+            src="/assets/rol2.jpg"
+            alt="Roles De Canela"
+            title="Roles de Canela"
+            class="w-full rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-orange-50 py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div class="space-y-2">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+              Rapido 🚀
+            </h3>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+              Sencillo 😍
+            </h3>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800">
+              Del horno a tu mesa 🍞
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="container mx-auto px-4 my-12">
+      <hr class="border-t-2 border-gray-200" />
+    </div>
+
+    <!-- Carousel Section -->
+    <section class="container mx-auto px-4 py-12">
+      <Carousel images={carouselImages} />
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
