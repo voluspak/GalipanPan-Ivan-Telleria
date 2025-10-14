@@ -1,7 +1,7 @@
 {
   "name": "galipan-pan",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "./scripts/run-dev.sh",
     "dev:skip-tests": "astro dev",
@@ -13,20 +13,20 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.0",
-    "@tailwindcss/vite": "^4.1.14",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "astro": "^5.14.4",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "tailwindcss": "^4.1.14"
+    "@astrojs/react": "4.4.0",
+    "@tailwindcss/vite": "4.1.14",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "astro": "5.14.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwindcss": "4.1.14"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@vitest/ui": "^3.2.4",
-    "happy-dom": "^20.0.0",
-    "sharp": "^0.34.4",
-    "vitest": "^3.2.4"
+    "@testing-library/dom": "10.4.1",
+    "@vitest/ui": "3.2.4",
+    "happy-dom": "20.0.0",
+    "sharp": "0.34.4",
+    "vitest": "3.2.4"
   }
 }
