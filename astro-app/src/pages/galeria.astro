@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Importar datos de galería
+import galeriaData from '../content/galeria/data.json';
+---
+
+<BaseLayout
+  title="Galeria"
+  description="Galeria de fotos de los productos y servicios que brinda Galipan Pan"
+>
+  <Header />
+
+  <main class="flex-1">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 font-[Courgette] mb-12">
+        Fotos
+      </h1>
+
+      <!-- Grid de galería -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {galeriaData.map((foto) => (
+          <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <img
+              src={foto.img}
+              alt={foto.nombre}
+              title={foto.nombre}
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <p class="text-white font-medium text-lg p-4">
+                {foto.nombre}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
