@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+
+const menuImages = [
+  {
+    src: '/assets/Carta1.png',
+    alt: 'Menu 1',
+    title: 'Carta de productos página 1'
+  },
+  {
+    src: '/assets/Carta2.png',
+    alt: 'Menu 2',
+    title: 'Carta de productos página 2'
+  }
+];
+---
+
+<BaseLayout
+  title="Menú"
+  description="Menu completo de Galipan Pan"
+>
+  <Header />
+
+  <main class="flex-1">
+    <section class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 font-[Courgette] mb-12">
+        Menú
+      </h1>
+
+      <Carousel images={menuImages} />
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

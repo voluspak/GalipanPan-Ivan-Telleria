@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Sobre Nosotros"
+  description="Nacimiento de la idea de Galipan Pan, su concepto y objetivos"
+>
+  <Header />
+
+  <main class="flex-1">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Section A -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 items-center">
+        <div class="flex justify-center">
+          <img
+            src="/assets/Logo.jpg"
+            alt="Logo de la empresa"
+            class="w-64 h-64 rounded-full shadow-lg object-cover"
+          />
+        </div>
+
+        <div class="space-y-6">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 font-[Courgette]">
+            Nuestra Historia
+          </h1>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Una pareja de <em class="text-orange-500">venezolanos</em>, que habían <br />
+            emigrado a <em class="text-orange-500">Fusagasugá</em>, una pequeña ciudad <br />
+            a las afueras de Bogotá, decide a principios <br />
+            del año <em class="text-orange-500">2020</em> emprender su propio negocio de <br />
+            <em class="text-orange-500">panaderia artesanal venezolana.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Section B -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6 order-last lg:order-first">
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Debido a la pandemia del Covid-19, hemos <br />
+            vuelto los pedidos a <em class="text-orange-500">domicilio</em> una fortaleza <br />
+            y nuestra principal forma de servicio. <br /><br />
+            Al hacer todos nuestros productos al dia, <br />
+            podemos brindarle panaderia fresca, <br />
+            cálida y esponjosa a nuestros clientes. <br /><br />
+            Actualmente contamos con un centro de producción.
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <img
+            src="/assets/rol1.jpg"
+            alt="Rol de canela cubierto de caramelo"
+            class="w-full max-w-md rounded-lg shadow-2xl object-cover"
+          />
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
