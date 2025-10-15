@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -35,6 +36,7 @@ const { title, description } = Astro.props;
 
     <title>{title} - Galipan Pan</title>
     <link rel="shortcut icon" href="/assets/Logo.jpg" type="image/x-icon" />
+    <ClientRouter />
   </head>
   <body class="min-h-screen flex flex-col bg-background-light text-zinc-900">
     <!-- Skip to main content link (mejora accesibilidad con teclado) -->
