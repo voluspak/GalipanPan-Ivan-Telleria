@@ -22,7 +22,7 @@ const DeliveryContent = () => {
         <main className="flex-grow py-16 md:py-24 mx-auto">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <header className="text-center max-w-3xl mx-auto mb-16">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-heading">
                 Nuestro Menú
               </h1>
               <p className="mt-4 text-lg text-zinc-600">

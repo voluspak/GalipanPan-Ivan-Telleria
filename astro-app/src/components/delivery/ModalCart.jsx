@@ -9,7 +9,7 @@ const ModalCart = () => {
   return (
     <article className='bg-white w-11/12 max-w-5xl h-5/6 max-h-[90vh] rounded-xl shadow-2xl relative overflow-hidden flex flex-col'>
       <header className='border-b border-zinc-200 p-6 flex items-center justify-between'>
-        <h2 className='text-2xl font-bold text-zinc-900'>Carrito de Compra</h2>
+        <h2 className='text-2xl font-bold text-heading'>Carrito de Compra</h2>
         <button
           onClick={() => setShow(!show)}
           className='p-2 rounded-lg hover:bg-zinc-100 text-zinc-600 transition-colors'
@@ -48,7 +48,7 @@ const EmptyCart = () => {
             Vaciar Carrito
           </button>
           <button
-            className='px-6 h-10 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/30 transition-all'
+            className='px-6 h-10 rounded-lg bg-blaze-orange-600 hover:bg-blaze-orange-700 text-white font-bold shadow-lg shadow-blaze-orange-600/30 transition-all'
           >
             Proceder al Pago
           </button>
@@ -58,7 +58,7 @@ const EmptyCart = () => {
   } else {
     return (
       <div className='flex flex-col items-center justify-center py-16 px-4'>
-        <h3 className='font-bold text-2xl text-zinc-600 mb-4'>Nada por aquí... 👀</h3>
+        <h3 className='font-bold text-2xl text-heading mb-4'>Nada por aquí... 👀</h3>
         <p className='text-zinc-500 mb-8'>Tu carrito está vacío. ¡Agrega algunos productos deliciosos!</p>
         <img
           src='./assets/6011.jpg'

@@ -18,7 +18,7 @@ const Counter = ({ id, cart, addToCart, removeOneFromCart }) => {
         <span className='min-w-[2rem] text-center font-semibold text-zinc-900'>{itemQuantity}</span>
         <button
           onClick={addToCart}
-          className='w-8 h-8 rounded-lg bg-primary hover:bg-primary/90 text-white flex items-center justify-center transition-colors'
+          className='w-8 h-8 rounded-lg bg-blaze-orange-600 hover:bg-blaze-orange-700 text-white flex items-center justify-center transition-colors'
           aria-label='Aumentar cantidad'
         >
           <AiOutlinePlus className='w-4 h-4' />
@@ -29,7 +29,7 @@ const Counter = ({ id, cart, addToCart, removeOneFromCart }) => {
     return (
       <button
         onClick={addToCart}
-        className='w-full h-10 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold shadow-lg shadow-primary/30 transition-all duration-300'
+        className='w-full h-10 rounded-lg bg-blaze-orange-600 hover:bg-blaze-orange-700 text-white text-sm font-bold shadow-lg shadow-blaze-orange-600/30 transition-all duration-300'
         aria-label='Agregar al carrito'
       >
         Agregar al Carrito

@@ -2,13 +2,13 @@ import { useState, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProducts } from '../services/products'
 
-export default function useProducts () {
+export default function useProducts() {
   const [prods, setProds] = useState([])
   const [loader, setLoader] = useState(null)
   const { category } = useParams()
 
   useMemo(() => {
-    async function filterCategories () {
+    async function filterCategories() {
       try {
         setLoader(true)
         const products = await getProducts()

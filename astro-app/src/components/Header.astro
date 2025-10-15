@@ -39,8 +39,8 @@ const navLinks = [
                   class:list={[
                     "text-sm font-medium transition-colors",
                     currentPath === link.href
-                      ? "text-primary font-bold"
-                      : "text-zinc-600 hover:text-primary",
+                      ? "text-blaze-orange-600 font-bold"
+                      : "text-zinc-600 hover:text-blaze-orange-600",
                   ]}
                 >
                   {link.label}
@@ -51,7 +51,7 @@ const navLinks = [
         </ul>
         <a
           href="/delivery"
-          class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all duration-300 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-blaze-orange-600 text-white text-sm font-bold shadow-lg shadow-blaze-orange-600/30 hover:bg-blaze-orange-700 transition-all duration-300 focus:ring-2 focus:ring-blaze-orange-500 focus:ring-offset-2"
           aria-label="Ir a pedido online"
         >
           Ordenar Ahora
@@ -61,7 +61,7 @@ const navLinks = [
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="lg:hidden p-2 rounded-lg bg-primary/20 text-primary focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        class="lg:hidden p-2 rounded-lg bg-blaze-orange-600/20 text-blaze-orange-600 focus:ring-2 focus:ring-blaze-orange-500 focus:ring-offset-2"
         aria-label="Abrir menú de navegación"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -98,8 +98,8 @@ const navLinks = [
                 class:list={[
                   "block text-sm font-medium transition-colors",
                   currentPath === link.href
-                    ? "text-primary font-bold"
-                    : "text-zinc-700 hover:text-primary",
+                    ? "text-blaze-orange-600 font-bold"
+                    : "text-zinc-700 hover:text-blaze-orange-600",
                 ]}
               >
                 {link.label}
@@ -110,7 +110,7 @@ const navLinks = [
         <li>
           <a
             href="/delivery"
-            class="text-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all duration-300 flex items-center justify-center focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            class="text-center rounded-full h-10 px-6 bg-blaze-orange-600 text-white text-sm font-bold shadow-lg shadow-blaze-orange-600/30 hover:bg-blaze-orange-700 transition-all duration-300 flex items-center justify-center focus:ring-2 focus:ring-blaze-orange-500 focus:ring-offset-2"
             aria-label="Ir a pedido online"
           >
             Ordenar Ahora

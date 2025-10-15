@@ -10,10 +10,10 @@ const CartWidget = () => {
   return (
     <div>
       <label className='relative cursor-pointer' htmlFor={modalCheckbox}>
-        <AiOutlineShoppingCart className='h-auto w-12 hover:text-orange-400 text-gray-500' />
+        <AiOutlineShoppingCart className='w-16 h-auto hover:text-blaze-orange-600 text-zinc-500' />
         {total > 0 &&
-          <div className='absolute top-0 right-0 bg-orange-500 text-white w-6 h-6 rounded-full flex justify-center items-center'>
-            <span className='text-white'>{total}</span>
+          <div className='absolute top-1 right-0  text-white w-6 h-6  flex justify-center items-center'>
+            <span className='text-white bg-blaze-orange-600 rounded-full w-full h-full  text-center'>{total}</span>
           </div>}
       </label>
       <input type='checkbox' id={modalCheckbox} hidden onChange={() => setShow(!show)} />

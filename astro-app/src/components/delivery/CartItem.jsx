@@ -12,13 +12,13 @@ const CartItem = () => {
     <>
       <table className='w-full table-auto text-center'>
         <thead className='bg-zinc-50 border-b border-zinc-200'>
-          <tr>
-            <th className='p-3 text-sm font-semibold text-zinc-700'>Imagen</th>
-            <th className='p-3 text-sm font-semibold text-zinc-700'>Producto</th>
-            <th className='p-3 text-sm font-semibold text-zinc-700'>Precio</th>
-            <th className='p-3 text-sm font-semibold text-zinc-700'>Cantidad</th>
-            <th className='p-3 text-sm font-semibold text-zinc-700'>Total</th>
-            <th className='p-3 text-sm font-semibold text-zinc-700'>Acción</th>
+          <tr className='[&_th]:p-3 text-sm font-semibold text-zinc-700'>
+            <th>Imagen</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Acción</th>
           </tr>
         </thead>
         <tbody>
@@ -28,7 +28,7 @@ const CartItem = () => {
                 <img
                   src={prod.img}
                   alt={prod.name}
-                  className='mx-auto rounded-lg w-20 h-20 object-cover border border-zinc-200'
+                  className='mx-auto rounded-lg w-20 h-20 object-cover border border-blaze-orange-200'
                 />
               </td>
               <td className='p-3'>
@@ -49,7 +49,7 @@ const CartItem = () => {
                   <span className='min-w-[2rem] font-semibold text-zinc-900'>{prod.cant}</span>
                   <button
                     onClick={() => addToCart(prod)}
-                    className='w-7 h-7 rounded bg-primary hover:bg-primary/90 text-white flex items-center justify-center transition-colors'
+                    className='w-7 h-7 rounded bg-blaze-orange-600 hover:bg-blaze-orange-700 text-white flex items-center justify-center transition-colors'
                     aria-label='Aumentar cantidad'
                   >
                     <AiOutlinePlus className='w-3 h-3' />
@@ -78,12 +78,12 @@ const CartItem = () => {
               <strong className='text-zinc-900'>{totalItems} unid.</strong>
             </td>
             <td className='p-4'>
-              <strong className='text-primary text-lg'>COP${pay}k</strong>
+              <strong className='text-blaze-orange-600 text-lg'>COP${pay}k</strong>
             </td>
             <td className='p-4'></td>
           </tr>
         </tfoot>
-      </table>
+      </table >
     </>
   )
 }

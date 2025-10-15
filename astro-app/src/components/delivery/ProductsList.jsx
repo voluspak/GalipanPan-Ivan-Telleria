@@ -13,7 +13,7 @@ const ProductsList = ({ prods }) => {
           .map(prod => (
             <article
               key={prod.id}
-              className='group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-primary/10'
+              className='group bg-white rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blaze-orange-600/20 transition-shadow duration-300 overflow-hidden border border-blaze-orange-200'
             >
               <figure className='overflow-hidden'>
                 <img
@@ -24,9 +24,9 @@ const ProductsList = ({ prods }) => {
                 />
               </figure>
               <figcaption className='p-5 flex flex-col gap-3'>
-                <h3 className='text-lg font-bold text-zinc-900'>{prod.name}</h3>
+                <h3 className='text-lg font-bold text-heading'>{prod.name}</h3>
                 <p className='text-sm text-zinc-600'>
-                  <span className='text-primary font-bold text-lg'>COP${prod.price}k</span>
+                  <span className='text-blaze-orange-600 font-bold text-lg'>COP${prod.price}k</span>
                   <span className='text-zinc-500'> {prod.unid}</span>
                 </p>
                 <p className='text-xs text-zinc-500'>+ Delivery</p>
