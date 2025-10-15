@@ -2,6 +2,9 @@
   "name": "galipan-pan",
   "type": "module",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "./scripts/run-dev.sh",
     "dev:skip-tests": "astro dev",
