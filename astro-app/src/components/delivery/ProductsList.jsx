@@ -6,28 +6,40 @@ const ProductsList = ({ prods }) => {
   const { cart, addToCart, removeOneFromCart } = useCart()
 
   return (
-    <section className=' w-4/5 grid grid-cols-autoFit gap-5 place-items-center'>
+    <section className='grid w-full max-w-7xl px-4 sm:px-6 lg:px-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
       {
-      prods
-        .filter(prod => prod.display)
-        .map(prod => (
-          <div key={prod.id} className=' bg-orange-100 rounded w-64 h-96 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-transform'>
-            <figure>
-              <img src={prod.img} title={prod.name} className='h-60 w-64 object-cover rounded' />
-            </figure>
-            <figcaption className='flex flex-col justify-around items-center'>
-              <h3 className=' text-orange-500 text-xl'>{prod.name}</h3>
-              <span className='italic'>COP{prod.price}k
-                <span> {prod.unid}</span>
-              </span>
-              <span className='font-bold'>+ Delivery</span>
-              <Counter
-                {...prod} addToCart={() => addToCart(prod)} removeOneFromCart={() => removeOneFromCart(prod)} cart={cart}
-              />
-            </figcaption>
-          </div>
-        ))
-    }
+        prods
+          .filter(prod => prod.display)
+          .map(prod => (
+            <article
+              key={prod.id}
+              className='group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-primary/10'
+            >
+              <figure className='overflow-hidden'>
+                <img
+                  src={prod.img}
+                  alt={prod.name}
+                  title={prod.name}
+                  className='w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105'
+                />
+              </figure>
+              <figcaption className='p-5 flex flex-col gap-3'>
+                <h3 className='text-lg font-bold text-zinc-900'>{prod.name}</h3>
+                <p className='text-sm text-zinc-600'>
+                  <span className='text-primary font-bold text-lg'>COP${prod.price}k</span>
+                  <span className='text-zinc-500'> {prod.unid}</span>
+                </p>
+                <p className='text-xs text-zinc-500'>+ Delivery</p>
+                <Counter
+                  {...prod}
+                  addToCart={() => addToCart(prod)}
+                  removeOneFromCart={() => removeOneFromCart(prod)}
+                  cart={cart}
+                />
+              </figcaption>
+            </article>
+          ))
+      }
     </section>
   )
 }

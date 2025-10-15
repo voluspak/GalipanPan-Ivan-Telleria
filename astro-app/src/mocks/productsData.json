@@ -20,16 +20,6 @@
         "display": true
     },
     {
-        "id": 3,
-        "name": "Pan de jamon",
-        "img": "../assets/pan-de-jamón.jpg",
-        "price": 15,
-        "unid": "x 1 unid",
-        "cant": 1,
-        "category": "panaderia",
-        "display": true
-    },
-    {
         "id": 4,
         "name": "Golfeado",
         "img": "../assets/golfeado.jpg",

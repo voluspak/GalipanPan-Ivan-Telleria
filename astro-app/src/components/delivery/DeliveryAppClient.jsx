@@ -12,21 +12,28 @@ const DeliveryContent = () => {
 
   return (
     <CartProvider>
-      <div className="min-h-screen">
-        <header className="mb-40">
-          <Navbar />
-        </header>
+      <div className="relative min-h-screen w-full flex flex-col bg-white">
+        <Navbar />
         {show && (
-          <aside className="fixed bg-opacity-50 backdrop-blur-sm bg-black w-screen h-screen top-0 left-0 z-20 flex items-center justify-center">
+          <aside className="fixed bg-black/50 backdrop-blur-sm w-screen h-screen top-0 left-0 z-30 flex items-center justify-center">
             <ModalCart />
           </aside>
         )}
-        <main className="grid place-items-center gap-5 mt-5 mb-5">
-          <h1 className="text-2xl font-bold text-orange-600">Delivery</h1>
-          <Routes>
-            <Route index element={<ListContainer />} />
-            <Route path="category/:category" element={<ListContainer />} />
-          </Routes>
+        <main className="flex-grow py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <header className="text-center max-w-3xl mx-auto mb-16">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900">
+                Nuestro Menú
+              </h1>
+              <p className="mt-4 text-lg text-zinc-600">
+                Explora nuestra deliciosa selección de productos, hechos frescos diariamente con los mejores ingredientes y mucho amor.
+              </p>
+            </header>
+            <Routes>
+              <Route index element={<ListContainer />} />
+              <Route path="category/:category" element={<ListContainer />} />
+            </Routes>
+          </div>
         </main>
       </div>
     </CartProvider>

@@ -4,18 +4,38 @@ import CartWidget from './CartWidget'
 
 const Navbar = () => {
   return (
-    <div className='fixed top-0 z-10 left-16 md:left-20 lg:left-34 bg-white w-4/5 flex container justify-around items-center shadow-md'>
-      <Link to='/' className='cursor-pointer'>
-        <img src='/assets/Logo.webp' alt='Logo Galipan Pan' title='Logo' className='h-auto w-56' />
-      </Link>
-      <nav className='flex w-2/4 justify-around font-sans font-bold text-gray-500'>
-        <Link to='/' className='text-2xl hover:text-orange-400 hover:rotate-3 transition-all'>Todos</Link>
-        <Link to='/category/roles' className='text-2xl hover:text-orange-400 hover:rotate-3 transition-all'>Roles</Link>
-        <Link to='/category/panaderia' className='text-2xl hover:text-orange-400 hover:rotate-3 transition-all'>Panaderia</Link>
-        <Link to='/category/tortasYCupcakes' className='text-2xl hover:text-orange-400 hover:rotate-3 transition-all'>Tortas y cupcakes</Link>
-      </nav>
-      <CartWidget />
-    </div>
+    <header className='sticky top-0 z-20 bg-white/95 backdrop-blur-sm border-b border-primary/20 shadow-sm'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <nav className='flex items-center justify-between h-20' aria-label='Navegación de categorías'>
+          <Link to='/' className='flex-shrink-0' aria-label='Ver todos los productos'>
+            <img src='/assets/Logo.webp' alt='Logo Galipan Pan' title='Logo' className='h-auto w-32 sm:w-40' />
+          </Link>
+          <ul className='hidden md:flex items-center gap-6' role='list'>
+            <li>
+              <Link to='/' className='text-sm font-medium text-zinc-600 hover:text-primary transition-colors'>
+                Todos
+              </Link>
+            </li>
+            <li>
+              <Link to='/category/roles' className='text-sm font-medium text-zinc-600 hover:text-primary transition-colors'>
+                Roles
+              </Link>
+            </li>
+            <li>
+              <Link to='/category/panaderia' className='text-sm font-medium text-zinc-600 hover:text-primary transition-colors'>
+                Panadería
+              </Link>
+            </li>
+            <li>
+              <Link to='/category/tortasYCupcakes' className='text-sm font-medium text-zinc-600 hover:text-primary transition-colors'>
+                Tortas y Cupcakes
+              </Link>
+            </li>
+          </ul>
+          <CartWidget />
+        </nav>
+      </div>
+    </header>
   )
 }
 

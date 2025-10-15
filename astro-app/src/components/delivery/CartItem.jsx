@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCart } from '../../hooks/useCart'
 import { RiDeleteBin5Line } from 'react-icons/ri'
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import useTotals from '../../hooks/useTotals'
 
 const CartItem = () => {
@@ -9,51 +10,77 @@ const CartItem = () => {
 
   return (
     <>
-      <table className='w-full md:table-auto table-fixed text-center'>
-        <thead>
+      <table className='w-full table-auto text-center'>
+        <thead className='bg-zinc-50 border-b border-zinc-200'>
           <tr>
-            <th> </th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Total</th>
-            <th> </th>
+            <th className='p-3 text-sm font-semibold text-zinc-700'>Imagen</th>
+            <th className='p-3 text-sm font-semibold text-zinc-700'>Producto</th>
+            <th className='p-3 text-sm font-semibold text-zinc-700'>Precio</th>
+            <th className='p-3 text-sm font-semibold text-zinc-700'>Cantidad</th>
+            <th className='p-3 text-sm font-semibold text-zinc-700'>Total</th>
+            <th className='p-3 text-sm font-semibold text-zinc-700'>Acción</th>
           </tr>
         </thead>
         <tbody>
           {cart.map(prod => (
-            <tr key={prod.id} className='border-y my-1 py-2 even:bg-gray-50'>
-              <td>
-                <img src={prod.img} className='mx-auto border-2 border-opacity-50 border-orange-500 rounded-full w-32 h-32 object-cover' />
+            <tr key={prod.id} className='border-b border-zinc-100 hover:bg-zinc-50 transition-colors'>
+              <td className='p-3'>
+                <img
+                  src={prod.img}
+                  alt={prod.name}
+                  className='mx-auto rounded-lg w-20 h-20 object-cover border border-zinc-200'
+                />
               </td>
-              <td>
-                <span>{prod.name}</span>
+              <td className='p-3'>
+                <span className='font-medium text-zinc-900'>{prod.name}</span>
               </td>
-              <td>
-                COP{prod.price}K
+              <td className='p-3'>
+                <span className='text-zinc-700'>COP${prod.price}k</span>
               </td>
-              <td>
-                <button onClick={() => removeOneFromCart(prod)} className='p-2 font-bold text-2xl text-red-700 active:text-red-500'>-</button>
-                <span>{prod.cant}</span>
-                <button onClick={() => addToCart(prod)} className='p-2 font-bold text-green-700 active:text-green-500 text-lg'>+</button>
+              <td className='p-3'>
+                <div className='flex items-center gap-2 justify-center'>
+                  <button
+                    onClick={() => removeOneFromCart(prod)}
+                    className='w-7 h-7 rounded bg-zinc-100 hover:bg-zinc-200 text-zinc-700 flex items-center justify-center transition-colors'
+                    aria-label='Disminuir cantidad'
+                  >
+                    <AiOutlineMinus className='w-3 h-3' />
+                  </button>
+                  <span className='min-w-[2rem] font-semibold text-zinc-900'>{prod.cant}</span>
+                  <button
+                    onClick={() => addToCart(prod)}
+                    className='w-7 h-7 rounded bg-primary hover:bg-primary/90 text-white flex items-center justify-center transition-colors'
+                    aria-label='Aumentar cantidad'
+                  >
+                    <AiOutlinePlus className='w-3 h-3' />
+                  </button>
+                </div>
               </td>
-              <td>
-                <span>COP{prod.price * prod.cant}K</span>
+              <td className='p-3'>
+                <span className='font-semibold text-zinc-900'>COP${prod.price * prod.cant}k</span>
               </td>
-              <td>
-                <button onClick={() => deleteFromCart(prod)} className='p-2 text-2xl text-red-700 active:text-red-500'><RiDeleteBin5Line /></button>
+              <td className='p-3'>
+                <button
+                  onClick={() => deleteFromCart(prod)}
+                  className='p-2 rounded-lg hover:bg-red-50 text-red-600 hover:text-red-700 transition-colors'
+                  aria-label='Eliminar producto'
+                >
+                  <RiDeleteBin5Line className='w-5 h-5' />
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
-        <tfoot>
+        <tfoot className='bg-zinc-50 border-t-2 border-zinc-300'>
           <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td><strong>{totalItems}unid.</strong></td>
-            <td><strong>COP{pay}K</strong></td>
-            <td> </td>
+            <td colSpan='3' className='p-4'></td>
+            <td className='p-4'>
+              <strong className='text-zinc-900'>{totalItems} unid.</strong>
+            </td>
+            <td className='p-4'>
+              <strong className='text-primary text-lg'>COP${pay}k</strong>
+            </td>
+            <td className='p-4'></td>
           </tr>
         </tfoot>
       </table>

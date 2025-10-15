@@ -7,14 +7,21 @@ import CartItem from './CartItem'
 const ModalCart = () => {
   const { show, setShow } = useModal()
   return (
-    <div className='bg-white w-3/4 h-4/5 rounded p-3 shadow-md relative overflow-auto'>
-      <header className=' mb-3 flex items-center justify-between'>
-        <h1 className='text-2xl font-bold text-orange-500'>Carrito de compra</h1>
+    <article className='bg-white w-11/12 max-w-5xl h-5/6 max-h-[90vh] rounded-xl shadow-2xl relative overflow-hidden flex flex-col'>
+      <header className='border-b border-zinc-200 p-6 flex items-center justify-between'>
+        <h2 className='text-2xl font-bold text-zinc-900'>Carrito de Compra</h2>
+        <button
+          onClick={() => setShow(!show)}
+          className='p-2 rounded-lg hover:bg-zinc-100 text-zinc-600 transition-colors'
+          aria-label='Cerrar carrito'
+        >
+          <GrClose className='w-5 h-5' />
+        </button>
       </header>
-      <button onClick={() => setShow(!show)} className='absolute p-1 rounded-full top-5 right-5 hover:bg-slate-100 text-gray-500'><GrClose /></button>
-      <hr />
-      <EmptyCart />
-    </div>
+      <div className='flex-1 overflow-auto'>
+        <EmptyCart />
+      </div>
+    </article>
   )
 }
 
@@ -27,20 +34,36 @@ const EmptyCart = () => {
     return (
       <>
         <CartItem />
-        <hr />
-        <footer className='flex justify-around items-center p-3'>
-          <button className='py-1 px-3 rounded-md border text-white font-bold text-lg bg-red-600' onClick={clearCart}>Vaciar</button>
-          <button className='py-1 px-3 rounded-md border text-white font-bold text-lg bg-green-600'>Comprar</button>
-          <button className='py-1 px-3 rounded-md border text-white font-bold text-lg bg-gray-500' onClick={() => setShow(!show)}>Cancelar</button>
+        <footer className='border-t border-zinc-200 p-6 flex flex-wrap gap-3 justify-end bg-zinc-50'>
+          <button
+            className='px-6 h-10 rounded-lg bg-zinc-200 hover:bg-zinc-300 text-zinc-900 font-semibold transition-colors'
+            onClick={() => setShow(!show)}
+          >
+            Continuar Comprando
+          </button>
+          <button
+            className='px-6 h-10 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold transition-colors'
+            onClick={clearCart}
+          >
+            Vaciar Carrito
+          </button>
+          <button
+            className='px-6 h-10 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/30 transition-all'
+          >
+            Proceder al Pago
+          </button>
         </footer>
       </>
     )
   } else {
     return (
-      <div className='flex flex-col items-center justify-center mt-16'>
-        <h2 className='font-bold text-xl text-orange-500'>Nada por aqui... 👀</h2>
+      <div className='flex flex-col items-center justify-center py-16 px-4'>
+        <h3 className='font-bold text-2xl text-zinc-600 mb-4'>Nada por aquí... 👀</h3>
+        <p className='text-zinc-500 mb-8'>Tu carrito está vacío. ¡Agrega algunos productos deliciosos!</p>
         <img
-          src='./assets/6011.jpg' alt='Empty cart' className=' h-72 w-72'
+          src='./assets/6011.jpg'
+          alt='Carrito vacío'
+          className='h-64 w-64 object-contain opacity-50'
         />
       </div>
     )
