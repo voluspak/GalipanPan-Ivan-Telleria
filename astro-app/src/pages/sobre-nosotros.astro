@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import logoImg from "../../public/assets/Logo.webp";
+import rol1Img from "../../public/assets/rol1.webp";
+---
+
+<BaseLayout
+  title="Sobre Nosotros"
+  description="Nacimiento de la idea de Galipan Pan, su concepto y objetivos"
+>
+  <Header />
+
+  <main id="main-content" class="flex-1 bg-blaze-orange-50">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Section A -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 items-center">
+        <div class="flex justify-center">
+          <Image
+            src={logoImg}
+            alt="Logo de la empresa"
+            class="w-full shadow-lg object-fill rounded-2xl"
+          />
+        </div>
+
+        <div class="space-y-6">
+          <h1
+            class="text-4xl md:text-5xl font-bold font-[Courgette] text-heading"
+          >
+            Nuestra Historia
+          </h1>
+          <p class="text-xl text-zinc-700 leading-relaxed">
+            Una pareja de <em class="text-blaze-orange-600 font-semibold">venezolanos</em>, que
+            habían <br />
+            emigrado a <em class="text-blaze-orange-600 font-semibold">Fusagasugá</em>, una pequeña
+            ciudad <br />
+            a las afueras de Bogotá, decide a principios <br />
+            del año <em class="text-blaze-orange-600 font-semibold">2020</em> emprender su propio negocio
+            de <br />
+            <em class="text-blaze-orange-600 font-semibold">panaderia artesanal venezolana.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Section B -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6 order-last lg:order-first">
+          <p class="text-xl text-zinc-700 leading-relaxed">
+            Debido a la pandemia del Covid-19, hemos <br />
+            vuelto los pedidos a <em class="text-blaze-orange-600 font-semibold">domicilio</em> una fortaleza
+            <br />
+            y nuestra principal forma de servicio. <br /><br />
+            Al hacer todos nuestros productos al dia, <br />
+            podemos brindarle panaderia fresca, <br />
+            cálida y esponjosa a nuestros clientes. <br /><br />
+            Actualmente contamos con un centro de producción.
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <Image
+            src={rol1Img}
+            alt="Rol de canela cubierto de caramelo"
+            class="w-full rounded-lg shadow-2xl object-cover"
+          />
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+const navLinks = [
+  { href: '/menu', label: 'Menú' },
+  { href: '/galeria', label: 'Galeria' },
+  { href: '/delivery', label: 'Pedido Online' },
+  { href: '/contacto', label: 'Contactanos' },
+  { href: '/sobre-nosotros', label: 'Sobre Nosotros' }
+];
+
+const socialLinks = [
+  {
+    href: 'https://www.instagram.com/galipanpan/',
+    icon: 'fa-instagram',
+    label: 'Instagram'
+  },
+  {
+    href: 'https://www.facebook.com/galipanpan',
+    icon: 'fa-facebook',
+    label: 'Facebook'
+  },
+  {
+    href: 'https://api.whatsapp.com/send?phone=573173934277',
+    icon: 'fa-whatsapp',
+    label: 'Whatsapp'
+  }
+];
+---
+
+<footer class="w-full bg-blaze-orange-50 border-t border-blaze-orange-200 mt-auto">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Links de navegación -->
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class="text-sm text-zinc-600 hover:text-blaze-orange-600 transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="flex justify-center gap-6">
+        {socialLinks.map(social => (
+          <a
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-zinc-500 hover:text-blaze-orange-600 transition-colors"
+            title={social.label}
+          >
+            <i class={`fa-brands ${social.icon} h-6 w-6 text-2xl`}></i>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 text-center text-sm text-zinc-500">
+      <p>© 2024 Galipan Pan. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

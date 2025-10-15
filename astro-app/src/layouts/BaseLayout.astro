@@ -1,0 +1,51 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="Rollos de canela, delivery, domicilio, panaderia, venezolana, artesanal"
+    />
+    <meta name="description" content={description} />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/4619c90884.js"
+      crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title} - Galipan Pan</title>
+    <link rel="shortcut icon" href="/assets/Logo.jpg" type="image/x-icon" />
+    <ClientRouter />
+  </head>
+  <body class="min-h-screen flex flex-col bg-background-light text-zinc-900">
+    <!-- Skip to main content link (mejora accesibilidad con teclado) -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-primary focus:text-white focus:rounded-lg focus:shadow-lg focus:ring-2 focus:ring-white focus:ring-offset-2"
+    >
+      Saltar al contenido principal
+    </a>
+    <slot />
+  </body>
+</html>
