@@ -3,7 +3,7 @@ export const mockProducts = [
   {
     id: 1,
     name: "Rollos de canela",
-    img: "../assets/rol1.jpg",
+    img: "/assets/rol1.webp",
     price: 19,
     unid: "x 4 Rolls",
     cant: 1,
@@ -13,7 +13,7 @@ export const mockProducts = [
   {
     id: 2,
     name: "Rollos de canela",
-    img: "../assets/rol2.jpg",
+    img: "/assets/rol2.webp",
     price: 22,
     unid: "x 6 Rolls",
     cant: 1,
@@ -22,8 +22,8 @@ export const mockProducts = [
   },
   {
     id: 3,
-    name: "Pan de jamon",
-    img: "../assets/pan-de-jamón.jpg",
+    name: "Pan de jamón",
+    img: "/assets/pan-de-jamón.webp",
     price: 15,
     unid: "x 1 unid",
     cant: 1,
@@ -33,7 +33,7 @@ export const mockProducts = [
   {
     id: 4,
     name: "Golfeado",
-    img: "../assets/golfeado.jpg",
+    img: "/assets/golfeado.webp",
     price: 20,
     unid: "x 4 Rolls",
     cant: 1,
@@ -43,7 +43,7 @@ export const mockProducts = [
   {
     id: 5,
     name: "Cupcake",
-    img: "../assets/cupcake.jpg",
+    img: "/assets/cupcake.webp",
     price: 26,
     unid: "x 6 cupcakes",
     cant: 1,
@@ -53,7 +53,7 @@ export const mockProducts = [
   {
     id: 6,
     name: "Tortarol",
-    img: "../assets/tortarol.jpg",
+    img: "/assets/tortarol.webp",
     price: 25,
     unid: "x 1 unid",
     cant: 1,
