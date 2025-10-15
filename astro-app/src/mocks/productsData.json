@@ -6,7 +6,8 @@
         "price": 19,
         "unid": "x 4 Rolls",
         "cant": 1,
-        "category": "roles"
+        "category": "roles",
+        "display": true
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "price": 22,
         "unid": "x 6 Rolls",
         "cant": 1,
-        "category": "roles"
+        "category": "roles",
+        "display": true
     },
     {
         "id": 3,
@@ -24,8 +26,8 @@
         "price": 15,
         "unid": "x 1 unid",
         "cant": 1,
-        "category": "panaderia"
-
+        "category": "panaderia",
+        "display": true
     },
     {
         "id": 4,
@@ -34,8 +36,8 @@
         "price": 20,
         "unid": "x 4 Rolls",
         "cant": 1,
-        "category": "panaderia"
-
+        "category": "panaderia",
+        "display": true
     },
     {
         "id": 5,
@@ -44,7 +46,8 @@
         "price": 26,
         "unid": "x 6 cupcakes",
         "cant": 1,
-        "category": "tortasYCupcakes"
+        "category": "tortasYCupcakes",
+        "display": true
     },
     {
         "id": 6,
@@ -53,6 +56,7 @@
         "price": 25,
         "unid": "x 1 unid",
         "cant": 1,
-        "category": "tortasYCupcakes"
+        "category": "tortasYCupcakes",
+        "display": true
     }
 ]
