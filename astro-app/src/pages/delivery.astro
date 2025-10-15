@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DeliveryAppClient from '../components/delivery/DeliveryAppClient';
+---
+
+<BaseLayout
+  title="Delivery"
+  description="Haz tu pedido online de productos Galipan Pan con entrega a domicilio"
+>
+  <DeliveryAppClient client:only="react" />
+</BaseLayout>
